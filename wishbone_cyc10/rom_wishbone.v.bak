@@ -1,0 +1,43 @@
+`include "../openriscv/src/cpu/defines.v"
+
+module rom_wishbone (
+	 input 						 	 clk,		//
+	 input 						 	 rst_n,	
+	 input  [`WishboneDataBus]	 wishbone_addr_i,
+	 input  [`WishboneDataBus]  wishbone_data_i,
+	 input							 wishbone_we_i,
+	 input  [`WishboneSelBus]	 wishbone_sel_i,
+	 input 							 wishbone_stb_i,
+	 input							 wishbone_cyc_i,
+	 output	[`WishboneDataBus] wishbone_data_o,
+	 output	reg					 wishbone_ack_o
+);
+
+ip_rom ip_rom0 (
+	.address		(wishbone_addr_i[11:0]),
+	.clock		(clk),	
+	.q				(wishbone_data_o),
+);
+
+reg ack_delay;
+
+
+always @(posedge clk) begin
+	if(rst_n == `RstEnable) begin
+		ack_delay <= 1'b0;
+	end else if (wishbone_stb_i && wishbone_cyc_i) begin
+		ack_delay <= 1'b1;
+	end else begin
+		ack_delay <= 1'b0;
+	end
+end
+
+always @(posedge clk) begin
+	if(rst_n == `RstEnable) begin
+		wishbone_ack_o <= 1'b0;
+	end else begin
+		wishbone_ack_o <= ack_delay;
+	end
+end
+
+endmodule

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Nov 26 10:16:58 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : wishbone_cycy10_soc
+Top-level Entity Name : wishbone_soc
+Family : Cyclone 10 LP
+Device : 10CL016YU256C8G
+Timing Models : Final
+Total logic elements : 13,541 / 15,408 ( 88 % )
+    Total combinational functions : 12,431 / 15,408 ( 81 % )
+    Dedicated logic registers : 4,770 / 15,408 ( 31 % )
+Total registers : 4770
+Total pins : 12 / 163 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 262,144 / 516,096 ( 51 % )
+Embedded Multiplier 9-bit elements : 8 / 112 ( 7 % )
+Total PLLs : 1 / 4 ( 25 % )

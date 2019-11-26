@@ -1,0 +1,804 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/undergraduate_thesis/wishbone_cyc10/simulation/modelsim
+vconfig_string_and_timer
+Z1 !s110 1574645794
+!i10b 1
+!s100 @i9PhGW^F9iEAC1Ho>z3a3
+IbJDJYh4@[9C`z7b;m1Vfl0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1574391057
+8F:/undergraduate_thesis/wishbone_cyc10/config_string_and_timer.v
+FF:/undergraduate_thesis/wishbone_cyc10/config_string_and_timer.v
+FF:/undergraduate_thesis/wishbone_cyc10/config_string_rom/config_string_rom
+L0 44
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1574645794.000000
+!s107 F:/undergraduate_thesis/wishbone_cyc10/config_string_rom/config_string_rom|F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/config_string_and_timer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/config_string_and_timer.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/wishbone_cyc10
+Z7 tCvgOpt 0
+vcsr
+Z8 !s110 1574645798
+!i10b 1
+!s100 7SUUS3CjD:WbknmG[aPkM3
+I_?f@<DNkgW@9bD7JQoic?0
+R2
+R0
+Z9 w1573543479
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/csr.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/csr.v
+Z10 L0 36
+R3
+r1
+!s85 0
+31
+Z11 !s108 1574645798.000000
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/csr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/csr.v|
+!i113 1
+R5
+Z12 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu
+R7
+vctrl
+Z13 !s110 1574645797
+!i10b 1
+!s100 JY9`F072mDjXYBGKHlbj40
+I>3GU?W5V]lSHPA2GX3a6i1
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/ctrl.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/ctrl.v
+Z14 L0 35
+R3
+r1
+!s85 0
+31
+Z15 !s108 1574645797.000000
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/ctrl.v|
+!i113 1
+R5
+R12
+R7
+vdiv
+R13
+!i10b 1
+!s100 :NbbJXRTRNm0i9]6:MKb]3
+IZKWg@zY4V2o18n8hdd=aD2
+R2
+R0
+w1574596760
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/div.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/div.v
+R14
+R3
+r1
+!s85 0
+31
+R15
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/div.v|
+!i113 1
+R5
+R12
+R7
+vex
+R13
+!i10b 1
+!s100 kTn1;FZ?mNGjdU@D@[Y]T2
+Im6SLDCO26cY6zfK`dd_Nk2
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/ex.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/ex.v
+R14
+R3
+r1
+!s85 0
+31
+R15
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/ex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/ex.v|
+!i113 1
+R5
+R12
+R7
+vex_mem
+R13
+!i10b 1
+!s100 z1NGL30X_;J]jT9=@XQ4m0
+I`[z5SKGDKH4?FUhn@0]4A3
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/ex_mem.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/ex_mem.v
+R14
+R3
+r1
+!s85 0
+31
+R15
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/ex_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/ex_mem.v|
+!i113 1
+R5
+R12
+R7
+vid
+R13
+!i10b 1
+!s100 AA_aQDDJM?:`AU[5QfZI@3
+IonFdLFJE8XGCZ=OIf8S@P0
+R2
+R0
+w1574217302
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/id.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/id.v
+R10
+R3
+r1
+!s85 0
+31
+R15
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/id.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/id.v|
+!i113 1
+R5
+R12
+R7
+vid_ex
+R13
+!i10b 1
+!s100 P3oz]POgC4jh;f;K]gnkn2
+I>gZ6:SRZH6mfZ5lCM0g8X3
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/id_ex.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/id_ex.v
+R14
+R3
+r1
+!s85 0
+31
+R15
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/id_ex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/id_ex.v|
+!i113 1
+R5
+R12
+R7
+vif_id
+R13
+!i10b 1
+!s100 9k2NGf2EF:ZzgB@@Qk]eF0
+I6<i_7=;a@cbQ@B7?zYVnh3
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/if_id.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/if_id.v
+Z16 L0 38
+R3
+r1
+!s85 0
+31
+Z17 !s108 1574645796.000000
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/if_id.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/if_id.v|
+!i113 1
+R5
+R12
+R7
+vip_pll
+Z18 !s110 1574645793
+!i10b 1
+!s100 8j3IGmXbZm<mP=K6o8HUG1
+IIN:GTWZQBR;cT[mmE<j?;1
+R2
+R0
+w1573644482
+8F:/undergraduate_thesis/wishbone_cyc10/ip_pll.v
+FF:/undergraduate_thesis/wishbone_cyc10/ip_pll.v
+Z19 L0 39
+R3
+r1
+!s85 0
+31
+Z20 !s108 1574645793.000000
+!s107 F:/undergraduate_thesis/wishbone_cyc10/ip_pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/ip_pll.v|
+!i113 1
+R5
+R6
+R7
+vip_pll_altpll
+R18
+!i10b 1
+!s100 I`^N4SW2Rz:iMUnGdY4iz3
+Ib[?GKo3JGFE9XMMo^>W^S2
+R2
+R0
+w1573644543
+8F:/undergraduate_thesis/wishbone_cyc10/db/ip_pll_altpll.v
+FF:/undergraduate_thesis/wishbone_cyc10/db/ip_pll_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+R20
+!s107 F:/undergraduate_thesis/wishbone_cyc10/db/ip_pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/db|F:/undergraduate_thesis/wishbone_cyc10/db/ip_pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/wishbone_cyc10/db
+R7
+vip_ram
+R18
+!i10b 1
+!s100 Lflgo0>6Y6m90_DoDEA9P2
+Ic]0b;<`2SNSzPSdSSfOE22
+R2
+R0
+w1574482248
+8F:/undergraduate_thesis/wishbone_cyc10/ip_ram.v
+FF:/undergraduate_thesis/wishbone_cyc10/ip_ram.v
+R19
+R3
+r1
+!s85 0
+31
+R20
+!s107 F:/undergraduate_thesis/wishbone_cyc10/ip_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/ip_ram.v|
+!i113 1
+R5
+R6
+R7
+vip_rom
+R18
+!i10b 1
+!s100 gNg7YmggodaU5MF5d:5XR2
+I<?c2IznDRf6AIVVf?[<TN1
+R2
+R0
+w1574641788
+8F:/undergraduate_thesis/wishbone_cyc10/ip_rom.v
+FF:/undergraduate_thesis/wishbone_cyc10/ip_rom.v
+R19
+R3
+r1
+!s85 0
+31
+R20
+!s107 F:/undergraduate_thesis/wishbone_cyc10/ip_rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/ip_rom.v|
+!i113 1
+R5
+R6
+R7
+vled_wishbone
+R8
+!i10b 1
+!s100 bYKcj7cmb0e7jl]HYWEhC3
+ISZI_I]`]>=8Ro`l2o3@OW0
+R2
+R0
+w1574345700
+8F:/undergraduate_thesis/wishbone_cyc10/led_wishbone.v
+FF:/undergraduate_thesis/wishbone_cyc10/led_wishbone.v
+L0 3
+R3
+r1
+!s85 0
+31
+R11
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/led_wishbone.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/led_wishbone.v|
+!i113 1
+R5
+R6
+R7
+vLLbit_reg
+Z21 !s110 1574645796
+!i10b 1
+!s100 2E77Q1KcY>Da:@zB5YYeI3
+I8z[NW3[PKHTI0CQG3jH]N2
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/llbit_reg.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/llbit_reg.v
+R14
+R3
+r1
+!s85 0
+31
+R17
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/llbit_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/llbit_reg.v|
+!i113 1
+R5
+R12
+R7
+n@l@lbit_reg
+vmem
+R21
+!i10b 1
+!s100 mT6>8;eYU;JeDRJ?n?EgN3
+I[5LTB^;T@zVbcFkc9IIm]2
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/mem.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/mem.v
+R14
+R3
+r1
+!s85 0
+31
+R17
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/mem.v|
+!i113 1
+R5
+R12
+R7
+vmem_wb
+R21
+!i10b 1
+!s100 _EU`NLSIcZXf<2<T9:eZV2
+Imf>`j2O0E>N0NTakD;6613
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/mem_wb.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/mem_wb.v
+R14
+R3
+r1
+!s85 0
+31
+R17
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/mem_wb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/mem_wb.v|
+!i113 1
+R5
+R12
+R7
+vmmu_conv
+R21
+!i10b 1
+!s100 4lf<Nl=YlWcQZemQ8XT=W3
+ISj2@580l[G>W>9JO1AEWT1
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/mmu_conv.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/mmu_conv.v
+R14
+R3
+r1
+!s85 0
+31
+R17
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/mmu_conv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/mmu_conv.v|
+!i113 1
+R5
+R12
+R7
+vopenriscv
+R21
+!i10b 1
+!s100 _NTi07zWXNCNOolkQcQ?;1
+IC0@`UeAAko=]RW=[RNIf32
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/openriscv.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/openriscv.v
+R14
+R3
+r1
+!s85 0
+31
+R17
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/openriscv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/openriscv.v|
+!i113 1
+R5
+R12
+R7
+vpc_reg
+R21
+!i10b 1
+!s100 M4:AH=b193l:QNmhId0HX0
+I6zc=_lUUOm@A@QI7c`W0P0
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/pc_reg.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/pc_reg.v
+R16
+R3
+r1
+!s85 0
+31
+R17
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/pc_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/pc_reg.v|
+!i113 1
+R5
+R12
+R7
+vphy_bus_addr_conv
+R1
+!i10b 1
+!s100 nTRDQM2NJX7E[e`?;H`6]2
+ITHEdDoe_IGFlkHjW`egIB3
+R2
+R0
+w1574574919
+8F:/undergraduate_thesis/wishbone_cyc10/phy_bus_addr_conv.v
+FF:/undergraduate_thesis/wishbone_cyc10/phy_bus_addr_conv.v
+L0 62
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/phy_bus_addr_conv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/phy_bus_addr_conv.v|
+!i113 1
+R5
+R6
+R7
+vram_wishbone
+R1
+!i10b 1
+!s100 >FU1dn0:AEDcz`ih;UfzJ1
+IiJKRNUdKz6GUQn9l>?AdN3
+R2
+R0
+w1574482980
+8F:/undergraduate_thesis/wishbone_cyc10/ram_wishbone.v
+FF:/undergraduate_thesis/wishbone_cyc10/ram_wishbone.v
+L0 3
+R3
+r1
+!s85 0
+31
+R20
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/ram_wishbone.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/ram_wishbone.v|
+!i113 1
+R5
+R6
+R7
+vregfile
+R21
+!i10b 1
+!s100 9n_@]acJ]B1Q>QNoe[6z50
+IUY^ghO5]i8RO_zjk;[dG`0
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/regfile.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/regfile.v
+R14
+R3
+r1
+!s85 0
+31
+Z22 !s108 1574645795.000000
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/regfile.v|
+!i113 1
+R5
+R12
+R7
+vrom_wishbone
+R18
+!i10b 1
+!s100 1OK?o<XBIm;V`lT?PC2XX1
+IRZa1HLg[K7`3W456CYFN21
+R2
+R0
+w1574482961
+8F:/undergraduate_thesis/wishbone_cyc10/rom_wishbone.v
+FF:/undergraduate_thesis/wishbone_cyc10/rom_wishbone.v
+L0 3
+R3
+r1
+!s85 0
+31
+R20
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/rom_wishbone.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/rom_wishbone.v|
+!i113 1
+R5
+R6
+R7
+vwb_conmax_arb
+Z23 !s110 1574645795
+!i10b 1
+!s100 KDD5ifon^A4TOA0B=P]T40
+I49n70XGI3VW5HUCjTlhSo2
+R2
+R0
+Z24 w1573543480
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_arb.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_arb.v
+L0 63
+R3
+r1
+!s85 0
+31
+R22
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_arb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_arb.v|
+!i113 1
+R5
+Z25 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax
+R7
+vwb_conmax_master_if
+R23
+!i10b 1
+!s100 2QXT;Vea`JCOAkcSje72<1
+IKYi]4<h@S4=?GI8DiCXih1
+R2
+R0
+R24
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v
+Z26 L0 61
+R3
+r1
+!s85 0
+31
+R22
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v|
+!i113 1
+R5
+R25
+R7
+vwb_conmax_msel
+R23
+!i10b 1
+!s100 P<8BID9@^MQf]c_W0N6n;1
+Ia>Sc^17^D5E^lOg^SM>M[1
+R2
+R0
+R24
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_msel.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_msel.v
+R26
+R3
+r1
+!s85 0
+31
+R22
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_msel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_msel.v|
+!i113 1
+R5
+R25
+R7
+vwb_conmax_pri_dec
+R23
+!i10b 1
+!s100 F?cJb`zB9Om3SSYHgeZmz0
+IT?XnC9T39OQ5K[7PQ;oj^1
+R2
+R0
+R24
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v
+R26
+R3
+r1
+!s85 0
+31
+R22
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v|
+!i113 1
+R5
+R25
+R7
+vwb_conmax_pri_enc
+R23
+!i10b 1
+!s100 VVPk_hZ`2M8JdHXDcn03Z3
+Izz^V8WF7hoNWJBSM?9Q>E0
+R2
+R0
+R24
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v
+R26
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v|
+!i113 1
+R5
+R25
+R7
+vwb_conmax_rf
+R1
+!i10b 1
+!s100 l>e_YWVaiUPD]=2I6?mkJ0
+IaJ03e51Mi1^GHJCJF;zlm1
+R2
+R0
+R24
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_rf.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_rf.v
+R26
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_rf.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_rf.v|
+!i113 1
+R5
+R25
+R7
+vwb_conmax_slave_if
+R1
+!i10b 1
+!s100 @h607nU2jgEh9F3GlZ;Ge3
+IJCB]Y:TH56TlFLeFIVc_l0
+R2
+R0
+R24
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v
+R26
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v|
+!i113 1
+R5
+R25
+R7
+vwb_conmax_top
+R1
+!i10b 1
+!s100 cDWSL^Qjk6Ea<a`_^KM7X2
+IlPozkdFiZ5LiazNBJK:M_0
+R2
+R0
+R24
+8F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_top.v
+FF:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_top.v
+R26
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/wishbone_cyc10/wb_conmax/wb_conmax_top.v|
+!i113 1
+R5
+R25
+R7
+vwishbone_bus_if
+R23
+!i10b 1
+!s100 hWQQ]8l8Sa5Ol[DkB9oob3
+IM4lAOJc8Em5oYo6CTcIjB1
+R2
+R0
+R9
+8F:/undergraduate_thesis/wishbone_cyc10/cpu/wishbone_bus_if.v
+FF:/undergraduate_thesis/wishbone_cyc10/cpu/wishbone_bus_if.v
+R16
+R3
+r1
+!s85 0
+31
+R22
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/cpu/wishbone_bus_if.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/cpu|F:/undergraduate_thesis/wishbone_cyc10/cpu/wishbone_bus_if.v|
+!i113 1
+R5
+R12
+R7
+vwishbone_soc
+R18
+!i10b 1
+!s100 E0o[4dO@DhHe7^fBOX;GD3
+ITeLm5DX4NBYLcL3<II[7N1
+R2
+R0
+w1574641690
+8F:/undergraduate_thesis/wishbone_cyc10/wishbone_soc.v
+FF:/undergraduate_thesis/wishbone_cyc10/wishbone_soc.v
+L0 40
+R3
+r1
+!s85 0
+31
+R20
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/wishbone_soc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/wishbone_soc.v|
+!i113 1
+R5
+R6
+R7
+vwishbone_soc_vlg_tst
+R8
+!i10b 1
+!s100 ZiaVNIUc@IbiO5T_@8mDZ1
+I]Q0HhJ36RUe]>XcWjNlHF2
+R2
+R0
+w1574345857
+8F:/undergraduate_thesis/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt
+FF:/undergraduate_thesis/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R11
+!s107 F:/undergraduate_thesis/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10/simulation/modelsim|F:/undergraduate_thesis/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/wishbone_cyc10/simulation/modelsim
+R7
+vwishbone_uart_lite
+R8
+!i10b 1
+!s100 A<CUz4V9[7RJ06Q_aHc=B2
+IVn^3KLhQgEdFK[i8TfZe<0
+R2
+R0
+w1574645772
+8F:/undergraduate_thesis/wishbone_cyc10/wishbone_uart_lite.v
+FF:/undergraduate_thesis/wishbone_cyc10/wishbone_uart_lite.v
+L0 20
+R3
+r1
+!s85 0
+31
+R11
+!s107 F:/undergraduate_thesis/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/wishbone_cyc10/wishbone_uart_lite.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/wishbone_cyc10|F:/undergraduate_thesis/wishbone_cyc10/wishbone_uart_lite.v|
+!i113 1
+R5
+R6
+R7
