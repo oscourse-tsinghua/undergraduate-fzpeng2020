@@ -6,7 +6,7 @@
 _start:
 # zero-initialize register file
 addi x1, zero, 0
-li   x2, 0x9000
+li   x2, 0x300000
 addi x3, zero, 0
 addi x4, zero, 0
 addi x5, zero, 0

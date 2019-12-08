@@ -63,41 +63,41 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 CHIP  "wishbone_cycy10_soc"  ASSIGNED TO AN: 10CL016YU256C8G
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
+sdr_cs_n_o                   : A2        : output : 2.5 V             :         : 8         : Y              
+sdr_ras_n_o                  : A3        : output : 2.5 V             :         : 8         : Y              
+sdr_dq_io[5]                 : A4        : bidir  : 2.5 V             :         : 8         : Y              
+sdr_dq_io[1]                 : A5        : bidir  : 2.5 V             :         : 8         : Y              
+sdr_dq_io[0]                 : A6        : bidir  : 2.5 V             :         : 8         : Y              
+sdr_dq_io[6]                 : A7        : bidir  : 2.5 V             :         : 8         : Y              
 GND+                         : A8        :        :                   :         : 8         :                
 GND+                         : A9        :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
+sdr_cke_o                    : A10       : output : 2.5 V             :         : 7         : Y              
+sdr_dqm_o[1]                 : A11       : output : 2.5 V             :         : 7         : Y              
+sdr_dq_io[13]                : A12       : bidir  : 2.5 V             :         : 7         : Y              
+sdr_dq_io[11]                : A13       : bidir  : 2.5 V             :         : 7         : Y              
+sdr_dq_io[12]                : A14       : bidir  : 2.5 V             :         : 7         : Y              
+sdr_dq_io[8]                 : A15       : bidir  : 2.5 V             :         : 7         : Y              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 led[0]                       : B1        : output : 2.5 V             :         : 1         : Y              
 GND                          : B2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
+sdr_we_n_o                   : B3        : output : 2.5 V             :         : 8         : Y              
+sdr_dq_io[7]                 : B4        : bidir  : 2.5 V             :         : 8         : Y              
+sdr_dq_io[3]                 : B5        : bidir  : 2.5 V             :         : 8         : Y              
+sdr_dq_io[4]                 : B6        : bidir  : 2.5 V             :         : 8         : Y              
+sdr_dq_io[2]                 : B7        : bidir  : 2.5 V             :         : 8         : Y              
 GND+                         : B8        :        :                   :         : 8         :                
 GND+                         : B9        :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
+sdr_clk_o                    : B10       : output : 2.5 V             :         : 7         : Y              
+sdr_dq_io[9]                 : B11       : bidir  : 2.5 V             :         : 7         : Y              
+sdr_dq_io[15]                : B12       : bidir  : 2.5 V             :         : 7         : Y              
+sdr_dq_io[14]                : B13       : bidir  : 2.5 V             :         : 7         : Y              
+sdr_dq_io[10]                : B14       : bidir  : 2.5 V             :         : 7         : Y              
 GND                          : B15       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
@@ -105,15 +105,15 @@ led[1]                       : C2        : output : 2.5 V             :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
 VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
+sdr_addr_o[10]               : C6        : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
+sdr_dqm_o[0]                 : C8        : output : 2.5 V             :         : 8         : Y              
+sdr_cas_n_o                  : C9        : output : 2.5 V             :         : 7         : Y              
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
+sdr_addr_o[11]               : C11       : output : 2.5 V             :         : 7         : Y              
 GND                          : C12       : gnd    :                   :         :           :                
 VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
+sdr_addr_o[8]                : C14       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
 led[2]                       : D1        : output : 2.5 V             :         : 1         : Y              
@@ -121,12 +121,12 @@ led[2]                       : D1        : output : 2.5 V             :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 8         :                
 VCCD_PLL3                    : D4        : power  :                   : 1.2V    :           :                
 GND                          : D5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
+sdr_addr_o[2]                : D6        : output : 2.5 V             :         : 8         : Y              
 GND                          : D7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 7         :                
+sdr_addr_o[0]                : D8        : output : 2.5 V             :         : 8         : Y              
+sdr_addr_o[3]                : D9        : output : 2.5 V             :         : 7         : Y              
 GND                          : D10       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 7         :                
+sdr_addr_o[5]                : D11       : output : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
 VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
@@ -137,12 +137,12 @@ GND+                         : E2        :        :                   :         
 VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
 GND                          : E4        : gnd    :                   :         :           :                
 GNDA3                        : E5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 7         :                
+sdr_addr_o[1]                : E6        : output : 2.5 V             :         : 8         : Y              
+sdr_ba_o[1]                  : E7        : output : 2.5 V             :         : 8         : Y              
+sdr_ba_o[0]                  : E8        : output : 2.5 V             :         : 8         : Y              
+sdr_addr_o[4]                : E9        : output : 2.5 V             :         : 7         : Y              
+sdr_addr_o[9]                : E10       : output : 2.5 V             :         : 7         : Y              
+sdr_addr_o[7]                : E11       : output : 2.5 V             :         : 7         : Y              
 GNDA2                        : E12       : gnd    :                   :         :           :                
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
@@ -156,7 +156,7 @@ VCCA3                        : F5        : power  :                   : 2.5V    
 GND                          : F6        : gnd    :                   :         :           :                
 VCCINT                       : F7        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 7         :                
+sdr_addr_o[6]                : F9        : output : 2.5 V             :         : 7         : Y              
 GND                          : F10       : gnd    :                   :         :           :                
 VCCINT                       : F11       : power  :                   : 1.2V    :           :                
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                

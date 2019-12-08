@@ -47,7 +47,7 @@ module wishbone_soc(
 	inout wire[15:0] flash_data,
 	output wire[0:7] flash_signal,
 */
-	`ifndef onchip_ram
+	`ifndef Simulation
 	output wire sdr_clk_o,
    output wire sdr_cs_n_o,
    output wire sdr_cke_o,
@@ -75,13 +75,13 @@ module wishbone_soc(
 	// wishbone 时钟
 	wire wishbone_clk;
 	assign reset_n = lock & rst_n;
+	assign sdr_clk_o = wishbone_clk;
 	
 	ip_pll ip_pll0(
 		.areset(!rst_n),
 		.inclk0(clk),
 		.c0(wishbone_clk), //30Mhz
 		.c1(cpu_clk),		 //10Mhz		
-		.c2(sdr_clk_o),	 //133Mhz
 		.locked(lock)
 	);
 	
@@ -176,7 +176,14 @@ module wishbone_soc(
 	wire       s1_stb_o;
 	wire       s1_ack_i;
 	
-	wishbone_uart_lite wishbone_uart_lite0(
+	wishbone_uart_lite #(
+		.ClkFreq(25000000),
+	`ifdef Simulation
+		.BoundRate(2500000)
+	`else
+		.BoundRate(115200)
+	`endif
+	) wishbone_uart_lite0(
 		.clk(wishbone_clk),
 		.resetn(reset_n),	
 		.wishbone_addr_i(s1_addr_o),
@@ -322,7 +329,7 @@ module wishbone_soc(
 	wire       s6_stb_o;
 	wire       s6_ack_i;	
 
-	`ifdef onchip_ram 
+	`ifdef Simulation
 	ram_wishbone ram_wishbone0(
 		.clk(wishbone_clk),		// max. 50 MHz
 		.rst_n(reset_n),	
@@ -370,13 +377,13 @@ module wishbone_soc(
      .cfg_sdr_en(1'b1),
      .cfg_sdr_mode_reg(13'b0000000110001),
      .cfg_sdr_tras_d(4'b1000),
-     .cfg_sdr_trp_d(4'b0100),
-     .cfg_sdr_trcd_d(4'b0100),
+     .cfg_sdr_trp_d(4'b0010),
+     .cfg_sdr_trcd_d(4'b0010),
      .cfg_sdr_cas(3'b100),
-     .cfg_sdr_trcar_d(4'b1100),
+     .cfg_sdr_trcar_d(4'b1010),
      .cfg_sdr_twr_d(4'b0010),
-     .cfg_sdr_rfsh(12'b110000110101),
-	  .cfg_sdr_rfmax(3'b001),
+     .cfg_sdr_rfsh(12'b011101010011),
+	  .cfg_sdr_rfmax(3'b100),
 	  .cfg_sdr_width(2'b01),
      .cfg_colbits(2'b00)
   );

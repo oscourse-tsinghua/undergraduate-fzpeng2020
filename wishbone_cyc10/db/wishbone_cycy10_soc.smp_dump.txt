@@ -879,8 +879,64 @@ state.grant5 0 0 1 0 0 0 0 1
 state.grant6 0 1 0 0 0 0 0 1 
 state.grant7 1 0 0 0 0 0 0 1 
 
+State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_xfr_ctl:u_xfr_ctl|mgmt_st
+Name mgmt_st.111 mgmt_st.110 mgmt_st.101 mgmt_st.100 mgmt_st.011 mgmt_st.010 mgmt_st.001 mgmt_st.000 
+mgmt_st.000 0 0 0 0 0 0 0 0 
+mgmt_st.001 0 0 0 0 0 0 1 1 
+mgmt_st.010 0 0 0 0 0 1 0 1 
+mgmt_st.011 0 0 0 0 1 0 0 1 
+mgmt_st.100 0 0 0 1 0 0 0 1 
+mgmt_st.101 0 0 1 0 0 0 0 1 
+mgmt_st.110 0 1 0 0 0 0 0 1 
+mgmt_st.111 1 0 0 0 0 0 0 1 
+
+State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_xfr_ctl:u_xfr_ctl|xfr_st
+Name xfr_st.11 xfr_st.10 xfr_st.01 xfr_st.00 
+xfr_st.00 0 0 0 0 
+xfr_st.01 0 0 1 1 
+xfr_st.10 0 1 0 1 
+xfr_st.11 1 0 0 1 
+
+State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank3_fsm|bank_st
+Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
+bank_st.000 0 0 0 0 0 
+bank_st.001 0 0 1 1 0 
+bank_st.010 0 1 0 1 0 
+bank_st.011 1 0 0 1 0 
+bank_st.100 0 0 0 1 1 
+
+State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank2_fsm|bank_st
+Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
+bank_st.000 0 0 0 0 0 
+bank_st.001 0 0 1 1 0 
+bank_st.010 0 1 0 1 0 
+bank_st.011 1 0 0 1 0 
+bank_st.100 0 0 0 1 1 
+
+State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank1_fsm|bank_st
+Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
+bank_st.000 0 0 0 0 0 
+bank_st.001 0 0 1 1 0 
+bank_st.010 0 1 0 1 0 
+bank_st.011 1 0 0 1 0 
+bank_st.100 0 0 0 1 1 
+
+State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank0_fsm|bank_st
+Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
+bank_st.000 0 0 0 0 0 
+bank_st.001 0 0 1 1 0 
+bank_st.010 0 1 0 1 0 
+bank_st.011 1 0 0 1 0 
+bank_st.100 0 0 0 1 1 
+
+State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_req_gen:u_req_gen|req_st
+Name req_st.00 req_st.10 req_st.01 
+req_st.00 0 0 0 
+req_st.01 1 0 1 
+req_st.10 1 1 0 
+
 State Machine - |wishbone_soc|wishbone_uart_lite:wishbone_uart_lite0|state
-Name state.state_req state.state_ok state.state_idle 
-state.state_idle 0 0 0 
-state.state_req 1 0 1 
-state.state_ok 0 1 1 
+Name state.StateReq state.StateOk state.StateIdle 
+state.StateIdle 0 0 0 
+state.StateReq 1 0 1 
+state.StateOk 0 1 1 

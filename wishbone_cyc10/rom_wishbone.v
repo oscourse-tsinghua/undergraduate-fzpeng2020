@@ -14,7 +14,7 @@ module rom_wishbone (
 );
 
 ip_rom ip_rom0 (
-	.address		(wishbone_addr_i[13:2]),
+	.address		(wishbone_addr_i[15:2]),
 	.clock		(clk),	
 	.q				(wishbone_data_o)
 );

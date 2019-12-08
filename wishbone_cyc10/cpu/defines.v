@@ -1,6 +1,7 @@
 // define RV32 for 32 bits, or ISA is 64 bits
 `define RV32
-`define onchip_ram 1'b1
+`define Simulation
+
 //ȫ��
 `define RstEnable 1'b0
 `define RstDisable 1'b1
@@ -432,7 +433,9 @@
 `endif
 
 /* medeleg */
-`define CSR_medeleg_bus 11:0
+// modified
+//`define CSR_medeleg_bus 11:0
+`define CSR_medeleg_bus 15:0
 `define CSR_medeleg_INST_MISALIGNED_bus    0:0
 `define CSR_medeleg_INST_ACCESS_FAULT_bus  1:1
 `define CSR_medeleg_INST_ILLEGAL_bus       2:2

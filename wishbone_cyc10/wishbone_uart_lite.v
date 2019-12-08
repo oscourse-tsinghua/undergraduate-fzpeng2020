@@ -17,7 +17,10 @@
  *
  */
 `include "cpu/defines.v"
-module wishbone_uart_lite (
+module wishbone_uart_lite #(
+	parameter ClkFreq   = 25000000,
+	parameter BoundRate = 115200
+)(
 	input clk,
 	input resetn,
 
@@ -34,11 +37,11 @@ module wishbone_uart_lite (
 	output							  wishbone_ack_o
 
 );
-	localparam cfg_divider = 260;
-	localparam state_idle = 2'b00;
-	localparam state_req  = 2'b01;
-	localparam state_wait = 2'b10;
-	localparam state_ok	 = 2'b11;
+	localparam CfgDivder = ClkFreq/BoundRate;
+	localparam StateIdle = 2'b00;
+	localparam StateReq  = 2'b01;
+	localparam StateWait = 2'b10;
+	localparam StateOk	= 2'b11;
 	
 	reg [9:0] send_pattern;
 	reg [3:0] send_bitcnt;
@@ -46,18 +49,19 @@ module wishbone_uart_lite (
 	reg [1:0] state;
 	
 	wire req = wishbone_cyc_i && wishbone_stb_i && wishbone_we_i;
-	assign wishbone_ack_o = state == state_ok ? 1'b1 : 1'b0;
+	assign wishbone_ack_o = state == StateOk ? 1'b1 : 1'b0;
 	assign wishbone_data_o = 32'b0;
 	assign ser_tx = send_pattern[0];
 	
 	always @(posedge clk) begin
 		if(resetn == `RstEnable) begin
-			state <= state_idle;
+			state <= StateIdle;
+			send_pattern[0] = 1'b1;
 		end else begin
 		case(state)
-			state_idle: begin
+			StateIdle: begin
 				if(req) begin
-					state <= state_req;
+					state <= StateReq;
 					send_pattern <= {1'b1, wishbone_data_i[7:0], 1'b0};
 					send_bitcnt <= 10;
 					send_divcnt <= 0;
@@ -67,10 +71,10 @@ module wishbone_uart_lite (
 					send_divcnt <= 0;
 				end
 			end
-			state_req: begin
+			StateReq: begin
 				if(send_bitcnt == 0) begin
-					state <= state_ok;
-				end else if(send_divcnt > cfg_divider) begin
+					state <= StateOk;
+				end else if(send_divcnt >= CfgDivder) begin
 					send_pattern <= {1'b1, send_pattern[9:1]};
 					send_bitcnt <= send_bitcnt - 1;
 					send_divcnt <= 0;
@@ -78,8 +82,9 @@ module wishbone_uart_lite (
 					send_divcnt = send_divcnt + 1;
 				end
 			end
-			state_ok: begin
-				state <= state_idle;
+			StateOk: begin
+				state <= StateIdle;
+				send_pattern[0] = 1'b1;
 			end
 		endcase
 		end
@@ -101,7 +106,7 @@ module wishbone_uart_lite (
 				send_bitcnt <= 10;
 				send_divcnt <= 0;
 			end else
-			if (send_divcnt > cfg_divider && send_bitcnt) begin
+			if (send_divcnt > CfgDivder && send_bitcnt) begin
 				send_pattern <= {1'b1, send_pattern[9:1]};
 				send_bitcnt <= send_bitcnt - 1;
 				send_divcnt <= 0;

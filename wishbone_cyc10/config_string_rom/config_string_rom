@@ -1,9 +1,9 @@
 // FBI Warning: do NOT modify, this file was auto generated
 
-assign mem[0] = 32'h30000537;
-assign mem[1] = 32'h00f06593;
-assign mem[2] = 32'h00b52023;
-assign mem[3] = 32'h7f50206f;
+assign mem[0] = 32'h0000f06f;
+assign mem[1] = 32'h00000000;
+assign mem[2] = 32'h00000000;
+assign mem[3] = 32'h00000000;
 assign mem[4] = 32'h00000000;
 assign mem[5] = 32'h00000000;
 assign mem[6] = 32'h00000000;

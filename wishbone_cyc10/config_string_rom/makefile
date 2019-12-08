@@ -18,8 +18,8 @@ Bin2Mem: Bin2Mem.c
 	gcc $< -o $@
 %.v: %.bin Bin2Mem
 	./Bin2Mem -f $< -o $@
-config_string_rom:
-	cp config_string_rom.v config_string_rom
+config_string_rom: config_string_rom.v
+	cp $< $@
 
 clean:
-	rm -f *.o *.om *.bin *.data *.mif *.v *.asm Bin2Mem
+	rm -f *.o *.om *.bin *.data *.mif *.v *.asm Bin2Mem config_string_rom

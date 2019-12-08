@@ -12,26 +12,23 @@
 int main()
 {
 	reg_gpio = 0x11;
-	char greet[] = "Booting......\n\r.";
 	int i = 0;
-	int j = 0;
-	char tmp;
-	
+	int test_ram[10000];
+	char greet[] = "Booting...... Testing for ram by ZhipengFan.\n\r";
+	char *p;	
+	for(i = 0 ; i < 10000; i++) {
+		test_ram[i] = i;
+	}
 //	reg_seg1 = ( uart_divisor >> 8 ) & 15;
 //	reg_seg2 = ( uart_divisor >> 4 ) & 15;
 //	for(i = 0; i < 1000000; i++);
 //	reg_seg1 = ( uart_divisor >> 4 ) & 15;
 //	reg_seg2 = ( uart_divisor >> 0 ) & 15;
 		
+	p = greet;
+	while( uart_tx = *p++);
+	for(i = 0 ; i < 10000; i++) uart_tx = (char)test_ram[i];
+    while(1);
 
-	while(1) {		
-		for(j = 0; j < 15; j++) {
-			uart_tx = greet[j];
-			reg_gpio = 255 >> j;
-			
-			// test 5th bit in uart_ls 
-		}
-	}
-	
 	return 0;
 }

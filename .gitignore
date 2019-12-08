@@ -1,1 +1,6 @@
 *.o
+*.ddb
+*.tdb
+*.jic
+*.sof
+*.pof
