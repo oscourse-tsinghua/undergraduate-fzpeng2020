@@ -3,7 +3,6 @@ SHELL = bash
 
 TEST_OBJS = $(addsuffix .o,$(basename $(wildcard test/*.S)))
 
-# FIRMWARE_OBJS = firmware/start.o firmware/irq.o firmware/print.o firmware/sieve.o firmware/multest.o firmware/stats.o
 FIRMWARE_OBJS = firmware/start.o
 
 GCC_WARNS  = -Werror -Wall -Wextra -Wshadow -Wundef -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings
