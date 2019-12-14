@@ -1,16 +1,17 @@
+.globl __start
+__start:
 .org 0x0
-#"j 0x20000"
-j 0x10000
-.org 0x020
-#.long 0x00001020
+j 0x20000   #jump to load bootloader
+
+.org 0x00c
+.long 0x00001020
 .long 0x0
 .long 0x0
 .long 0x0
 .long 0x0
-/*
 .ascii "platform {\n"
-.ascii "  vendor shyoshyo;\n"
-.ascii "  arch reiko;\n"
+.ascii "  ;\n"
+.ascii "  ;\n"
 .ascii "};\n"
 .ascii "rtc {\n"
 .ascii "  addr 0x40000000;\n"
@@ -18,14 +19,14 @@ j 0x10000
 .ascii "ram {\n"
 .ascii "  0 {\n"
 .ascii "    addr 0x80000000;\n"
-.ascii "    size 0x00800000;\n"
+.ascii "    size 0x00400000;\n"
 .ascii "  };\n"
 .ascii "};\n"
 .ascii "uart {\n"
 .ascii "  0 {\n"
-.ascii "    addr 0xbfd003f8;\n"
+.ascii "    addr 0x00200000;\n"
 .ascii "    type UART16550IPCore;\n"
-.ascii "    divclk 55;\n"
+.ascii "    divclk 38;\n"
 .ascii "  };\n"
 .ascii "};\n"
 .ascii "core {\n"
@@ -38,6 +39,5 @@ j 0x10000
 .ascii "  };\n"
 .ascii "};\n"
 .byte 0x0
-*/
+.org 0x3ec
 
-.org 0x0ec

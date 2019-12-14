@@ -22,8 +22,8 @@ void inttohex(int aa)
 
 int main() {
     FILE *fpr, *fpw;
-    fpr = fopen("firmware/firmware.coe", "r");
-    fpw = fopen("firmware/firmware.hex", "w");
+    fpr = fopen("firmware/firmware_test.coe", "r");
+    fpw = fopen("firmware/firmware_test.hex", "w");
 
     int sum = 0;
     int prioty = 0;

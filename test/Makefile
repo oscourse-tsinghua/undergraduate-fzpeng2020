@@ -14,7 +14,7 @@ TOOLCHAIN_PREFIX = riscv32-unknown-elf-
 all: firmware.hex firmware/firmware.d copy 
 
 copy: firmware/firmware.hex
-	cp $< ../../wishbone_cyc10/simulation/modelsim/
+	cp $< ../wishbone_cyc10/
 
 firmware.hex: firmware/firmware.coe
 	./coe2hex
@@ -36,12 +36,29 @@ firmware/firmware.elf: $(FIRMWARE_OBJS) $(TEST_OBJS) firmware/sections.lds
 firmware/start.o: firmware/start.S
 	$(TOOLCHAIN_PREFIX)gcc -c -march=rv32im -o $@ $<
 
+firmware_test: firmware_test.hex copy_test
+
+copy_test: firmware/firmware_test.hex
+	cp $< ../wishbone_cyc10/firmware.hex
+
+firmware_test.hex: firmware/firmware_test.coe
+	./coe2hex_test
+
+firmware/firmware_test.d: firmware/firmware.elf
+	$(TOOLCHAIN_PREFIX)objdump -d $< > $@
+
+firmware/firmware_test.coe: firmware/firmware_test.bin
+	./bin2coe.py 32 < firmware/firmware_test.bin > firmware/firmware_test.coe
+
+firmware/firmware_test.bin: firmware/firmware_test.elf
+	$(TOOLCHAIN_PREFIX)objcopy -O binary $< $@
+
 
 test/%.o: test/%.S test/riscv_test.h test/test_macros.h
 	$(TOOLCHAIN_PREFIX)gcc -c -march=rv32im -o $@ -DTEST_FUNC_NAME=$(notdir $(basename $<)) \
 		-DTEST_FUNC_TXT='"$(notdir $(basename $<))"' -DTEST_FUNC_RET=$(notdir $(basename $<))_ret $<
 
 clean:	
-	rm -vrf $(FIRMWARE_OBJS) $(TEST_OBJS) firmware/firmware.elf firmware/firmware.bin firmware/firmware.hex firmware/firmware.map firmware/firmware.d ../../wishbone_cyc10/simulation/modelsim/firmware.hex 
+	rm -vrf $(FIRMWARE_OBJS) $(TEST_OBJS) firmware/firmware.elf firmware/firmware.bin firmware/firmware.hex firmware/firmware.map firmware/firmware.d ../wishbone_cyc10/firmware.hex firmware/firmware_test* 
 
 .PHONY:  clean
