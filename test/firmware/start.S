@@ -92,7 +92,8 @@ _start:
 	.global n ## _ret; \
 	n ## _ret:
 #endif
-	
+
+#ifdef RV32UI
 	TEST(lui)
 	TEST(auipc)
 	TEST(j)
@@ -143,12 +144,26 @@ _start:
 	TEST(mulhu)
 	TEST(mul)
 
-	//TEST(div)
-	//TEST(divu)
-	//TEST(rem)
-	//TEST(remu)
+	TEST(div)
+	TEST(divu)
+	TEST(rem)
+	TEST(remu)
 
 	TEST(simple)
+#endif
+
+#ifdef RV32UA
+	TEST(amoadd_w)
+	TEST(amoand_w)
+	TEST(amomaxu_w)
+	TEST(amomax_w)
+	TEST(amominu_w)
+	TEST(amomin_w)
+	TEST(amoor_w)
+	TEST(amoswap_w)
+	TEST(amoxor_w)
+	TEST(lrsc)
+#endif
 
 	/* set stack pointer */
 	lui sp,(64*1024)>>12

@@ -48,16 +48,16 @@ module wishbone_soc(
 	output wire[0:7] flash_signal,
 */
 	`ifndef Simulation
-	output wire sdr_clk_o,
-   output wire sdr_cs_n_o,
-   output wire sdr_cke_o,
-   output wire sdr_ras_n_o,
-   output wire sdr_cas_n_o,
-   output wire sdr_we_n_o,
-   output wire[1:0] sdr_dqm_o,
-   output wire[1:0] sdr_ba_o,
-   output wire[11:0] sdr_addr_o,
-   inout wire[15:0] sdr_dq_io,
+	output wire 			sdr_clk_o,
+   output wire 			sdr_cs_n_o,
+   output wire		   	sdr_cke_o,
+   output wire 			sdr_ras_n_o,
+   output wire 			sdr_cas_n_o,
+   output wire 			sdr_we_n_o,
+   output wire [1:0] 	sdr_dqm_o,
+   output wire [1:0] 	sdr_ba_o,
+   output wire	[11:0]   sdr_addr_o,
+   inout  wire	[15:0]   sdr_dq_io,
 	`endif
 	// UART
 	input wire uart_rxd_i,

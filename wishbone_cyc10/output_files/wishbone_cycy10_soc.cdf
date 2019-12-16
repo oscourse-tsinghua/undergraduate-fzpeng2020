@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10CL016YU256) Path("F:/undergraduate_thesis/wishbone_cyc10/output_files/") File("wishbone_cycy10_soc.sof") MfrSpec(OpMask(1));
+		Device PartName(10CL016YU256) Path("F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/output_files/") File("wishbone_cycy10_soc.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

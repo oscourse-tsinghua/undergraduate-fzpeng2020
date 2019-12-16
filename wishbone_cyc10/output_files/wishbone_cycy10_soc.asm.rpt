@@ -1,5 +1,5 @@
 Assembler report for wishbone_cycy10_soc
-Fri Dec 06 21:53:16 2019
+Mon Dec 16 12:58:10 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: F:/undergraduate_thesis/wishbone_cyc10/output_files/wishbone_cycy10_soc.sof
+  5. Assembler Device Options: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/output_files/wishbone_cycy10_soc.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Dec 06 21:53:16 2019 ;
+; Assembler Status      ; Successful - Mon Dec 16 12:58:10 2019 ;
 ; Revision Name         ; wishbone_cycy10_soc                   ;
 ; Top-level Entity Name ; wishbone_soc                          ;
 ; Family                ; Cyclone 10 LP                         ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------+
-; Assembler Generated Files                                                   ;
-+-----------------------------------------------------------------------------+
-; File Name                                                                   ;
-+-----------------------------------------------------------------------------+
-; F:/undergraduate_thesis/wishbone_cyc10/output_files/wishbone_cycy10_soc.sof ;
-+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                            ;
++------------------------------------------------------------------------------------------------------+
+; File Name                                                                                            ;
++------------------------------------------------------------------------------------------------------+
+; F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/output_files/wishbone_cycy10_soc.sof ;
++------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: F:/undergraduate_thesis/wishbone_cyc10/output_files/wishbone_cycy10_soc.sof ;
-+----------------+--------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                              ;
-+----------------+--------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00EAA2B2                                                                           ;
-; Checksum       ; 0x00EAA2B2                                                                           ;
-+----------------+--------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/output_files/wishbone_cycy10_soc.sof ;
++----------------+---------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                       ;
++----------------+---------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00BC7FF0                                                                                                    ;
+; Checksum       ; 0x00BC7FF0                                                                                                    ;
++----------------+---------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Dec 06 21:53:12 2019
+    Info: Processing started: Mon Dec 16 12:58:06 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off wishbone_cycy10_soc -c wishbone_cycy10_soc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4729 megabytes
-    Info: Processing ended: Fri Dec 06 21:53:17 2019
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Mon Dec 16 12:58:10 2019
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 

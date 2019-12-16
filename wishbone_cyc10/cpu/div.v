@@ -53,21 +53,20 @@ module div(
 	
 
 	// 结果寄存器
-	//output reg[`RegBus] rem_o,
-	//output reg[`RegBus] div_o,
+	output reg[`RegBus] rem_o,
+	output reg[`RegBus] div_o,
 
 	// 除法运算是否结束
-	//output reg ready_o
-	output wire[`RegBus] rem_o,
-	output wire[`RegBus] div_o,
-	output wire			   ready_o
+	output reg ready_o
 );
-	assign rem_o = 32'b0;
-	assign div_o = 32'b0;
-	assign ready_o = 1'b1;
-	
 	// 32 bits divisor 
-/*
+`ifndef Div
+always @(posedge clk) begin
+	div_o <= 32'b0;
+	rem_o <= 32'b0;
+	ready_o <= 1'b1;
+end
+`else
 	wire[32:0] div_temp;
 
 	// 除法进行了多少轮。cnt = 32 时，试商法结束。
@@ -192,5 +191,5 @@ module div(
 			endcase
 		end
 	end
-*/
+`endif
 endmodule

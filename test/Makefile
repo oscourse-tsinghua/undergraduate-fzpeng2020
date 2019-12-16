@@ -1,9 +1,12 @@
 
 SHELL = bash
 
-TEST_OBJS = $(addsuffix .o,$(basename $(wildcard test/*.S)))
+TEST_OBJS = $(addsuffix .o,$(basename $(wildcard $(TARGET)/*.S)))
 
 FIRMWARE_OBJS = firmware/start.o
+
+TARGET ?= rv32ui
+CFLAGS ?= -DRV32UI
 
 GCC_WARNS  = -Werror -Wall -Wextra -Wshadow -Wundef -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings
 GCC_WARNS += -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -pedantic # -Wconversion
@@ -18,46 +21,34 @@ copy: firmware/firmware.hex
 firmware.hex: firmware/firmware.coe
 	./coe2hex
 
-firmware/firmware.d: firmware/firmware.elf
+firmware/firmware.d: firmware/$(TARGET)
 	$(TOOLCHAIN_PREFIX)objdump -d $< > $@
 
 firmware/firmware.coe: firmware/firmware.bin
 	./bin2coe.py 32 < firmware/firmware.bin > firmware/firmware.coe
 
-firmware/firmware.bin: firmware/firmware.elf
+firmware/firmware.bin: firmware/$(TARGET)
 	$(TOOLCHAIN_PREFIX)objcopy -O binary $< $@
 
-firmware/firmware.elf: $(FIRMWARE_OBJS) $(TEST_OBJS) firmware/sections.lds
+ifeq ($(TARGET),$(filter $(TARGET),rv32ui rv32ua))
+firmware/$(TARGET): $(FIRMWARE_OBJS) $(TEST_OBJS) firmware/sections.lds
 	$(TOOLCHAIN_PREFIX)gcc -Os -g -ffreestanding -nostdlib -o $@ \
 		-Wl,-Bstatic,-T,firmware/sections.lds,-Map,firmware/firmware.map,--strip-debug \
 		$(FIRMWARE_OBJS) $(TEST_OBJS) -lgcc
 
-firmware/start.o: firmware/start.S
-	$(TOOLCHAIN_PREFIX)gcc -c -march=rv32im -o $@ $<
-
-firmware_test: firmware_test.hex copy_test
-
-copy_test: firmware/firmware_test.hex
-	cp $< ../wishbone_cyc10/firmware.hex
-
-firmware_test.hex: firmware/firmware_test.coe
-	./coe2hex_test
-
-firmware/firmware_test.d: firmware/firmware.elf
-	$(TOOLCHAIN_PREFIX)objdump -d $< > $@
-
-firmware/firmware_test.coe: firmware/firmware_test.bin
-	./bin2coe.py 32 < firmware/firmware_test.bin > firmware/firmware_test.coe
-
-firmware/firmware_test.bin: firmware/firmware_test.elf
-	$(TOOLCHAIN_PREFIX)objcopy -O binary $< $@
-
-
-test/%.o: test/%.S test/riscv_test.h test/test_macros.h
-	$(TOOLCHAIN_PREFIX)gcc -c -march=rv32im -o $@ -DTEST_FUNC_NAME=$(notdir $(basename $<)) \
+$(TARGET)/%.o: $(TARGET)/%.S $(TARGET)/riscv_test.h $(TARGET)/test_macros.h
+	$(TOOLCHAIN_PREFIX)gcc -c -march=rv32ima -o $@ -DTEST_FUNC_NAME=$(notdir $(basename $<)) \
 		-DTEST_FUNC_TXT='"$(notdir $(basename $<))"' -DTEST_FUNC_RET=$(notdir $(basename $<))_ret $<
+endif
+
+ifeq ($(TARGET), rv32ua)
+CFLAGS = -DRV32UA
+endif
+
+firmware/start.o: firmware/start.S
+	$(TOOLCHAIN_PREFIX)gcc $(CFLAGS) -c -march=rv32ima -o $@ $<
 
 clean:	
-	rm -vrf $(FIRMWARE_OBJS) $(TEST_OBJS) firmware/firmware.elf firmware/firmware.bin firmware/firmware.hex firmware/firmware.map firmware/firmware.d ../wishbone_cyc10/firmware.hex firmware/firmware_test* 
+	rm -vrf $(FIRMWARE_OBJS) rv32ui/*.o rv32ua/*.o firmware/start.o firmware/firmware.elf firmware/firmware.bin firmware/firmware.hex firmware/firmware.map firmware/firmware.d 
 
 .PHONY:  clean
