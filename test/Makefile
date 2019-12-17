@@ -39,6 +39,9 @@ firmware/$(TARGET): $(FIRMWARE_OBJS) $(TEST_OBJS) firmware/sections.lds
 $(TARGET)/%.o: $(TARGET)/%.S $(TARGET)/riscv_test.h $(TARGET)/test_macros.h
 	$(TOOLCHAIN_PREFIX)gcc -c -march=rv32ima -o $@ -DTEST_FUNC_NAME=$(notdir $(basename $<)) \
 		-DTEST_FUNC_TXT='"$(notdir $(basename $<))"' -DTEST_FUNC_RET=$(notdir $(basename $<))_ret $<
+else
+firmware/$(TARGET):
+	cp rv32msi/$(TARGET) ./firmware
 endif
 
 ifeq ($(TARGET), rv32ua)

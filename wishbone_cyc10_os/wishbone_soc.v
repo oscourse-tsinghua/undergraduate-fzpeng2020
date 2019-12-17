@@ -84,8 +84,6 @@ module wishbone_soc(
 		.c1(cpu_clk),		 //10Mhz		
 		.locked(lock)
 	);
-	
-	wire[31:0] pc_o;
 
 	wire timer_int;
 	wire software_int;
@@ -154,7 +152,6 @@ module wishbone_soc(
 		.dwishbone_stb_o(m0_stb_i),
 		.dwishbone_cyc_o(m0_cyc_i),
 
-		.pc_o(pc_o)
 	);
 
 

@@ -16,8 +16,8 @@
  *  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
  */
-`include "cpu/defines.v"
-module wishbone_uart_lite #(
+`include "defines.v"
+module uart_ip #(
 	parameter ClkFreq   = 25000000,
 	parameter BoundRate = 115200
 )(
