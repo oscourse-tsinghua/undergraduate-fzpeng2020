@@ -6,3 +6,4 @@
 *.pof
 cscope.*
 wishbone_cyc10/simulation/modelsim/*
+os/target
