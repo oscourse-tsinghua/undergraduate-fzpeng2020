@@ -7,4 +7,7 @@ mod io;
 mod init;
 mod lang_items;
 mod sbi;
+mod interrupt;
+mod context;
+mod clock;
 
