@@ -76,14 +76,17 @@ module wishbone_soc(
 	wire wishbone_clk;
 	assign reset_n = lock & rst_n;
 	assign sdr_clk_o = wishbone_clk;
+
 	
 	ip_pll ip_pll0(
 		.areset(!rst_n),
 		.inclk0(clk),
-		.c0(wishbone_clk), //30Mhz
+		.c0(wishbone_clk), //25Mhz
 		.c1(cpu_clk),		 //10Mhz		
 		.locked(lock)
 	);
+	
+	wire[31:0] pc_o;
 
 	wire timer_int;
 	wire software_int;
@@ -152,6 +155,7 @@ module wishbone_soc(
 		.dwishbone_stb_o(m0_stb_i),
 		.dwishbone_cyc_o(m0_cyc_i),
 
+		.pc_o(pc_o)
 	);
 
 

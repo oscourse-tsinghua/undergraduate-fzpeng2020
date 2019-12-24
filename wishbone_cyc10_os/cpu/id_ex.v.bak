@@ -26,7 +26,7 @@
 // File:    id_ex.v
 // Author:  Lei Silei, shyoshyo
 // E-mail:  leishangwen@163.com, shyoshyo@qq.com
-// Description: ID/EXï¿½×¶ÎµÄ¼Ä´ï¿½ï¿½ï¿½
+// Description: ID/EX½×¶ÎµÄ¼Ä´æÆ÷
 // Revision: 1.0
 //////////////////////////////////////////////////////////////////////
 
@@ -40,7 +40,7 @@ module id_ex(
 	input wire flush,
 
 	
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¶Î´ï¿½ï¿½Ýµï¿½ï¿½ï¿½Ï¢
+	//´ÓÒëÂë½×¶Î´«µÝµÄÐÅÏ¢
 	input wire[`AluOpBus] id_aluop,
 	input wire[`AluSelBus] id_alusel,
 	input wire[`RegBus] id_reg1,
@@ -59,11 +59,11 @@ module id_ex(
 	input wire[`CSRAddrBus] id_csr_reg_addr,
 	input wire[`RegBus] id_csr_reg_data,
 
-	// ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½Òªï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Ï¢
+	// ÒëÂë½×¶ÎÒª´«»ØÈ¥µÄÐÅÏ¢
 	input wire next_inst_in_delayslot_i,
 	input wire step_i,
 	
-	//ï¿½ï¿½ï¿½Ýµï¿½Ö´ï¿½Ð½×¶Îµï¿½ï¿½ï¿½Ï¢
+	//´«µÝµ½Ö´ÐÐ½×¶ÎµÄÐÅÏ¢
 	output reg[`AluOpBus] ex_aluop,
 	output reg[`AluSelBus] ex_alusel,
 	output reg[`RegBus] ex_reg1,
@@ -82,7 +82,7 @@ module id_ex(
 	output reg[`CSRAddrBus] ex_csr_reg_addr,
 	output reg[`RegBus] ex_csr_reg_data,
 
-	// ï¿½ï¿½ï¿½ï¿½ id ï¿½×¶ï¿½
+	// ´«»Ø id ½×¶Î
 	output reg is_in_delayslot_o,
 	output reg step_o
 );
@@ -150,7 +150,7 @@ module id_ex(
 			ex_is_in_delayslot <= `NotInDelaySlot;
 			ex_inst <= `ZeroWord;
 			ex_excepttype <= `ZeroWord;
-			//ex_current_inst_address <= `ZeroWord;
+			ex_current_inst_address <= `ZeroWord;
 			ex_not_stall <= `False_v;
 
 			ex_csr_reg_we <= `CSRWriteDisable;
@@ -185,7 +185,7 @@ module id_ex(
 			is_in_delayslot_o <= next_inst_in_delayslot_i;
 			step_o <= 1'b0;
 		end
-		else // stall[2] Í£ï¿½ï¿½stall[3] Ò²Í£ï¿½ï¿½exe_* ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½
+		else // stall[2] Í££¬stall[3] Ò²Í££¬exe_* ±£³Ö²»±ä
 		begin
 			step_o <= step_i;
 		end

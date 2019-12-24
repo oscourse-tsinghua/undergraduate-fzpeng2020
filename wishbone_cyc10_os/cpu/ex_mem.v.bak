@@ -26,7 +26,7 @@
 // File:    ex_mem.v
 // Author:  Lei Silei, shyoshyo
 // E-mail:  leishangwen@163.com, shyoshyo@qq.com
-// Description: EX/MEMï¿½×¶ÎµÄ¼Ä´ï¿½ï¿½ï¿½
+// Description: EX/MEM½×¶ÎµÄ¼Ä´æÆ÷
 // Revision: 1.0
 //////////////////////////////////////////////////////////////////////
 
@@ -37,67 +37,67 @@ module ex_mem(
 	input wire clk,
 	input wire rst_n,
 
-	//ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+	//À´×Ô¿ØÖÆÄ£¿éµÄÐÅÏ¢
 	input wire[5:0] stall,
 	input wire flush,
 	
-	//ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶Îµï¿½ï¿½ï¿½Ï¢	
+	//À´×ÔÖ´ÐÐ½×¶ÎµÄÐÅÏ¢	
 	input wire[`RegAddrBus] ex_wd,
 	input wire ex_wreg,
 	input wire[`RegBus] ex_wdata,
-	//ÎªÊµï¿½Ö¼ï¿½ï¿½Ø¡ï¿½ï¿½Ã´ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//ÎªÊµÏÖ¼ÓÔØ¡¢·Ã´æÖ¸Áî¶øÌí¼Ó
 	input wire[`AluOpBus] ex_aluop,
 	input wire[`RegBus] ex_mem_addr,
 	input wire[`RegBus] ex_reg2,
 
-	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ ex ï¿½ï¿½Ò»ï¿½×¶Î±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+	// ¼´½«ÔÝÍ£µÄ ex ÉÏÒ»½×¶Î±£´æµÄÐÅÏ¢
 	input wire[1:0] cnt_i,
 	input wire div_started_i,
 
-	// ÒªÐ´ï¿½ï¿½ csr ï¿½ï¿½ï¿½ï¿½Ï¢
+	// ÒªÐ´Èë csr µÄÐÅÏ¢
 	input wire[`CSRWriteTypeBus] ex_csr_reg_we,
 	input wire[`CSRAddrBus] ex_csr_reg_addr,
 	input wire[`RegBus] ex_csr_reg_data,
 
-	// ÒªÐ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+	// ÒªÐ´ÈëµÄÎïÀíµØÖ·
 	input wire [`PhyAddrBus]ex_mem_phy_addr,
 	input wire ex_data_tlb_r_exception,
 	input wire ex_data_tlb_w_exception,
 
 
-	// ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½Ï¢
+	// ÊÕ¼¯µ½µÄÒì³£µÄÐÅÏ¢
 	input wire[`ExceptionTypeBus] ex_excepttype,
 	input wire ex_is_in_delayslot,
 	input wire[`RegBus] ex_current_inst_address,
 	input wire ex_not_stall,
 	
-	//ï¿½Íµï¿½ï¿½Ã´ï¿½ï¿½×¶Îµï¿½ï¿½ï¿½Ï¢
+	//ËÍµ½·Ã´æ½×¶ÎµÄÐÅÏ¢
 	output reg[`RegAddrBus] mem_wd,
 	output reg mem_wreg,
 	output reg[`RegBus] mem_wdata,
-	//ÎªÊµï¿½Ö¼ï¿½ï¿½Ø¡ï¿½ï¿½Ã´ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//ÎªÊµÏÖ¼ÓÔØ¡¢·Ã´æÖ¸Áî¶øÌí¼Ó
 	output reg[`AluOpBus] mem_aluop,
 	output reg[`RegBus] mem_mem_addr,
 	output reg[`RegBus] mem_reg2,
 
-	// ÒªÐ´ï¿½ï¿½ csr ï¿½ï¿½ï¿½ï¿½Ï¢
+	// ÒªÐ´Èë csr µÄÐÅÏ¢
 	output reg[`CSRWriteTypeBus] mem_csr_reg_we,
 	output reg[`CSRAddrBus] mem_csr_reg_addr,
 	output reg[`RegBus] mem_csr_reg_data,
 
-	// ï¿½Íµï¿½ï¿½ï¿½Ò»ï¿½×¶Îµï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½Ï¢
+	// ËÍµ½ÏÂÒ»½×¶ÎµÄÒì³£µÄÐÅÏ¢
 	output reg[`ExceptionTypeBus] mem_excepttype,
 	output reg mem_is_in_delayslot,
 	output reg[`RegBus] mem_current_inst_address,
 	output reg mem_not_stall,
 
 
-	// ï¿½Íµï¿½ï¿½ï¿½Ò»ï¿½×¶Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+	// ËÍµ½ÏÂÒ»½×¶ÎµÄÎïÀíµØÖ·
 	output reg [`PhyAddrBus]mem_mem_phy_addr,
 	output reg mem_data_tlb_r_exception,
 	output reg mem_data_tlb_w_exception,
 
-	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ ex ï¿½ï¿½Ò»ï¿½×¶ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ï¢
+	// ¼´½«ÔÝÍ£µÄ ex ÏÂÒ»½×¶ÎÐèÒªµÄÐÅÏ¢
 	output reg[1:0] cnt_o,
 	output reg div_started_o
 );
@@ -174,7 +174,7 @@ module ex_mem(
 
 			mem_excepttype <= `ZeroWord;
 			mem_is_in_delayslot <= `NotInDelaySlot;
-			//mem_current_inst_address <= `ZeroWord;
+			mem_current_inst_address <= `ZeroWord;
 			mem_not_stall <= `False_v;
 
 			mem_mem_phy_addr <= `ZeroWord;
@@ -210,7 +210,7 @@ module ex_mem(
 			cnt_o <= 2'b00;
 			div_started_o <= 1'b0;
 		end
-		else // stall[3] Í£ï¿½ï¿½stall[4] Ò²Í£ï¿½ï¿½mem_* ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ 
+		else // stall[3] Í££¬stall[4] Ò²Í££¬mem_* ±£³Ö²»±ä 
 		begin
 			cnt_o <= cnt_i;
 			div_started_o <= div_started_i;
