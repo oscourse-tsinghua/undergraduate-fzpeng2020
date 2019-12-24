@@ -8,14 +8,12 @@ edition = "2018"
 
 [profile.dev]
 panic = "abort"
-opt-level = 2
 
 [profile.release]
 panic = "abort" 
 
 [dependencies]
 riscv = { path = "crate/riscv", features = ["inline-asm"] }
-buddy_system_allocator = "0.1"
-buddy-allocator = { path = "crate/buddy-allocator" }
-lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
-spin = "0.3"
+buddy_system_allocator = "0.3"
+#buddy-allocator = { path = "crate/buddy-allocator" }
+spin = "0.5.2"

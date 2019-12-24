@@ -1,5 +1,5 @@
 target := riscv32-os
-mode := debug
+mode ?= debug
 kernel := target/$(target)/$(mode)/os
 bin := target/$(target)/$(mode)/kernel.bin
 usr_path := usr
@@ -15,14 +15,20 @@ build: $(bin)
 
 run: build qemu
 
+ifeq ($(mode),debug)
+
 kernel:
 	@cargo xbuild --target riscv32-os.json
+else
+kernel:
+	@cargo xbuild --release --target riscv32-os.json
+endif
 
 $(bin): kernel
 	@riscv32-unknown-elf-objcopy $(kernel) --strip-all -O binary $@
 
 asm:
-	@riscv32-unknown-elf-objdump -d $(kernel) | less
+	@riscv32-unknown-elf-objdump -D $(kernel)  > os.asm
 
 gdb:
 	@ $(qemu_path) -nographic -machine virt \
@@ -34,3 +40,5 @@ qemu:
 	@ $(qemu_path) -nographic -machine virt \
         -kernel opensbi/virt.elf \
         -device loader,file=$(bin),addr=0x80400000
+clean:
+	rm -r $(kernel)
