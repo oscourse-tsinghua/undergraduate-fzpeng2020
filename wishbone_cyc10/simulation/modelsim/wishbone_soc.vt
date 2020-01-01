@@ -75,7 +75,7 @@ localparam RxStart 		 = 3'b001;
 localparam RxData  		 = 3'b010;
 localparam RxStop  		 = 3'b011;
 localparam RxDone  		 = 3'b100;
-localparam CfgDivider    = 25000000/2500000;
+localparam CfgDivider    = 20000000/2500000;
 localparam CfgDividerMid = CfgDivider/2;
 
 reg	[15:0]	clock_count;

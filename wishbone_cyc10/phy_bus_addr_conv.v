@@ -31,8 +31,8 @@
 //////////////////////////////////////////////////////////////////////
 `include "cpu/defines.v"
 
-`define RAM_PHYSICAL_ADDR_BEGIN            34'h00010_0000
-`define RAM_PHYSICAL_ADDR_LEN              34'h00040_0000
+`define RAM_PHYSICAL_ADDR_BEGIN            34'h08000_0000
+`define RAM_PHYSICAL_ADDR_LEN              34'h00080_0000
 
 `define UART_PHYSICAL_ADDR_BEGIN           34'h00200_0000
 `define UART_PHYSICAL_ADDR_LEN             34'h20
@@ -50,7 +50,7 @@
 `define IPI_PHYSICAL_ADDR_LEN              34'h00000_0004
 
 `define FLASH_PHYSICAL_ADDR_BEGIN          34'h00001_0000//34'h02000_0000
-`define FLASH_PHYSICAL_ADDR_LEN            34'h00000_8000//34'h00080_0000
+`define FLASH_PHYSICAL_ADDR_LEN            34'h00000_C000//34'h00080_0000
 
 //`define BOOTLOADER_PHYSICAL_ADDR_BEGIN     34'h00002_0000
 //`define BOOTLOADER_PHYSICAL_ADDR_LEN       34'h00000_0400

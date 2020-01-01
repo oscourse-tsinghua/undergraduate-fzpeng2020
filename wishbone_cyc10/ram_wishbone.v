@@ -3,8 +3,10 @@
 //数据存储器data_ram
 `define DataAddrBus 31:0
 `define DataBus 31:0
-`define DataMemNum (1*1024*1024)
-`define DataMemNumLog2 20
+`define DataMemNum (4*1024*1024)
+`define DataMemNumLog2 22
+//`define DataMemNum (32)
+//`define DataMemNumLog2 5
 `define ByteWidth 7:0
 
 `timescale 1ns/1ps
@@ -43,10 +45,6 @@ module ram_wishbone (
 
 
 	reg[`WishboneDataBus]  mem[0:`DataMemNum-1];
-	
-	always @ (posedge clk or negedge rst_n)
-		if (rst_n == `RstEnable)
-			wishbone_data_o <= `ZeroWord;
 
 	always @ (posedge clk or negedge rst_n)
 		if(rst_n == `RstEnable)
@@ -59,8 +57,10 @@ module ram_wishbone (
 	// generate a 1 cycle acknowledgement for each request rising edge
 	always @ (posedge clk or negedge rst_n)
 	begin
-		if (rst_n == `RstEnable)
+		if (rst_n == `RstEnable) begin
 			{ram_ack_delay} <= 3'b000;
+			wishbone_data_o <= `ZeroWord;
+		end
 		else if(request == 1'b0)
 			{ram_ack_delay} <= 3'b000;
 		else if (request_rising_edge == 1'b1)

@@ -5,21 +5,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/wb2sdrc.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/async_fifo.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_pll.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip_pll_altpll.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_xfr_ctl.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_top.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_req_gen.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_core.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bs_convert.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_fsm.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_ctl.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ram_wishbone.v}

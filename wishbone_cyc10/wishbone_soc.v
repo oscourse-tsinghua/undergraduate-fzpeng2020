@@ -177,7 +177,7 @@ module wishbone_soc(
 	wire       s1_ack_i;
 	
 	wishbone_uart_lite #(
-		.ClkFreq(25000000),
+		.ClkFreq(20000000),
 	`ifdef Simulation
 		.BoundRate(2500000)
 	`else
@@ -382,7 +382,7 @@ module wishbone_soc(
      .cfg_sdr_cas(3'b100),
      .cfg_sdr_trcar_d(4'b1010),
      .cfg_sdr_twr_d(4'b0010),
-     .cfg_sdr_rfsh(12'b011101010011),
+     .cfg_sdr_rfsh(12'b010011100010),
 	  .cfg_sdr_rfmax(3'b100),
 	  .cfg_sdr_width(2'b01),
      .cfg_colbits(2'b00)

@@ -8,257 +8,235 @@ z2
 !i10f 100
 cModel Technology
 Z0 dF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim
-vasync_fifo
-!s110 1576467833
-!i10b 1
-!s100 _gfNBkIMcNZ0?MjHa^8mV0
-IEYLNZ1PiP16m_:@S6aYYk3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z2 w1379343606
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/async_fifo.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/async_fifo.v
-L0 45
-Z3 OV;L;10.5b;63
-r1
-!s85 0
-31
-!s108 1576467833.000000
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/async_fifo.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/async_fifo.v|
-!i113 1
-Z4 o-vlog01compat -work work
-Z5 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller
-Z6 tCvgOpt 0
 vconfig_string_and_timer
-Z7 !s110 1576467850
+Z1 !s110 1577803211
 !i10b 1
 !s100 5@_BOnDT@Rz29oFB;Sh9H3
 I8KoJkHVP8FlRd>N[A8=BU1
-R1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1575625398
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_and_timer.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_and_timer.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_rom/config_string_rom
 L0 44
-R3
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z8 !s108 1576467850.000000
+Z4 !s108 1577803211.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_rom/config_string_rom|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_and_timer.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_and_timer.v|
 !i113 1
-R4
-Z9 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10
-R6
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10
+Z7 tCvgOpt 0
 vcsr
-Z10 !s110 1576467849
+Z8 !s110 1577803210
 !i10b 1
 !s100 ZW_hGog61LJ7N:6WOAmkP2
 IjGNdcm;WX>NaC>`07R:]m0
-R1
+R2
 R0
 w1575710399
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/csr.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/csr.v
-Z11 L0 36
+Z9 L0 36
 R3
 r1
 !s85 0
 31
-Z12 !s108 1576467849.000000
+Z10 !s108 1577803210.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/csr.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/csr.v|
 !i113 1
-R4
-Z13 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu
-R6
+R5
+Z11 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu
+R7
 vctrl
-R10
+R8
 !i10b 1
 !s100 JY9`F072mDjXYBGKHlbj40
 I0?b1Ci;Kk>2^I12jdDchN1
-R1
+R2
 R0
-Z14 w1573543479
+Z12 w1573543479
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ctrl.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ctrl.v
-Z15 L0 35
+Z13 L0 35
 R3
 r1
 !s85 0
 31
-R12
+R10
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ctrl.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ctrl.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vdiv
-Z16 !s110 1576467848
+R8
 !i10b 1
-!s100 n3V@F0M>o0z`JEboAEAnH2
-I7f]WJ:Z]>0ahmL3iDbeh;3
-R1
+!s100 XQHLD^8HaL<KOJ@[R5z>e1
+Ijik45?ZPjTIQTAenk4OSD0
+R2
 R0
-w1576367847
+w1576470537
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/div.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/div.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-!s108 1576467848.000000
+R10
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/div.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/div.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vex
-R16
+Z14 !s110 1577803209
 !i10b 1
 !s100 kTn1;FZ?mNGjdU@D@[Y]T2
 IOC=>SA4<=eG^f;WCZ>BC`3
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-Z17 !s108 1576467847.000000
+Z15 !s108 1577803209.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vex_mem
-Z18 !s110 1576467847
+R14
 !i10b 1
 !s100 z1NGL30X_;J]jT9=@XQ4m0
 I?T`7JPi7X?M1m^:8gZ@HZ1
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex_mem.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex_mem.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-R17
+R15
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex_mem.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vid
-R18
+R14
 !i10b 1
 !s100 AA_aQDDJM?:`AU[5QfZI@3
 I:Z_ggXoN^gS=68HN:Z_Bl2
-R1
+R2
 R0
 w1574217302
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id.v
-R11
+R9
 R3
 r1
 !s85 0
 31
-Z19 !s108 1576467846.000000
+R15
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vid_ex
-Z20 !s110 1576467846
+R14
 !i10b 1
 !s100 P3oz]POgC4jh;f;K]gnkn2
 I1B?4YWWC?JVi?bE]^]nYe2
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id_ex.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id_ex.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-R19
+R15
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id_ex.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id_ex.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vif_id
-R20
+Z16 !s110 1577803208
 !i10b 1
 !s100 9k2NGf2EF:ZzgB@@Qk]eF0
 I;M<EkXSg;K[;:f^3P6O1D3
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/if_id.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/if_id.v
-Z21 L0 38
+Z17 L0 38
 R3
 r1
 !s85 0
 31
-R19
+Z18 !s108 1577803208.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/if_id.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/if_id.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vip_pll
-Z22 !s110 1576467834
+Z19 !s110 1577803200
 !i10b 1
-!s100 E;JhD?@^=Y<kaJ8kjo;3m3
-IRi]2Y]?AK?a`PIFa`?>3e1
-R1
+!s100 NNVdncnGLoLLLUWgZ;R?K3
+IWSc4=MlS_A;RTafcXL?lB1
+R2
 R0
-w1575640528
+w1577794110
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_pll.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_pll.v
-Z23 L0 39
+Z20 L0 39
 R3
 r1
 !s85 0
 31
-Z24 !s108 1576467834.000000
+Z21 !s108 1577803200.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_pll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_pll.v|
 !i113 1
-R4
-R9
+R5
 R6
+R7
 vip_pll_altpll
-R22
+R19
 !i10b 1
-!s100 a7^mKU?g74Y54WUkK]]zN0
-ICAfVGN2K^8fznV6N@nTJM2
-R1
+!s100 2R6RjLi5cL3:n;aF47Y?o3
+IY4]TIlWnRUdn>BhZXnfiF3
+R2
 R0
-w1575601768
+w1577794263
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip_pll_altpll.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip_pll_altpll.v
 L0 30
@@ -266,41 +244,41 @@ R3
 r1
 !s85 0
 31
-R24
+R21
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip_pll_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip_pll_altpll.v|
 !i113 1
-R4
+R5
 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db
-R6
+R7
 vip_rom
-R22
+R19
 !i10b 1
-!s100 5@Od_YFD3>dPJ5lI3=`]^1
-IYgD?`XY@P>fge6cmne_3l3
-R1
+!s100 i3;fhi7bO>@]7SHK[[>1z0
+I>oh[hFJO@6:<[51SW]4T`0
+R2
 R0
-w1575688772
+w1577794038
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v
-R23
+R20
 R3
 r1
 !s85 0
 31
-R24
+R21
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v|
 !i113 1
-R4
-R9
+R5
 R6
-vled_wishbone
 R7
+vled_wishbone
+R8
 !i10b 1
 !s100 bYKcj7cmb0e7jl]HYWEhC3
 IdU5@>3FBWoJzf2QVzOQN^2
-R1
+R2
 R0
 w1574345700
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/led_wishbone.v
@@ -310,154 +288,154 @@ R3
 r1
 !s85 0
 31
-R8
+R10
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/led_wishbone.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/led_wishbone.v|
 !i113 1
-R4
-R9
+R5
 R6
+R7
 vLLbit_reg
-R20
+R16
 !i10b 1
 !s100 2E77Q1KcY>Da:@zB5YYeI3
 IUn_ggE[5QMbbWFAK1Yhzo3
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/llbit_reg.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/llbit_reg.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-R19
+R18
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/llbit_reg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/llbit_reg.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 n@l@lbit_reg
 vmem
-R20
+R16
 !i10b 1
 !s100 mT6>8;eYU;JeDRJ?n?EgN3
 I]JXS17TSTbR<h^<Yz7DY@1
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-R19
+Z22 !s108 1577803207.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vmem_wb
-R20
+Z23 !s110 1577803207
 !i10b 1
 !s100 _EU`NLSIcZXf<2<T9:eZV2
 IAGJ]kNT15SgZgi1hR7c4[3
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem_wb.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem_wb.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-Z25 !s108 1576467845.000000
+R22
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem_wb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem_wb.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vmmu_conv
-Z26 !s110 1576467845
+R23
 !i10b 1
 !s100 4lf<Nl=YlWcQZemQ8XT=W3
 IYMfbe@Y:So]FV3?SojTGC0
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mmu_conv.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mmu_conv.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-R25
+R22
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mmu_conv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mmu_conv.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vopenriscv
-R26
+R23
 !i10b 1
 !s100 _NTi07zWXNCNOolkQcQ?;1
 I3L`@^XjWg85=>BYLaO^<J0
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/openriscv.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/openriscv.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-R25
+R22
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/openriscv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/openriscv.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vpc_reg
-R26
+R23
 !i10b 1
 !s100 M4:AH=b193l:QNmhId0HX0
 I@<1ejz;Xb8@NVKdK0VBnY2
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/pc_reg.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/pc_reg.v
-R21
+R17
 R3
 r1
 !s85 0
 31
-R25
+R22
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/pc_reg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/pc_reg.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vphy_bus_addr_conv
-Z27 !s110 1576467841
+Z24 !s110 1577803202
 !i10b 1
-!s100 i?JzN1QY?c=[R[CPdbSk]2
-IYfR3m15Ad8RaknZ;g6:0h0
-R1
+!s100 hnjf^YkhJJa1<:0c:>BIS3
+IPgBe3ghiA^B<fkeYUFgD<2
+R2
 R0
-w1575625925
+w1577793927
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/phy_bus_addr_conv.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/phy_bus_addr_conv.v
 L0 62
@@ -465,65 +443,65 @@ R3
 r1
 !s85 0
 31
-Z28 !s108 1576467841.000000
+Z25 !s108 1577803202.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/phy_bus_addr_conv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/phy_bus_addr_conv.v|
 !i113 1
-R4
-R9
+R5
 R6
+R7
 vram_wishbone
-R27
+R24
 !i10b 1
-!s100 [BA2=ShaL1V6>WcS=IWBR1
-I3PO[@z^6A0n9=ahkWz<z_0
-R1
+!s100 jhdSPLzW7?Q@<TB8^Zf<30
+IXl@FXdi5=7?KTPdi8DiVG0
+R2
 R0
-w1575626013
+w1577803160
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ram_wishbone.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ram_wishbone.v
-L0 12
+L0 14
 R3
 r1
 !s85 0
 31
-Z29 !s108 1576467840.000000
+R25
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ram_wishbone.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ram_wishbone.v|
 !i113 1
-R4
-R9
+R5
 R6
+R7
 vregfile
-Z30 !s110 1576467844
+Z26 !s110 1577803206
 !i10b 1
 !s100 9n_@]acJ]B1Q>QNoe[6z50
 IO2ifBFfe<_P;^R4OM028P3
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/regfile.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/regfile.v
-R15
+R13
 R3
 r1
 !s85 0
 31
-Z31 !s108 1576467844.000000
+Z27 !s108 1577803206.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/regfile.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/regfile.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vrom_wishbone
-!s110 1576467840
+Z28 !s110 1577803201
 !i10b 1
-!s100 M2@cWzbR`a;aHcX79mN[=2
-I]eOC[:6FDQ]JmDa5b4Z<=1
-R1
+!s100 ik6CJYbQag8A5YOMN@]@l2
+Ih9zWo=hk1X3KikkfUdQc21
+R2
 R0
-w1575688713
+w1576469931
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v
 L0 3
@@ -531,395 +509,219 @@ R3
 r1
 !s85 0
 31
-R29
+Z29 !s108 1577803201.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v|
 !i113 1
-R4
-R9
+R5
 R6
-vsdrc_bank_ctl
-Z32 !s110 1576467838
+R7
+vwb_conmax_arb
+R26
 !i10b 1
-!s100 K6?BQQfJ?leeG06@IQY3?1
-IZINmX1k7Z_O;`oR>H34mY0
-R1
+!s100 KDD5ifon^A4TOA0B=P]T40
+InzDAUX8@87keVf5?cDF5R2
+R2
 R0
-w1379343610
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_ctl.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_ctl.v
-Z33 L0 49
+Z30 w1573543480
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v
+L0 63
 R3
 r1
 !s85 0
 31
-Z34 !s108 1576467838.000000
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_ctl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_ctl.v|
+R27
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v|
 !i113 1
-R4
 R5
-R6
-vsdrc_bank_fsm
-R32
+Z31 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax
+R7
+vwb_conmax_master_if
+R26
 !i10b 1
-!s100 QeAU:2T_BWCXm>C0gd^zM1
-IRUfZR`Q20Q2V_ez9WQY?83
-R1
+!s100 2QXT;Vea`JCOAkcSje72<1
+IBQJh7lKP1T<b7bYjge^VL0
+R2
 R0
-Z35 w1379343608
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_fsm.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_fsm.v
+R30
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v
+Z32 L0 61
+R3
+r1
+!s85 0
+31
+R27
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v|
+!i113 1
+R5
+R31
+R7
+vwb_conmax_msel
+Z33 !s110 1577803205
+!i10b 1
+!s100 P<8BID9@^MQf]c_W0N6n;1
+IRRQ9`UOZog[fe0JcR4GYE1
+R2
+R0
+R30
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v
+R32
+R3
+r1
+!s85 0
+31
+Z34 !s108 1577803205.000000
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v|
+!i113 1
+R5
+R31
+R7
+vwb_conmax_pri_dec
 R33
+!i10b 1
+!s100 F?cJb`zB9Om3SSYHgeZmz0
+I36o^`Hj[5<Tc<ORV4A^J]0
+R2
+R0
+R30
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v
+R32
 R3
 r1
 !s85 0
 31
 R34
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_fsm.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bank_fsm.v|
-!i113 1
-R4
-R5
-R6
-vsdrc_bs_convert
-Z36 !s110 1576467837
-!i10b 1
-!s100 JhO[fX4;<<YbBcnT;DS:d2
-I4AzEZ8`?XlDQ28jgb:Mbg3
-R1
-R0
-w1379746254
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bs_convert.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bs_convert.v
-L0 52
-R3
-r1
-!s85 0
-31
-!s108 1576467837.000000
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bs_convert.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_bs_convert.v|
-!i113 1
-R4
-R5
-R6
-vsdrc_core
-R36
-!i10b 1
-!s100 ?Nk2ll`_>c`TO2T?Pn[0c0
-IP51Nj?75V@NTCSeQ9M`D_0
-R1
-R0
-R35
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_core.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_core.v
-L0 77
-R3
-r1
-!s85 0
-31
-Z37 !s108 1576467836.000000
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_core.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_core.v|
-!i113 1
-R4
-R5
-R6
-vsdrc_req_gen
-!s110 1576467836
-!i10b 1
-!s100 AVmN=]`KXm@R[330TkBGU1
-I=S;C1Lo7O:Q<]KD0h7Ckg2
-R1
-R0
-R35
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_req_gen.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_req_gen.v
-L0 79
-R3
-r1
-!s85 0
-31
-R37
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_req_gen.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_req_gen.v|
-!i113 1
-R4
-R5
-R6
-vsdrc_top
-Z38 !s110 1576467835
-!i10b 1
-!s100 I>_IgOB@oFb[FTZzT^ohV2
-IR2PZoTVX<l?iD_ifC4b6W3
-R1
-R0
-w1574569816
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_top.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_top.v
-Z39 L0 63
-R3
-r1
-!s85 0
-31
-Z40 !s108 1576467835.000000
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_top.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_top.v|
-!i113 1
-R4
-R5
-R6
-vsdrc_xfr_ctl
-R38
-!i10b 1
-!s100 kfBhTGTXiEF_PS=TjQXQh0
-Ig_WY`>;bX_lOdbM_TEASK2
-R1
-R0
-R35
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_xfr_ctl.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_xfr_ctl.v
-L0 66
-R3
-r1
-!s85 0
-31
-R40
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_define.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_xfr_ctl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/sdrc_xfr_ctl.v|
-!i113 1
-R4
-R5
-R6
-vwb2sdrc
-!s110 1576467832
-!i10b 1
-!s100 S=19f:`3_k4e`LjGIRM@:1
-IQoBnUM`H;Wz?lEHlEGIe@0
-R1
-R0
-R2
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/wb2sdrc.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/wb2sdrc.v
-R33
-R3
-r1
-!s85 0
-31
-!s108 1576467832.000000
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/wb2sdrc.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/sdram_controller/wb2sdrc.v|
-!i113 1
-R4
-R5
-R6
-vwb_conmax_arb
-R30
-!i10b 1
-!s100 KDD5ifon^A4TOA0B=P]T40
-InzDAUX8@87keVf5?cDF5R2
-R1
-R0
-Z41 w1573543480
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v
-R39
-R3
-r1
-!s85 0
-31
-Z42 !s108 1576467843.000000
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v|
-!i113 1
-R4
-Z43 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax
-R6
-vwb_conmax_master_if
-Z44 !s110 1576467843
-!i10b 1
-!s100 2QXT;Vea`JCOAkcSje72<1
-IBQJh7lKP1T<b7bYjge^VL0
-R1
-R0
-R41
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v
-Z45 L0 61
-R3
-r1
-!s85 0
-31
-R42
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v|
-!i113 1
-R4
-R43
-R6
-vwb_conmax_msel
-R44
-!i10b 1
-!s100 P<8BID9@^MQf]c_W0N6n;1
-IRRQ9`UOZog[fe0JcR4GYE1
-R1
-R0
-R41
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v
-R45
-R3
-r1
-!s85 0
-31
-R42
-!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v|
-!i113 1
-R4
-R43
-R6
-vwb_conmax_pri_dec
-Z46 !s110 1576467842
-!i10b 1
-!s100 F?cJb`zB9Om3SSYHgeZmz0
-I36o^`Hj[5<Tc<ORV4A^J]0
-R1
-R0
-R41
-8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v
-FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v
-R45
-R3
-r1
-!s85 0
-31
-Z47 !s108 1576467842.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v|
 !i113 1
-R4
-R43
-R6
+R5
+R31
+R7
 vwb_conmax_pri_enc
-R46
+R33
 !i10b 1
 !s100 VVPk_hZ`2M8JdHXDcn03Z3
 Iezh6c0?4AK_zoF]aJ[j[[3
-R1
+R2
 R0
-R41
+R30
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v
-R45
+R32
 R3
 r1
 !s85 0
 31
-R47
+R34
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v|
 !i113 1
-R4
-R43
-R6
+R5
+R31
+R7
 vwb_conmax_rf
-R46
+Z35 !s110 1577803204
 !i10b 1
 !s100 l>e_YWVaiUPD]=2I6?mkJ0
 I=`a0zH4@[K;8G@AR:NPVj1
-R1
+R2
 R0
-R41
+R30
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_rf.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_rf.v
-R45
+R32
 R3
 r1
 !s85 0
 31
-R47
+Z36 !s108 1577803204.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_rf.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_rf.v|
 !i113 1
-R4
-R43
-R6
+R5
+R31
+R7
 vwb_conmax_slave_if
-R27
+R35
 !i10b 1
 !s100 @h607nU2jgEh9F3GlZ;Ge3
 Id^md9Z2XFe;dI>;fAZ`3A3
-R1
+R2
 R0
-R41
+R30
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v
-R45
+R32
 R3
 r1
 !s85 0
 31
-R28
+R36
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v|
 !i113 1
-R4
-R43
-R6
+R5
+R31
+R7
 vwb_conmax_top
-R27
+!s110 1577803203
 !i10b 1
 !s100 cDWSL^Qjk6Ea<a`_^KM7X2
 I^VleQznzMg@X3j`=UeHBZ0
-R1
+R2
 R0
-R41
+R30
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_top.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_top.v
-R45
+R32
 R3
 r1
 !s85 0
 31
-R28
+!s108 1577803203.000000
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_top.v|
 !i113 1
-R4
-R43
-R6
+R5
+R31
+R7
 vwishbone_bus_if
-R30
+R26
 !i10b 1
 !s100 hWQQ]8l8Sa5Ol[DkB9oob3
 IA1]X3m97995oMQioj?=df2
-R1
+R2
 R0
-R14
+R12
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/wishbone_bus_if.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/wishbone_bus_if.v
-R21
+R17
 R3
 r1
 !s85 0
 31
-R31
+R27
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/wishbone_bus_if.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/wishbone_bus_if.v|
 !i113 1
-R4
-R13
-R6
+R5
+R11
+R7
 vwishbone_soc
-!s110 1576467839
+R28
 !i10b 1
-!s100 IWEbEY:>`ke92Vn40bA:d2
-IfNn_[bZ>LMbVEhB0[8YmT3
-R1
+!s100 m=Kan^`1ze?6k2UZ>9TRz3
+IGk>EO>aKbedE5_bnmhObe1
+R2
 R0
-w1576349206
+w1577794183
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v
 L0 40
@@ -927,21 +729,21 @@ R3
 r1
 !s85 0
 31
-!s108 1576467839.000000
+R29
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v|
 !i113 1
-R4
-R9
+R5
 R6
-vwishbone_soc_vlg_tst
 R7
-!i10b 1
-!s100 ;1X]F><FY]GEZOiXmRNW]1
-IC[V5Z4OX]dCaW?Z]>6[AH1
+vwishbone_soc_vlg_tst
 R1
+!i10b 1
+!s100 A5e:M<PLo1]h0BiLYjlo;0
+I5Qa<02Hcg:]eZ[XBCDFg[2
+R2
 R0
-w1576367910
+w1577802619
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt
 L0 28
@@ -949,21 +751,21 @@ R3
 r1
 !s85 0
 31
-R8
+R4
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt|
 !i113 1
-R4
+R5
 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim
-R6
-vwishbone_uart_lite
 R7
+vwishbone_uart_lite
+R1
 !i10b 1
 !s100 N640J6zlBKfC4_T=B=kO<1
 I;QoneGhHlm2@[4DFLl3@I2
-R1
+R2
 R0
-w1575601584
+w1577187021
 8F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_uart_lite.v
 FF:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_uart_lite.v
 L0 20
@@ -971,10 +773,10 @@ R3
 r1
 !s85 0
 31
-R8
+R10
 !s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_uart_lite.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10|F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_uart_lite.v|
 !i113 1
-R4
-R9
+R5
 R6
+R7
