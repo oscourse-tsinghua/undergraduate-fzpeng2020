@@ -43,8 +43,7 @@ test_ ## testnum: \
 
 #define TEST_IMM_OP( testnum, inst, result, val1, imm ) \
     TEST_CASE( testnum, x3, result, \
-      li  x1, val1; \
-      inst x3, x1, SEXT_IMM(imm); \
+
     )
 
 #define TEST_IMM_SRC1_EQ_DEST( testnum, inst, result, val1, imm ) \

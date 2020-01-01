@@ -150,6 +150,7 @@ _start:
 	TEST(remu)
 
 	TEST(simple)
+	TEST(sdram)
 #endif
 
 #ifdef RV32UA

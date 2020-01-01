@@ -1,8 +1,8 @@
 ENTRY(_start)
 MEMORY
 {
-    ROM (rx)      : ORIGIN = 0x00010000, LENGTH = 0xc000  /* ROM 48   KB */
-    RAM (xrw)     : ORIGIN = 0x00100000, LENGTH = 0x10000 /* RAM 64   KB */
+    ROM (rx)      : ORIGIN = 0x00010000, LENGTH = 0xc000   /* ROM 48   KB */
+    RAM (xrw)     : ORIGIN = 0x80000000, LENGTH = 0x800000 /* RAM 8  MB */
 }
 
 
