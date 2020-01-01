@@ -2,7 +2,7 @@
 #include "unprivileged_memory.h"
 #include "softfloat.h"
 #include "config.h"
-
+/*
 DECLARE_EMULATION_FUNC(emulate_fp)
 {
   asm (".pushsection .rodata\n"
@@ -397,3 +397,4 @@ DECLARE_EMULATION_FUNC(emulate_fmadd)
     return truly_illegal_insn(regs, mcause, mepc, mstatus, insn);
   }
 }
+*/

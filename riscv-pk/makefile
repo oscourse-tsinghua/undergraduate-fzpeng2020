@@ -28,7 +28,7 @@ OBJECTS = build/bbl
 
 build/Makefile:
 	cd build && rm -f ./*
-	cd build && ../configure --prefix=$$RISCV --host=$(CROSS_COMPILE) --with-payload=../../undergraduate-fzpeng2020/os/target/riscv32-os/release/os
+	cd build && ../configure --prefix=$$RISCV --host=$(CROSS_COMPILE) --with-payload=../../os/target/riscv32-os/release/os --disable-fp-emulation
 
 build/bbl: build/Makefile
 	cd build && $(MAKE)

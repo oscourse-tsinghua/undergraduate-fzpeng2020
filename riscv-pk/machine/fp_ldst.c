@@ -1,6 +1,6 @@
 #include "fp_emulation.h"
 #include "unprivileged_memory.h"
-
+/*
 DECLARE_EMULATION_FUNC(emulate_float_load)
 {
   uint64_t val;
@@ -64,4 +64,4 @@ DECLARE_EMULATION_FUNC(emulate_float_store)
       return truly_illegal_insn(regs, mcause, mepc, mstatus, insn);
   }
 }
-
+*/

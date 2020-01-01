@@ -79,8 +79,6 @@ static void supervisor_vm_init()
 //for (uint32_t i = 0; i < 1024; i++) {
 //  	  printm("middle_pt[%d]:%x", i, middle_pt[i]);
 //  }
-  printm("sbi map is %x", middle_pt[1023]);
-  printm("mega map is %x", middle_pt[769]);
   mb();
   root_page_table = root_pt;
   write_csr(sptbr, (uintptr_t)root_pt >> RISCV_PGSHIFT);

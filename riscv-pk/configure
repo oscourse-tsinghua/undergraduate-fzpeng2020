@@ -4065,7 +4065,6 @@ fi
 
 
     # Add subproject to our running list
-
     subprojects="$subprojects softfloat"
 
     # Process the subproject appropriately. If enabled add it to the
@@ -4073,15 +4072,14 @@ fi
     # SUBPROJECT_ENABLED C define, and include the appropriate
     # 'subproject.ac'.
 
-
-      { $as_echo "$as_me:${as_lineno-$LINENO}: configuring default subproject : softfloat" >&5
+     { $as_echo "$as_me:${as_lineno-$LINENO}: configuring default subproject : softfloat" >&5
 $as_echo "$as_me: configuring default subproject : softfloat" >&6;}
       ac_config_files="$ac_config_files softfloat.mk:softfloat/softfloat.mk.in"
 
       enable_softfloat_sproj="yes"
       subprojects_enabled="$subprojects_enabled softfloat"
 
-$as_echo "#define SOFTFLOAT_ENABLED /**/" >>confdefs.h
+# $as_echo "#define SOFTFLOAT_ENABLED /**/" >>confdefs.h
 
 
 
@@ -4953,7 +4951,7 @@ do
   case $ac_config_target in
     "pk.mk") CONFIG_FILES="$CONFIG_FILES pk.mk:pk/pk.mk.in" ;;
     "bbl.mk") CONFIG_FILES="$CONFIG_FILES bbl.mk:bbl/bbl.mk.in" ;;
-    "softfloat.mk") CONFIG_FILES="$CONFIG_FILES softfloat.mk:softfloat/softfloat.mk.in" ;;
+	"softfloat.mk") CONFIG_FILES="$CONFIG_FILES softfloat.mk:softfloat/softfloat.mk.in" ;;
     "dummy_payload.mk") CONFIG_FILES="$CONFIG_FILES dummy_payload.mk:dummy_payload/dummy_payload.mk.in" ;;
     "machine.mk") CONFIG_FILES="$CONFIG_FILES machine.mk:machine/machine.mk.in" ;;
     "util.mk") CONFIG_FILES="$CONFIG_FILES util.mk:util/util.mk.in" ;;

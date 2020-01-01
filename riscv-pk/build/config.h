@@ -32,7 +32,7 @@
 #define PK_ENABLED /**/
 
 /* Define if floating-point emulation is enabled */
-#define PK_ENABLE_FP_EMULATION /**/
+/* #undef PK_ENABLE_FP_EMULATION */
 
 /* Define if the RISC-V logo is to be displayed */
 #define PK_ENABLE_LOGO /**/
@@ -41,7 +41,7 @@
 #define PK_ENABLE_VM /**/
 
 /* Define if subproject MCPPBS_SPROJ_NORM is enabled */
-#define SOFTFLOAT_ENABLED /**/
+/* #undef SOFTFLOAT_ENABLED */
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1

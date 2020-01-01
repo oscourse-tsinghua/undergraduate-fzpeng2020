@@ -66,7 +66,7 @@ void illegal_insn_trap(uintptr_t* regs, uintptr_t mcause, uintptr_t mepc)
        "  .word truly_illegal_insn\n"
        "  .word truly_illegal_insn\n"
        "  .popsection");
-
+//ifndef MODIFIED
   uintptr_t mstatus;
   insn_t insn = get_insn(mepc, &mstatus);
 
