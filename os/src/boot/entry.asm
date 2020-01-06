@@ -2,6 +2,7 @@
     .globl _start
 _start:
 	lui sp, %hi(bootstacktop)   # 将栈指针 sp 置为栈顶地址
+	/*
 	csrr t0, satp
 	#lw t1, 0(t0)
  	mv a3, t0
@@ -16,7 +17,7 @@ _start:
     or      t0, t0, t1
     csrw    satp, t0
 	#sfence.vma
-	
+	*/
 	# update pc to 0xc0xx_xxxx
 	lui t0, %hi(rust_main)
 	addi t0, t0, %lo(rust_main)
