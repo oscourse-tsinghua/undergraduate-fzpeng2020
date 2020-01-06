@@ -14,7 +14,7 @@ static void query_mem(const char* config_string)
   assert(base == DRAM_BASE);
   //res = query_config_string(config_string, "ram{0{size");
   //mem_size = get_uint(res);
-  mem_size = (uint64_t)0x00800000;
+  mem_size = (uint64_t)0x00200000;
 }
 
 static void query_rtc(const char* config_string)

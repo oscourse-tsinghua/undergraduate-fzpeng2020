@@ -12,27 +12,26 @@ static volatile int elf_loaded;
 static void supervisor_vm_init()
 {
   uintptr_t highest_va = DRAM_BASE - first_free_paddr;
-  //mem_size = MIN(mem_size, highest_va - info.first_user_vaddr) & -RISCV_PGSIZE;
-  mem_size = MIN(mem_size, highest_va - info.first_user_vaddr) & -MEGAPAGE_SIZE;
+  mem_size = MIN(mem_size, highest_va - info.first_user_vaddr) & -RISCV_PGSIZE;
+  //mem_size = MIN(mem_size, highest_va - info.first_user_vaddr) & -MEGAPAGE_SIZE;
 
   pte_t* sbi_pt = (pte_t*)(info.first_vaddr_after_user + info.load_offset);
   memset(sbi_pt, 0, RISCV_PGSIZE);
   printm("info.first_user_vaddr: %x sbi_pt_addr:%x mem_size: %x\n", info.first_user_vaddr, (uint32_t)sbi_pt,mem_size);
   pte_t* middle_pt = (void*)sbi_pt + RISCV_PGSIZE;
 #if __riscv_xlen == 32
-  ///*
+  /*
   size_t num_middle_pts = 1;
   pte_t* root_pt = middle_pt;
   memset(root_pt, 0, RISCV_PGSIZE);
-#else
-  //size_t num_middle_pts = (-info.first_user_vaddr - 1) / MEGAPAGE_SIZE + 1;
-  printm("MEGAPAGE_SIZE: %d total_vaddr: %d \n", MEGAPAGE_SIZE, (-info.first_user_vaddr -1) );
-  //pte_t* root_pt = (void*)middle_pt + num_middle_pts * RISCV_PGSIZE;
-  printm("Step 1.1 begin memset size: %x \n", (num_middle_pts + 1) * RISCV_PGSIZE);
-  //mset(middle_pt, 0, (num_middle_pts + 1) * RISCV_PGSIZE);
+  */
+  size_t num_middle_pts = (-info.first_user_vaddr - 1) / MEGAPAGE_SIZE + 1;
+  printm(">>> %d\n", num_middle_pts);
+  pte_t* root_pt = (void*)middle_pt + num_middle_pts * RISCV_PGSIZE;
+  memset(middle_pt, 0, (num_middle_pts + 1) * RISCV_PGSIZE);
   for (size_t i = 0; i < num_middle_pts - 1; i++)
     root_pt[(1<<RISCV_PGLEVEL_BITS)-num_middle_pts+i] = ptd_create(((uintptr_t)middle_pt >> RISCV_PGSHIFT) + i);
-//else
+#else
   die("not implemented!");
   size_t num_middle_pts = (-info.first_user_vaddr - 1) / GIGAPAGE_SIZE + 1;
   pte_t* root_pt = (void*)middle_pt + num_middle_pts * RISCV_PGSIZE;
@@ -40,7 +39,7 @@ static void supervisor_vm_init()
   for (size_t i = 0; i < num_middle_pts; i++)
     root_pt[(1<<RISCV_PGLEVEL_BITS)-num_middle_pts+i] = ptd_create(((uintptr_t)middle_pt >> RISCV_PGSHIFT) + i);
 #endif
-#if 0  
+#if 1  
   for (uintptr_t vaddr = info.first_user_vaddr, paddr = vaddr + info.load_offset, end = info.first_vaddr_after_user;
        paddr < DRAM_BASE + mem_size; vaddr += RISCV_PGSIZE, paddr += RISCV_PGSIZE) {
     int l2_shift = RISCV_PGLEVEL_BITS + RISCV_PGSHIFT;
@@ -72,9 +71,9 @@ static void supervisor_vm_init()
     uintptr_t idx = (1 << RISCV_PGLEVEL_BITS) - num_sbi_pages + i;
     sbi_pt[idx] = pte_create((DRAM_BASE / RISCV_PGSIZE) + i, PTE_G | PTE_R | PTE_X);
   }
-  //pte_t* sbi_pte = /*middle_pt*/root_pt + ((/*num_middle_pts*/1 << RISCV_PGLEVEL_BITS)-1);
-  pte_t* sbi_pte = middle_pt + ((num_middle_pts << RISCV_PGLEVEL_BITS) - 1);
-  assert(!*sbi_pte);
+  pte_t* sbi_pte = /*middle_pt*/root_pt + ((/*num_middle_pts*/1 << RISCV_PGLEVEL_BITS)-1);
+  //pte_t* sbi_pte = middle_pt + ((num_middle_pts << RISCV_PGLEVEL_BITS) - 1);
+  //assert(!*sbi_pte);
   *sbi_pte = ptd_create((uintptr_t)sbi_pt >> RISCV_PGSHIFT);
 //for (uint32_t i = 0; i < 1024; i++) {
 //  	  printm("middle_pt[%d]:%x", i, middle_pt[i]);
