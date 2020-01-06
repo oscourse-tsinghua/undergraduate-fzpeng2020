@@ -12,12 +12,13 @@ static volatile int elf_loaded;
 static void supervisor_vm_init()
 {
   uintptr_t highest_va = DRAM_BASE - first_free_paddr;
-  mem_size = MIN(mem_size, highest_va - info.first_user_vaddr) & -RISCV_PGSIZE;
+  mem_size = 0x200000;
+  //mem_size = MIN(mem_size, highest_va - info.first_user_vaddr) & -RISCV_PGSIZE;
   //mem_size = MIN(mem_size, highest_va - info.first_user_vaddr) & -MEGAPAGE_SIZE;
 
   pte_t* sbi_pt = (pte_t*)(info.first_vaddr_after_user + info.load_offset);
   memset(sbi_pt, 0, RISCV_PGSIZE);
-  printm("info.first_user_vaddr: %x sbi_pt_addr:%x mem_size: %x\n", info.first_user_vaddr, (uint32_t)sbi_pt,mem_size);
+  printm("highest_va: %x info.first_user_vaddr: %x sbi_pt_addr:%x mem_size: %x\n", highest_va, info.first_user_vaddr, (uint32_t)sbi_pt,mem_size);
   pte_t* middle_pt = (void*)sbi_pt + RISCV_PGSIZE;
 #if __riscv_xlen == 32
   /*
