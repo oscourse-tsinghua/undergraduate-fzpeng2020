@@ -3,8 +3,8 @@
 //数据存储器data_ram
 `define DataAddrBus 31:0
 `define DataBus 31:0
-`define DataMemNum (4*1024*1024)
-`define DataMemNumLog2 22
+`define DataMemNum (512*1024)
+`define DataMemNumLog2 19
 `define ByteWidth 7:0
 
 module ram_wishbone (

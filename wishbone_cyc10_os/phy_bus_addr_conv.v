@@ -32,7 +32,7 @@
 `include "cpu/defines.v"
 
 `define RAM_PHYSICAL_ADDR_BEGIN            34'h08000_0000
-`define RAM_PHYSICAL_ADDR_LEN              34'h00080_0000
+`define RAM_PHYSICAL_ADDR_LEN              34'h00020_0000
 
 `define UART_PHYSICAL_ADDR_BEGIN           34'h00200_0000
 `define UART_PHYSICAL_ADDR_LEN             34'h20
