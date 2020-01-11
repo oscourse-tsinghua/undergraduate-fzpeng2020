@@ -1,0 +1,3527 @@
+cscope 15 /mnt/f/undergraduate_thesis/undergraduate-fzpeng2020/test/rv32ui -q 0000000169 0000014561
+	@riscv_test.h
+
+1 #iâdeà
+_ENV_PICORV32_TEST_H
+
+
+2 
+	#_ENV_PICORV32_TEST_H
+
+
+	)
+
+4 #iâdeà
+TEST_FUNC_NAME
+
+
+5 
+	#TEST_FUNC_NAME
+ 
+my‹¡
+
+
+	)
+
+6 
+	#TEST_FUNC_TXT
+ "my‹¡"
+
+	)
+
+7 
+	#TEST_FUNC_RET
+ 
+my‹¡_»t
+
+
+	)
+
+10 
+	#RVTEST_RV32U
+
+
+	)
+
+11 
+	#TESTNUM
+ 
+x28
+
+
+	)
+
+13 
+	#RVTEST_CODE_BEGIN
+ \
+
+14 .
+‹xt
+; \
+
+15 .
+glob®
+ 
+TEST_FUNC_NAME
+; \
+
+16 .
+glob®
+ 
+TEST_FUNC_RET
+; \
+
+17 
+TEST_FUNC_NAME
+: \
+
+18 
+li
+ 
+a0
+, 0x00ff; \
+
+19 .
+d–ay_´
+: \
+
+20 
+addi
+ 
+a0
+,a0,-1; \
+
+21 
+bÃ
+ 
+a0
+,
+z”o
+,.
+d–ay_´
+; \
+
+22 
+lui
+ 
+a0
+,%
+	`hi
+(.
+‹¡_Çme
+); \
+
+23 
+addi
+ 
+a0
+,a0,%
+	`lo
+(.
+‹¡_Çme
+); \
+
+24 
+lui
+ 
+a2
+,0x02000000>>12; \
+
+25 .
+´Çme_Ãxt
+: \
+
+26 
+lb
+ 
+a1
+,0(
+a0
+); \
+
+27 
+beq
+ 
+a1
+,
+z”o
+,.
+´Çme_dÚe
+; \
+
+28 
+sw
+ 
+a1
+,0(
+a2
+); \
+
+29 
+addi
+ 
+a0
+,a0,1; \
+
+30 
+j®
+ 
+z”o
+,.
+´Çme_Ãxt
+; \
+
+31 .
+‹¡_Çme
+: \
+
+32 .
+ascii
+ 
+TEST_FUNC_TXT
+; \
+
+33 .
+by‹
+ 0x00; \
+
+34 .
+b®ign
+ 4, 0; \
+
+35 .
+´Çme_dÚe
+: \
+
+36 
+addi
+ 
+a1
+,
+z”o
+,'.'; \
+
+37 
+sw
+ 
+a1
+,0(
+a2
+); \
+
+38 
+sw
+ 
+a1
+,0(
+a2
+);
+
+	)
+
+40 
+	#RVTEST_PASS
+ \
+
+41 
+li
+ 
+a0
+, 0xff; \
+
+42 .
+d–ay_ok
+: \
+
+43 
+addi
+ 
+a0
+,a0,-1; \
+
+44 
+bÃ
+ 
+a0
+,
+z”o
+,.
+d–ay_ok
+; \
+
+45 
+lui
+ 
+a0
+,0x02000000>>12; \
+
+46 
+addi
+ 
+a1
+,
+z”o
+,'O'; \
+
+47 
+sw
+ 
+a1
+,0(
+a0
+); \
+
+48 
+addi
+ 
+a2
+,
+z”o
+,'K'; \
+
+49 
+sw
+ 
+a2
+,0(
+a0
+); \
+
+50 
+addi
+ 
+a3
+,
+z”o
+,'\r'; \
+
+51 
+sw
+ 
+a3
+,0(
+a0
+); \
+
+52 
+addi
+ 
+a4
+,
+z”o
+,'\n'; \
+
+53 
+sw
+ 
+a4
+,0(
+a0
+); \
+
+54 
+j®
+ 
+z”o
+,
+TEST_FUNC_RET
+;
+
+	)
+
+56 
+	#RVTEST_FAIL
+ \
+
+57 
+li
+ 
+a0
+, 0xff; \
+
+58 .
+d–ay_çž
+: \
+
+59 
+addi
+ 
+a0
+,a0,-1; \
+
+60 
+bÃ
+ 
+a0
+,
+z”o
+,.
+d–ay_çž
+; \
+
+61 
+lui
+ 
+a0
+,0x02000000>>12; \
+
+62 
+addi
+ 
+a1
+,
+z”o
+,'E'; \
+
+63 
+sw
+ 
+a1
+,0(
+a0
+); \
+
+64 
+addi
+ 
+a2
+,
+z”o
+,'R'; \
+
+65 
+sw
+ 
+a2
+,0(
+a0
+); \
+
+66 
+sw
+ 
+a2
+,0(
+a0
+); \
+
+67 
+addi
+ 
+a3
+,
+z”o
+,'O'; \
+
+68 
+sw
+ 
+a3
+,0(
+a0
+); \
+
+69 
+sw
+ 
+a2
+,0(
+a0
+); \
+
+70 
+addi
+ 
+a4
+,
+z”o
+,'\r'; \
+
+71 
+sw
+ 
+a4
+,0(
+a0
+); \
+
+72 
+addi
+ 
+a5
+,
+z”o
+,'\n'; \
+
+73 
+sw
+ 
+a5
+,0(
+a0
+); \
+
+74 
+j®
+ 
+z”o
+,
+TEST_FUNC_RET
+;
+
+	)
+
+78 
+	#RVTEST_CODE_END
+
+
+	)
+
+79 
+	#RVTEST_DATA_BEGIN
+ .
+b®ign
+ 4;
+
+	)
+
+80 
+	#RVTEST_DATA_END
+
+
+	)
+
+	@test_macros.h
+
+3 #iâdeà
+__TEST_MACROS_SCALAR_H
+
+
+4 
+	#__TEST_MACROS_SCALAR_H
+
+
+	)
+
+8 #H–³¸
+maüos
+
+
+11 
+	#TEST_CASE
+Ð
+‹¡num
+, 
+‹¡»g
+, 
+cÜ»ùv®
+, 
+code
+... ) \
+
+12 
+‹¡_
+ ## 
+‹¡num
+: \
+
+13 
+code
+; \
+
+14 
+li
+ 
+x29
+, 
+cÜ»ùv®
+; \
+
+15 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+16 
+bÃ
+ 
+‹¡»g
+, 
+x29
+, 
+çž
+;
+
+	)
+
+18 #W
+u£
+ 
+a
+ 
+maüo
+ 
+hack
+ 
+to
+ 
+simpify
+ 
+code
+ 
+g’”©iÚ
+ 
+v¬ious
+ 
+numb”s
+
+
+19 #oà
+bubbË
+ 
+cyþes
+.
+
+21 
+	#TEST_INSERT_NOPS_0
+
+
+	)
+
+22 
+	#TEST_INSERT_NOPS_1
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_0
+
+
+	)
+
+23 
+	#TEST_INSERT_NOPS_2
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_1
+
+
+	)
+
+24 
+	#TEST_INSERT_NOPS_3
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_2
+
+
+	)
+
+25 
+	#TEST_INSERT_NOPS_4
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_3
+
+
+	)
+
+26 
+	#TEST_INSERT_NOPS_5
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_4
+
+
+	)
+
+27 
+	#TEST_INSERT_NOPS_6
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_5
+
+
+	)
+
+28 
+	#TEST_INSERT_NOPS_7
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_6
+
+
+	)
+
+29 
+	#TEST_INSERT_NOPS_8
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_7
+
+
+	)
+
+30 
+	#TEST_INSERT_NOPS_9
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_8
+
+
+	)
+
+31 
+	#TEST_INSERT_NOPS_10
+ 
+nÝ
+; 
+TEST_INSERT_NOPS_9
+
+
+	)
+
+35 #RV64UI 
+MACROS
+
+
+39 #Te¡ 
+š¡ruùiÚs
+ 
+w™h
+ 
+immedŸ‹
+ 
+Ý”ªd
+
+
+42 
+	#SEXT_IMM
+(
+x
+è((xè| (-(((xè>> 11è& 1è<< 11))
+
+	)
+
+44 
+	#TEST_IMM_OP
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+imm
+ ) \
+
+45 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+46 
+li
+ 
+x1
+, 
+v®1
+; \
+
+47 
+š¡
+ 
+x3
+, 
+x1
+, 
+	`SEXT_IMM
+(
+imm
+); \
+
+48 )
+
+	)
+
+50 
+	#TEST_IMM_SRC1_EQ_DEST
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+imm
+ ) \
+
+51 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+52 
+li
+ 
+x1
+, 
+v®1
+; \
+
+53 
+š¡
+ 
+x1
+, x1, 
+	`SEXT_IMM
+(
+imm
+); \
+
+54 )
+
+	)
+
+56 
+	#TEST_IMM_DEST_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+imm
+ ) \
+
+57 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x6
+, 
+»suÉ
+, \
+
+58 
+li
+ 
+x4
+, 0; \
+
+59 1: 
+li
+ 
+x1
+, 
+v®1
+; \
+
+60 
+š¡
+ 
+x3
+, 
+x1
+, 
+	`SEXT_IMM
+(
+imm
+); \
+
+61 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+62 
+addi
+ 
+x6
+, 
+x3
+, 0; \
+
+63 
+addi
+ 
+x4
+, x4, 1; \
+
+64 
+li
+ 
+x5
+, 2; \
+
+65 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+66 )
+
+	)
+
+68 
+	#TEST_IMM_SRC1_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+imm
+ ) \
+
+69 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+70 
+li
+ 
+x4
+, 0; \
+
+71 1: 
+li
+ 
+x1
+, 
+v®1
+; \
+
+72 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+73 
+š¡
+ 
+x3
+, 
+x1
+, 
+	`SEXT_IMM
+(
+imm
+); \
+
+74 
+addi
+ 
+x4
+, x4, 1; \
+
+75 
+li
+ 
+x5
+, 2; \
+
+76 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+77 )
+
+	)
+
+79 
+	#TEST_IMM_ZEROSRC1
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+imm
+ ) \
+
+80 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+81 
+š¡
+ 
+x1
+, 
+x0
+, 
+	`SEXT_IMM
+(
+imm
+); \
+
+82 )
+
+	)
+
+84 
+	#TEST_IMM_ZERODEST
+Ð
+‹¡num
+, 
+š¡
+, 
+v®1
+, 
+imm
+ ) \
+
+85 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x0
+, 0, \
+
+86 
+li
+ 
+x1
+, 
+v®1
+; \
+
+87 
+š¡
+ 
+x0
+, 
+x1
+, 
+	`SEXT_IMM
+(
+imm
+); \
+
+88 )
+
+	)
+
+91 #Te¡ 
+veùÜ
+ 
+cÚfig
+ 
+š¡ruùiÚs
+
+
+94 
+	#TEST_VSETCFGIVL
+Ð
+‹¡num
+, 
+nx´
+, 
+når
+, 
+bªk
+, 
+vl
+, 
+»suÉ
+ ) \
+
+95 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+96 
+li
+ 
+x1
+, (
+bªk
+ << 12); \
+
+97 
+v£tcfg
+ 
+x1
+,
+nx´
+,
+når
+; \
+
+98 
+li
+ 
+x1
+, 
+vl
+; \
+
+99 
+v£tvl
+ 
+x1
+,x1; \
+
+100 )
+
+	)
+
+102 
+	#TEST_VVCFG
+Ð
+‹¡num
+, 
+nx´
+, 
+når
+, 
+bªk
+, 
+vl
+, 
+»suÉ
+ ) \
+
+103 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+104 
+li
+ 
+x1
+, (
+bªk
+ << 12è| (
+når
+ << 6è| 
+nx´
+; \
+
+105 
+v£tcfg
+ 
+x1
+; \
+
+106 
+li
+ 
+x1
+, 
+vl
+; \
+
+107 
+v£tvl
+ 
+x1
+,x1; \
+
+108 )
+
+	)
+
+110 
+	#TEST_VSETVL
+Ð
+‹¡num
+, 
+nx´
+, 
+når
+, 
+bªk
+, 
+vl
+, 
+»suÉ
+ ) \
+
+111 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+112 
+li
+ 
+x1
+, (
+bªk
+ << 12); \
+
+113 
+v£tcfg
+ 
+x1
+,
+nx´
+,
+når
+; \
+
+114 
+li
+ 
+x1
+, 
+vl
+; \
+
+115 
+v£tvl
+ 
+x1
+, x1; \
+
+116 )
+
+	)
+
+119 #Te¡ 
+ª
+ 
+š¡ruùiÚ
+ 
+w™h
+ 
+Ý”ªds
+
+
+122 
+	#TEST_R_OP
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+ ) \
+
+123 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+124 
+li
+ 
+x1
+, 
+v®1
+; \
+
+125 
+š¡
+ 
+x3
+, 
+x1
+; \
+
+126 )
+
+	)
+
+128 
+	#TEST_R_SRC1_EQ_DEST
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+ ) \
+
+129 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+130 
+li
+ 
+x1
+, 
+v®1
+; \
+
+131 
+š¡
+ 
+x1
+, x1; \
+
+132 )
+
+	)
+
+134 
+	#TEST_R_DEST_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+ ) \
+
+135 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x6
+, 
+»suÉ
+, \
+
+136 
+li
+ 
+x4
+, 0; \
+
+137 1: 
+li
+ 
+x1
+, 
+v®1
+; \
+
+138 
+š¡
+ 
+x3
+, 
+x1
+; \
+
+139 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+140 
+addi
+ 
+x6
+, 
+x3
+, 0; \
+
+141 
+addi
+ 
+x4
+, x4, 1; \
+
+142 
+li
+ 
+x5
+, 2; \
+
+143 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+144 )
+
+	)
+
+147 #Te¡ 
+ª
+ 
+š¡ruùiÚ
+ 
+w™h
+ -
+Ý”ªds
+
+
+150 
+	#TEST_RR_OP
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+v®2
+ ) \
+
+151 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+152 
+li
+ 
+x1
+, 
+v®1
+; \
+
+153 
+li
+ 
+x2
+, 
+v®2
+; \
+
+154 
+š¡
+ 
+x3
+, 
+x1
+, 
+x2
+; \
+
+155 )
+
+	)
+
+157 
+	#TEST_RR_SRC1_EQ_DEST
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+v®2
+ ) \
+
+158 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+159 
+li
+ 
+x1
+, 
+v®1
+; \
+
+160 
+li
+ 
+x2
+, 
+v®2
+; \
+
+161 
+š¡
+ 
+x1
+, x1, 
+x2
+; \
+
+162 )
+
+	)
+
+164 
+	#TEST_RR_SRC2_EQ_DEST
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+v®2
+ ) \
+
+165 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x2
+, 
+»suÉ
+, \
+
+166 
+li
+ 
+x1
+, 
+v®1
+; \
+
+167 
+li
+ 
+x2
+, 
+v®2
+; \
+
+168 
+š¡
+ 
+x2
+, 
+x1
+, x2; \
+
+169 )
+
+	)
+
+171 
+	#TEST_RR_SRC12_EQ_DEST
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+ ) \
+
+172 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+173 
+li
+ 
+x1
+, 
+v®1
+; \
+
+174 
+š¡
+ 
+x1
+, x1, x1; \
+
+175 )
+
+	)
+
+177 
+	#TEST_RR_DEST_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+v®2
+ ) \
+
+178 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x6
+, 
+»suÉ
+, \
+
+179 
+li
+ 
+x4
+, 0; \
+
+180 1: 
+li
+ 
+x1
+, 
+v®1
+; \
+
+181 
+li
+ 
+x2
+, 
+v®2
+; \
+
+182 
+š¡
+ 
+x3
+, 
+x1
+, 
+x2
+; \
+
+183 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+184 
+addi
+ 
+x6
+, 
+x3
+, 0; \
+
+185 
+addi
+ 
+x4
+, x4, 1; \
+
+186 
+li
+ 
+x5
+, 2; \
+
+187 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+188 )
+
+	)
+
+190 
+	#TEST_RR_SRC12_BYPASS
+Ð
+‹¡num
+, 
+¤c1_nÝs
+, 
+¤c2_nÝs
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+v®2
+ ) \
+
+191 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+192 
+li
+ 
+x4
+, 0; \
+
+193 1: 
+li
+ 
+x1
+, 
+v®1
+; \
+
+194 
+TEST_INSERT_NOPS_
+ ## 
+¤c1_nÝs
+ \
+
+195 
+li
+ 
+x2
+, 
+v®2
+; \
+
+196 
+TEST_INSERT_NOPS_
+ ## 
+¤c2_nÝs
+ \
+
+197 
+š¡
+ 
+x3
+, 
+x1
+, 
+x2
+; \
+
+198 
+addi
+ 
+x4
+, x4, 1; \
+
+199 
+li
+ 
+x5
+, 2; \
+
+200 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+201 )
+
+	)
+
+203 
+	#TEST_RR_SRC21_BYPASS
+Ð
+‹¡num
+, 
+¤c1_nÝs
+, 
+¤c2_nÝs
+, 
+š¡
+, 
+»suÉ
+, 
+v®1
+, 
+v®2
+ ) \
+
+204 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+205 
+li
+ 
+x4
+, 0; \
+
+206 1: 
+li
+ 
+x2
+, 
+v®2
+; \
+
+207 
+TEST_INSERT_NOPS_
+ ## 
+¤c1_nÝs
+ \
+
+208 
+li
+ 
+x1
+, 
+v®1
+; \
+
+209 
+TEST_INSERT_NOPS_
+ ## 
+¤c2_nÝs
+ \
+
+210 
+š¡
+ 
+x3
+, 
+x1
+, 
+x2
+; \
+
+211 
+addi
+ 
+x4
+, x4, 1; \
+
+212 
+li
+ 
+x5
+, 2; \
+
+213 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+214 )
+
+	)
+
+216 
+	#TEST_RR_ZEROSRC1
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®
+ ) \
+
+217 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x2
+, 
+»suÉ
+, \
+
+218 
+li
+ 
+x1
+, 
+v®
+; \
+
+219 
+š¡
+ 
+x2
+, 
+x0
+, 
+x1
+; \
+
+220 )
+
+	)
+
+222 
+	#TEST_RR_ZEROSRC2
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+v®
+ ) \
+
+223 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x2
+, 
+»suÉ
+, \
+
+224 
+li
+ 
+x1
+, 
+v®
+; \
+
+225 
+š¡
+ 
+x2
+, 
+x1
+, 
+x0
+; \
+
+226 )
+
+	)
+
+228 
+	#TEST_RR_ZEROSRC12
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+ ) \
+
+229 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x1
+, 
+»suÉ
+, \
+
+230 
+š¡
+ 
+x1
+, 
+x0
+, x0; \
+
+231 )
+
+	)
+
+233 
+	#TEST_RR_ZERODEST
+Ð
+‹¡num
+, 
+š¡
+, 
+v®1
+, 
+v®2
+ ) \
+
+234 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x0
+, 0, \
+
+235 
+li
+ 
+x1
+, 
+v®1
+; \
+
+236 
+li
+ 
+x2
+, 
+v®2
+; \
+
+237 
+š¡
+ 
+x0
+, 
+x1
+, 
+x2
+; \
+
+238 )
+
+	)
+
+241 #Te¡ 
+memÜy
+ 
+š¡ruùiÚs
+
+
+244 
+	#TEST_LD_OP
+Ð
+‹¡num
+, 
+š¡
+, 
+»suÉ
+, 
+off£t
+, 
+ba£
+ ) \
+
+245 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+246 
+Ï
+ 
+x1
+, 
+ba£
+; \
+
+247 
+š¡
+ 
+x3
+, 
+	`off£t
+(
+x1
+); \
+
+248 )
+
+	)
+
+250 
+	#TEST_ST_OP
+Ð
+‹¡num
+, 
+lßd_š¡
+, 
+¡Üe_š¡
+, 
+»suÉ
+, 
+off£t
+, 
+ba£
+ ) \
+
+251 
+	`TEST_CASE
+Ð
+‹¡num
+, 
+x3
+, 
+»suÉ
+, \
+
+252 
+Ï
+ 
+x1
+, 
+ba£
+; \
+
+253 
+li
+ 
+x2
+, 
+»suÉ
+; \
+
+254 
+¡Üe_š¡
+ 
+x2
+, 
+	`off£t
+(
+x1
+); \
+
+255 
+lßd_š¡
+ 
+x3
+, 
+	`off£t
+(
+x1
+); \
+
+256 )
+
+	)
+
+258 
+	#TEST_LD_DEST_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+, 
+»suÉ
+, 
+off£t
+, 
+ba£
+ ) \
+
+259 
+‹¡_
+ ## 
+‹¡num
+: \
+
+260 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+261 
+li
+ 
+x4
+, 0; \
+
+262 1: 
+Ï
+ 
+x1
+, 
+ba£
+; \
+
+263 
+š¡
+ 
+x3
+, 
+	`off£t
+(
+x1
+); \
+
+264 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+265 
+addi
+ 
+x6
+, 
+x3
+, 0; \
+
+266 
+li
+ 
+x29
+, 
+»suÉ
+; \
+
+267 
+bÃ
+ 
+x6
+, 
+x29
+, 
+çž
+; \
+
+268 
+addi
+ 
+x4
+, x4, 1; \
+
+269 
+li
+ 
+x5
+, 2; \
+
+270 
+bÃ
+ 
+x4
+, 
+x5
+, 1b; \
+
+271 
+
+	)
+
+272 
+	#TEST_LD_SRC1_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+, 
+»suÉ
+, 
+off£t
+, 
+ba£
+ ) \
+
+273 
+‹¡_
+ ## 
+‹¡num
+: \
+
+274 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+275 
+li
+ 
+x4
+, 0; \
+
+276 1: 
+Ï
+ 
+x1
+, 
+ba£
+; \
+
+277 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+278 
+š¡
+ 
+x3
+, 
+	`off£t
+(
+x1
+); \
+
+279 
+li
+ 
+x29
+, 
+»suÉ
+; \
+
+280 
+bÃ
+ 
+x3
+, 
+x29
+, 
+çž
+; \
+
+281 
+addi
+ 
+x4
+, x4, 1; \
+
+282 
+li
+ 
+x5
+, 2; \
+
+283 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+284 
+
+	)
+
+285 
+	#TEST_ST_SRC12_BYPASS
+Ð
+‹¡num
+, 
+¤c1_nÝs
+, 
+¤c2_nÝs
+, 
+lßd_š¡
+, 
+¡Üe_š¡
+, 
+»suÉ
+, 
+off£t
+, 
+ba£
+ ) \
+
+286 
+‹¡_
+ ## 
+‹¡num
+: \
+
+287 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+288 
+li
+ 
+x4
+, 0; \
+
+289 1: 
+li
+ 
+x1
+, 
+»suÉ
+; \
+
+290 
+TEST_INSERT_NOPS_
+ ## 
+¤c1_nÝs
+ \
+
+291 
+Ï
+ 
+x2
+, 
+ba£
+; \
+
+292 
+TEST_INSERT_NOPS_
+ ## 
+¤c2_nÝs
+ \
+
+293 
+¡Üe_š¡
+ 
+x1
+, 
+	`off£t
+(
+x2
+); \
+
+294 
+lßd_š¡
+ 
+x3
+, 
+	`off£t
+(
+x2
+); \
+
+295 
+li
+ 
+x29
+, 
+»suÉ
+; \
+
+296 
+bÃ
+ 
+x3
+, 
+x29
+, 
+çž
+; \
+
+297 
+addi
+ 
+x4
+, x4, 1; \
+
+298 
+li
+ 
+x5
+, 2; \
+
+299 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+300 
+
+	)
+
+301 
+	#TEST_ST_SRC21_BYPASS
+Ð
+‹¡num
+, 
+¤c1_nÝs
+, 
+¤c2_nÝs
+, 
+lßd_š¡
+, 
+¡Üe_š¡
+, 
+»suÉ
+, 
+off£t
+, 
+ba£
+ ) \
+
+302 
+‹¡_
+ ## 
+‹¡num
+: \
+
+303 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+304 
+li
+ 
+x4
+, 0; \
+
+305 1: 
+Ï
+ 
+x2
+, 
+ba£
+; \
+
+306 
+TEST_INSERT_NOPS_
+ ## 
+¤c1_nÝs
+ \
+
+307 
+li
+ 
+x1
+, 
+»suÉ
+; \
+
+308 
+TEST_INSERT_NOPS_
+ ## 
+¤c2_nÝs
+ \
+
+309 
+¡Üe_š¡
+ 
+x1
+, 
+	`off£t
+(
+x2
+); \
+
+310 
+lßd_š¡
+ 
+x3
+, 
+	`off£t
+(
+x2
+); \
+
+311 
+li
+ 
+x29
+, 
+»suÉ
+; \
+
+312 
+bÃ
+ 
+x3
+, 
+x29
+, 
+çž
+; \
+
+313 
+addi
+ 
+x4
+, x4, 1; \
+
+314 
+li
+ 
+x5
+, 2; \
+
+315 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+316 
+
+	)
+
+318 #Te¡ 
+b¿nch
+ 
+š¡ruùiÚs
+
+
+321 
+	#TEST_BR1_OP_TAKEN
+Ð
+‹¡num
+, 
+š¡
+, 
+v®1
+ ) \
+
+322 
+‹¡_
+ ## 
+‹¡num
+: \
+
+323 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+324 
+li
+ 
+x1
+, 
+v®1
+; \
+
+325 
+š¡
+ 
+x1
+, 2f; \
+
+326 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+327 1: 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 3f; \
+
+328 2: 
+š¡
+ 
+x1
+, 1b; \
+
+329 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+330 3:
+
+	)
+
+332 
+	#TEST_BR1_OP_NOTTAKEN
+Ð
+‹¡num
+, 
+š¡
+, 
+v®1
+ ) \
+
+333 
+‹¡_
+ ## 
+‹¡num
+: \
+
+334 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+335 
+li
+ 
+x1
+, 
+v®1
+; \
+
+336 
+š¡
+ 
+x1
+, 1f; \
+
+337 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 2f; \
+
+338 1: 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+339 2: 
+š¡
+ 
+x1
+, 1b; \
+
+340 3:
+
+	)
+
+342 
+	#TEST_BR1_SRC1_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+, 
+v®1
+ ) \
+
+343 
+‹¡_
+ ## 
+‹¡num
+: \
+
+344 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+345 
+li
+ 
+x4
+, 0; \
+
+346 1: 
+li
+ 
+x1
+, 
+v®1
+; \
+
+347 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+348 
+š¡
+ 
+x1
+, 
+çž
+; \
+
+349 
+addi
+ 
+x4
+, x4, 1; \
+
+350 
+li
+ 
+x5
+, 2; \
+
+351 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+352 
+
+	)
+
+353 
+	#TEST_BR2_OP_TAKEN
+Ð
+‹¡num
+, 
+š¡
+, 
+v®1
+, 
+v®2
+ ) \
+
+354 
+‹¡_
+ ## 
+‹¡num
+: \
+
+355 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+356 
+li
+ 
+x1
+, 
+v®1
+; \
+
+357 
+li
+ 
+x2
+, 
+v®2
+; \
+
+358 
+š¡
+ 
+x1
+, 
+x2
+, 2f; \
+
+359 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+360 1: 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 3f; \
+
+361 2: 
+š¡
+ 
+x1
+, 
+x2
+, 1b; \
+
+362 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+363 3:
+
+	)
+
+365 
+	#TEST_BR2_OP_NOTTAKEN
+Ð
+‹¡num
+, 
+š¡
+, 
+v®1
+, 
+v®2
+ ) \
+
+366 
+‹¡_
+ ## 
+‹¡num
+: \
+
+367 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+368 
+li
+ 
+x1
+, 
+v®1
+; \
+
+369 
+li
+ 
+x2
+, 
+v®2
+; \
+
+370 
+š¡
+ 
+x1
+, 
+x2
+, 1f; \
+
+371 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 2f; \
+
+372 1: 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+373 2: 
+š¡
+ 
+x1
+, 
+x2
+, 1b; \
+
+374 3:
+
+	)
+
+376 
+	#TEST_BR2_SRC12_BYPASS
+Ð
+‹¡num
+, 
+¤c1_nÝs
+, 
+¤c2_nÝs
+, 
+š¡
+, 
+v®1
+, 
+v®2
+ ) \
+
+377 
+‹¡_
+ ## 
+‹¡num
+: \
+
+378 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+379 
+li
+ 
+x4
+, 0; \
+
+380 1: 
+li
+ 
+x1
+, 
+v®1
+; \
+
+381 
+TEST_INSERT_NOPS_
+ ## 
+¤c1_nÝs
+ \
+
+382 
+li
+ 
+x2
+, 
+v®2
+; \
+
+383 
+TEST_INSERT_NOPS_
+ ## 
+¤c2_nÝs
+ \
+
+384 
+š¡
+ 
+x1
+, 
+x2
+, 
+çž
+; \
+
+385 
+addi
+ 
+x4
+, x4, 1; \
+
+386 
+li
+ 
+x5
+, 2; \
+
+387 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+388 
+
+	)
+
+389 
+	#TEST_BR2_SRC21_BYPASS
+Ð
+‹¡num
+, 
+¤c1_nÝs
+, 
+¤c2_nÝs
+, 
+š¡
+, 
+v®1
+, 
+v®2
+ ) \
+
+390 
+‹¡_
+ ## 
+‹¡num
+: \
+
+391 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+392 
+li
+ 
+x4
+, 0; \
+
+393 1: 
+li
+ 
+x2
+, 
+v®2
+; \
+
+394 
+TEST_INSERT_NOPS_
+ ## 
+¤c1_nÝs
+ \
+
+395 
+li
+ 
+x1
+, 
+v®1
+; \
+
+396 
+TEST_INSERT_NOPS_
+ ## 
+¤c2_nÝs
+ \
+
+397 
+š¡
+ 
+x1
+, 
+x2
+, 
+çž
+; \
+
+398 
+addi
+ 
+x4
+, x4, 1; \
+
+399 
+li
+ 
+x5
+, 2; \
+
+400 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+401 
+
+	)
+
+403 #Te¡ 
+jump
+ 
+š¡ruùiÚs
+
+
+406 
+	#TEST_JR_SRC1_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+ ) \
+
+407 
+‹¡_
+ ## 
+‹¡num
+: \
+
+408 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+409 
+li
+ 
+x4
+, 0; \
+
+410 1: 
+Ï
+ 
+x6
+, 2f; \
+
+411 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+412 
+š¡
+ 
+x6
+; \
+
+413 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+414 2: 
+addi
+ 
+x4
+, x4, 1; \
+
+415 
+li
+ 
+x5
+, 2; \
+
+416 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+417 
+
+	)
+
+418 
+	#TEST_JALR_SRC1_BYPASS
+Ð
+‹¡num
+, 
+nÝ_cyþes
+, 
+š¡
+ ) \
+
+419 
+‹¡_
+ ## 
+‹¡num
+: \
+
+420 
+li
+ 
+TESTNUM
+, 
+‹¡num
+; \
+
+421 
+li
+ 
+x4
+, 0; \
+
+422 1: 
+Ï
+ 
+x6
+, 2f; \
+
+423 
+TEST_INSERT_NOPS_
+ ## 
+nÝ_cyþes
+ \
+
+424 
+š¡
+ 
+x19
+, 
+x6
+, 0; \
+
+425 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+çž
+; \
+
+426 2: 
+addi
+ 
+x4
+, x4, 1; \
+
+427 
+li
+ 
+x5
+, 2; \
+
+428 
+bÃ
+ 
+x4
+, 
+x5
+, 1b \
+
+429 
+
+	)
+
+432 #Pas 
+ªd
+ 
+çž
+ 
+code
+ (
+assumes
+ 
+‹¡
+ 
+num
+ 
+is
+ 
+š
+ 
+TESTNUM
+)
+
+435 
+	#TEST_PASSFAIL
+ \
+
+436 
+bÃ
+ 
+x0
+, 
+TESTNUM
+, 
+·ss
+; \
+
+437 
+çž
+: \
+
+438 
+RVTEST_FAIL
+; \
+
+439 
+·ss
+: \
+
+440 
+RVTEST_PASS
+ \
+
+441 
+
+	)
+
+444 #Te¡ 
+d©a
+ 
+£ùiÚ
+
+
+447 
+	#TEST_DATA
+
+
+	)
+
+	@
+1
+.
+0
+2
+27
+riscv_test.h
+test_macros.h

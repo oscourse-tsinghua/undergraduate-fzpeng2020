@@ -96,7 +96,7 @@ module phy_bus_addr_conv(
 			else if (mtimecmp_index < `MTIMECMP_PHYSICAL_ADDR_LEN)
 				bus_addr_o <= {4'h3, mtimecmp_index[27:0] + 8'hfe};
 			else if (ipi_index < `IPI_PHYSICAL_ADDR_LEN)
-				bus_addr_o <= {4'h3, ipi_index[27:0] + 8'h3fb};
+				bus_addr_o <= {4'h3, ipi_index[27:0] + 8'hfb};
 			else if (flash_index < `FLASH_PHYSICAL_ADDR_LEN)
 				bus_addr_o <= {4'h4, flash_index[27:0]};
 			else if (led_index < `LED_PHYSICAL_ADDR_BEGIN)

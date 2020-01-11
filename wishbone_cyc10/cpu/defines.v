@@ -1,6 +1,9 @@
 // define RV32 for 32 bits, or ISA is 64 bits
 `define RV32
-//`define Simulation
+//`define SdramOpensourceIp
+`define SdramQuartusIp
+`define DisableTLB
+// `define Simulation
 // `define Div
 //ȫ��
 `define RstEnable 1'b0

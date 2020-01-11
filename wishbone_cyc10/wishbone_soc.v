@@ -39,6 +39,7 @@
 
 module wishbone_soc(
 	input wire clk,
+	input wire clk_50,
 	input wire rst_n,
 
 	// Flash
@@ -48,16 +49,16 @@ module wishbone_soc(
 	output wire[0:7] flash_signal,
 */
 	`ifndef Simulation
-	output wire 			sdr_clk_o,
-   output wire 			sdr_cs_n_o,
-   output wire		   	sdr_cke_o,
-   output wire 			sdr_ras_n_o,
-   output wire 			sdr_cas_n_o,
-   output wire 			sdr_we_n_o,
-   output wire [1:0] 	sdr_dqm_o,
-   output wire [1:0] 	sdr_ba_o,
-   output wire	[11:0]   sdr_addr_o,
-   inout  wire	[15:0]   sdr_dq_io,
+	(*keep*)output wire 			sdr_clk_o,
+   (*keep*)output wire 			sdr_cs_n_o,
+   (*keep*)output wire		   	sdr_cke_o,
+   (*keep*)output wire 			sdr_ras_n_o,
+   (*keep*)output wire 			sdr_cas_n_o,
+   (*keep*)output wire 			sdr_we_n_o,
+   (*keep*)output wire [1:0] 	sdr_dqm_o,
+   (*keep*)output wire [1:0] 	sdr_ba_o,
+   (*keep*)output wire	[11:0]   sdr_addr_o,
+   (*keep*)inout  wire	[15:0]   sdr_dq_io,
 	`endif
 	// UART
 	input wire uart_rxd_i,
@@ -67,7 +68,7 @@ module wishbone_soc(
 );
 
 	wire [12:0] sdr_addr_13_to_12;
-	assign sdr_addr_o = sdr_addr_13_to_12[11:0];
+	//assign sdr_addr_o = sdr_addr_13_to_12[11:0];
 	// CPU 时钟
 	wire cpu_clk;
 	wire lock;
@@ -75,15 +76,36 @@ module wishbone_soc(
 	// wishbone 时钟
 	wire wishbone_clk;
 	assign reset_n = lock & rst_n;
-	assign sdr_clk_o = wishbone_clk;
+	// sdram
+	wire sdram_clk;
 	
+	`ifdef SdramOpensourceIp
 	ip_pll ip_pll0(
 		.areset(!rst_n),
 		.inclk0(clk),
-		.c0(wishbone_clk), //30Mhz
-		.c1(cpu_clk),		 //10Mhz		
+		.c0(wishbone_clk), //20Mhz
+		.c1(cpu_clk),		 //10Mhz	
 		.locked(lock)
 	);
+	`else 
+	ip_pll_sdram ip_pll_sdram0(
+		.areset(!rst_n),
+		.inclk0(clk_50),
+		.c0(wishbone_clk), //20Mhz
+		.c1(cpu_clk),		 //10Mhz	
+		.c2(sdram_clk),	 //150Mhz
+		.c3(sdr_clk_o),	 //150Mhz -68degree
+		.locked(lock)
+	);
+	/*
+	sdram_clk sdram_clk0(
+	.inclk0(clk_50),
+	.c0(sdram_clk),		//200Mhz
+	.c1(sdr_clk_o)		//200Mhz -68
+	);
+	*/
+	`endif
+	
 	
 	wire[31:0] pc_o;
 
@@ -158,14 +180,14 @@ module wishbone_soc(
 	);
 
 
-	wire[31:0] s0_data_i;
-	wire[31:0] s0_data_o;
-	wire[31:0] s0_addr_o;
-	wire[3:0]  s0_sel_o;
-	wire       s0_we_o; 
-	wire       s0_cyc_o; 
-	wire       s0_stb_o;
-	wire       s0_ack_i;
+	(*keep*)wire[31:0] s0_data_i;
+	(*keep*)wire[31:0] s0_data_o;
+	(*keep*)wire[31:0] s0_addr_o;
+	(*keep*)wire[3:0]  s0_sel_o;
+	(*keep*)wire       s0_we_o; 
+	(*keep*)wire       s0_cyc_o; 
+	(*keep*)wire       s0_stb_o;
+	(*keep*)wire       s0_ack_i;
 	
 	wire[31:0] s1_data_i;
 	wire[31:0] s1_data_o;
@@ -197,40 +219,7 @@ module wishbone_soc(
 
 		.ser_tx(uart_txd_o),
 		.ser_rx(uart_rxd_i)
-		/*.stx_pad_o(uart_txd_o),
-		.srx_pad_i(uart_rxd_i),
-		.dsr_pad_i(1'b0), 
-		.ri_pad_i(1'b0), 
-		.dcd_pad_i(1'b0),
-		.rts_pad_o(),
-		.dtr_pad_o()*/
 	);
-	/*
-	//连接 bootloader
-	wire[31:0] s2_data_i;
-	wire[31:0] s2_data_o;
-	wire[31:0] s2_addr_o;
-	wire[3:0]  s2_sel_o;
-	wire       s2_we_o;
-	wire       s2_cyc_o;
-	wire       s2_stb_o;
-	wire       s2_ack_i;
-
-	bootloader bootloader0(
-		.clk(wishbone_clk),
-		.rst_n(reset_n),
-
-		.wishbone_addr_i(s2_addr_o),
-		.wishbone_data_i(s2_data_o),
-		.wishbone_we_i(s2_we_o),
-		.wishbone_sel_i(s2_sel_o),
-		.wishbone_stb_i(s2_stb_o),
-		.wishbone_cyc_i(s2_cyc_o),
-
-		.wishbone_data_o(s2_data_i),
-		.wishbone_ack_o(s2_ack_i)
-	);
-	*/
 
 	//连接 config_string, timer
 	wire[31:0] s3_data_i;
@@ -284,11 +273,6 @@ module wishbone_soc(
 		.wishbone_data_o(s4_data_i),
 		.wishbone_ack_o(s4_ack_i)
 		
-		/*
-		.signal(flash_signal),
-		.flash_data(flash_data),
-		.flash_addr(flash_addr)
-		*/
 	);
 	
 	wire[31:0] s5_data_i;
@@ -313,11 +297,7 @@ module wishbone_soc(
 		.wishbone_data_o(s5_data_i),
 		.wishbone_ack_o(s5_ack_i),
 		.led(led)
-		/*
-		.signal(flash_signal),
-		.flash_data(flash_data),
-		.flash_addr(flash_addr)
-		*/
+
 	);
 
 	wire[31:0] s6_data_i;
@@ -328,7 +308,7 @@ module wishbone_soc(
 	wire       s6_cyc_o; 
 	wire       s6_stb_o;
 	wire       s6_ack_i;	
-
+	
 	`ifdef Simulation
 	ram_wishbone ram_wishbone0(
 		.clk(wishbone_clk),		// max. 50 MHz
@@ -342,7 +322,7 @@ module wishbone_soc(
 		.wishbone_data_o(s0_data_i),
 		.wishbone_ack_o(s0_ack_i)
 		);
-	`else
+	`elif SdramOpensourceIp
 	sdrc_top sdrc_top0(
      .wb_rst_i(~reset_n),
      .wb_clk_i(wishbone_clk),
@@ -358,7 +338,7 @@ module wishbone_soc(
      .wb_cti_i(3'b000),
 		
 		//Interface to SDRAMs
-     .sdram_clk(sdr_clk_o),
+     .sdram_clk(wishbone_clk),
      .sdram_resetn(reset_n),
      .sdr_cs_n(sdr_cs_n_o),
      .sdr_cke(sdr_cke_o),
@@ -387,7 +367,69 @@ module wishbone_soc(
 	  .cfg_sdr_width(2'b01),
      .cfg_colbits(2'b00)
   );
+  
+	`else 
+	
+	wire [21:0]	avalon_sdram_address;
+	wire [1:0]	avalon_sdram_byteenable_n;
+	wire 	   	avalon_sdram_chipselect;
+	wire [15:0]	avalon_sdram_writedata;
+	wire 			avalon_sdram_read_n;
+	wire 			avalon_sdram_write_n;
+	wire [15:0]	avalon_sdram_readdata;
+	wire 			avalon_sdram_readdatavalid;
+	wire 			avalon_sdram_waitrequest;
+		
+	wb32_avalon16 wb32_avalon16 (
+		.clk									(wishbone_clk),	
+		.sdram_clk							(sdram_clk),
+		.reset_n								(reset_n),	
+		
+		.wishbone_addr_i					(s0_addr_o),
+		.wishbone_data_i					(s0_data_o),
+		.wishbone_we_i						(s0_we_o),
+		.wishbone_sel_i					(s0_sel_o),
+		.wishbone_stb_i					(s0_stb_o),
+		.wishbone_cyc_i					(s0_cyc_o),
+		.wishbone_data_o					(s0_data_i),
+		.wishbone_ack_o					(s0_ack_i),
+	
+		.avalon_sdram_address_o         (avalon_sdram_address),
+		.avalon_sdram_byteenable_n_o    (avalon_sdram_byteenable_n),
+		.avalon_sdram_chipselect_o      (avalon_sdram_chipselect),
+		.avalon_sdram_writedata_o       (avalon_sdram_writedata),
+		.avalon_sdram_read_n_o          (avalon_sdram_read_n),
+		.avalon_sdram_write_n_o         (avalon_sdram_write_n),
+		.avalon_sdram_readdata_i        (avalon_sdram_readdata),
+		.avalon_sdram_readdatavalid_i   (avalon_sdram_readdatavalid),
+		.avalon_sdram_waitrequest_i     (avalon_sdram_waitrequest)
+		
+	);
+	
+	sdram sdram0 (
+		.clk_clk                      (sdram_clk),                    					
+		.reset_reset_n                (reset_n),               		  					
+		.sdram_addr                   (sdr_addr_o),                   					
+		.sdram_ba                     (sdr_ba_o),                     					
+		.sdram_cas_n                  (sdr_cas_n_o),                  					
+		.sdram_cke                    (sdr_cke_o),                    					
+		.sdram_cs_n                   (sdr_cs_n_o),                   					
+		.sdram_dq                     (sdr_dq_io),                    					
+		.sdram_dqm                    (sdr_dqm_o),                    					
+		.sdram_ras_n                  (sdr_ras_n_o),                  					
+		.sdram_we_n                   (sdr_we_n_o),                   					
+		.avalon_sdram_address         (avalon_sdram_address),      
+		.avalon_sdram_byteenable_n    (avalon_sdram_byteenable_n),  
+		.avalon_sdram_chipselect      (avalon_sdram_chipselect),    
+		.avalon_sdram_writedata       (avalon_sdram_writedata),     
+		.avalon_sdram_read_n          (avalon_sdram_read_n),        
+		.avalon_sdram_write_n         (avalon_sdram_write_n),       
+		.avalon_sdram_readdata        (avalon_sdram_readdata),      
+		.avalon_sdram_readdatavalid   (avalon_sdram_readdatavalid), 
+		.avalon_sdram_waitrequest     (avalon_sdram_waitrequest)    
+	);
 	`endif
+	
 	// bus arbiter
 	wb_conmax_top wb_conmax_top0(
 		.clk_i(wishbone_clk),

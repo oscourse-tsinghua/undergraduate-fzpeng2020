@@ -94,6 +94,7 @@ _start:
 #endif
 
 #ifdef RV32UI
+	TEST(sdram)
 	TEST(lui)
 	TEST(auipc)
 	TEST(j)
@@ -150,7 +151,7 @@ _start:
 	TEST(remu)
 
 	TEST(simple)
-	TEST(sdram)
+	//TEST(sdram)
 #endif
 
 #ifdef RV32UA

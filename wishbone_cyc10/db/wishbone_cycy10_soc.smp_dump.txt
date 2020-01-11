@@ -879,61 +879,53 @@ state.grant5 0 0 1 0 0 0 0 1
 state.grant6 0 1 0 0 0 0 0 1 
 state.grant7 1 0 0 0 0 0 0 1 
 
-State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_xfr_ctl:u_xfr_ctl|mgmt_st
-Name mgmt_st.111 mgmt_st.110 mgmt_st.101 mgmt_st.100 mgmt_st.011 mgmt_st.010 mgmt_st.001 mgmt_st.000 
-mgmt_st.000 0 0 0 0 0 0 0 0 
-mgmt_st.001 0 0 0 0 0 0 1 1 
-mgmt_st.010 0 0 0 0 0 1 0 1 
-mgmt_st.011 0 0 0 0 1 0 0 1 
-mgmt_st.100 0 0 0 1 0 0 0 1 
-mgmt_st.101 0 0 1 0 0 0 0 1 
-mgmt_st.110 0 1 0 0 0 0 0 1 
-mgmt_st.111 1 0 0 0 0 0 0 1 
+State Machine - |wishbone_soc|sdram:sdram0|sdram_new_sdram_controller_0:new_sdram_controller_0|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
 
-State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_xfr_ctl:u_xfr_ctl|xfr_st
-Name xfr_st.11 xfr_st.10 xfr_st.01 xfr_st.00 
-xfr_st.00 0 0 0 0 
-xfr_st.01 0 0 1 1 
-xfr_st.10 0 1 0 1 
-xfr_st.11 1 0 0 1 
+State Machine - |wishbone_soc|sdram:sdram0|sdram_new_sdram_controller_0:new_sdram_controller_0|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
 
-State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank3_fsm|bank_st
-Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
-bank_st.000 0 0 0 0 0 
-bank_st.001 0 0 1 1 0 
-bank_st.010 0 1 0 1 0 
-bank_st.011 1 0 0 1 0 
-bank_st.100 0 0 0 1 1 
+State Machine - |wishbone_soc|sdram:sdram0|sdram_new_sdram_controller_0:new_sdram_controller_0|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
 
-State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank2_fsm|bank_st
-Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
-bank_st.000 0 0 0 0 0 
-bank_st.001 0 0 1 1 0 
-bank_st.010 0 1 0 1 0 
-bank_st.011 1 0 0 1 0 
-bank_st.100 0 0 0 1 1 
+State Machine - |wishbone_soc|sdram:sdram0|sdram_new_sdram_controller_0:new_sdram_controller_0|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
 
-State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank1_fsm|bank_st
-Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
-bank_st.000 0 0 0 0 0 
-bank_st.001 0 0 1 1 0 
-bank_st.010 0 1 0 1 0 
-bank_st.011 1 0 0 1 0 
-bank_st.100 0 0 0 1 1 
-
-State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_bank_ctl:u_bank_ctl|sdrc_bank_fsm:bank0_fsm|bank_st
-Name bank_st.011 bank_st.010 bank_st.001 bank_st.000 bank_st.100 
-bank_st.000 0 0 0 0 0 
-bank_st.001 0 0 1 1 0 
-bank_st.010 0 1 0 1 0 
-bank_st.011 1 0 0 1 0 
-bank_st.100 0 0 0 1 1 
-
-State Machine - |wishbone_soc|sdrc_top:sdrc_top0|sdrc_core:u_sdrc_core|sdrc_req_gen:u_req_gen|req_st
-Name req_st.00 req_st.10 req_st.01 
-req_st.00 0 0 0 
-req_st.01 1 0 1 
-req_st.10 1 1 0 
+State Machine - |wishbone_soc|wb32_avalon16:wb32_avalon16|state
+Name state.state_done state.state_read_wait_hi state.state_read_byte_hi state.state_read_wait_lo state.state_read_byte_lo state.state_write_wait_hi state.state_write_byte_hi state.state_write_wait_lo state.state_write_byte_lo state.state_idle 
+state.state_idle 0 0 0 0 0 0 0 0 0 0 
+state.state_write_byte_lo 0 0 0 0 0 0 0 0 1 1 
+state.state_write_wait_lo 0 0 0 0 0 0 0 1 0 1 
+state.state_write_byte_hi 0 0 0 0 0 0 1 0 0 1 
+state.state_write_wait_hi 0 0 0 0 0 1 0 0 0 1 
+state.state_read_byte_lo 0 0 0 0 1 0 0 0 0 1 
+state.state_read_wait_lo 0 0 0 1 0 0 0 0 0 1 
+state.state_read_byte_hi 0 0 1 0 0 0 0 0 0 1 
+state.state_read_wait_hi 0 1 0 0 0 0 0 0 0 1 
+state.state_done 1 0 0 0 0 0 0 0 0 1 
 
 State Machine - |wishbone_soc|wishbone_uart_lite:wishbone_uart_lite0|state
 Name state.StateReq state.StateOk state.StateIdle 
