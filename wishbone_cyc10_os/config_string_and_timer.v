@@ -95,7 +95,7 @@ module config_string_and_timer(
 	end
 
 	wire[`WishboneDataBus]  mem[0:`DataMemNum-1];
-	`include"config_string_rom/config_string_rom.v"
+	`include"config_string_rom/config_string_rom"
 	assign mem[251] = {31'h0, software_int};
 	assign mem[252] = mtime[31:0];
 	assign mem[253] = mtime[63:32];

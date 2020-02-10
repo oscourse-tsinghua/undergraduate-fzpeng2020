@@ -1,5 +1,5 @@
 Flow report for wishbone_cycy10_soc
-Mon Dec 09 22:43:47 2019
+Mon Feb 10 09:49:45 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 09 22:43:46 2019       ;
+; Flow Status                        ; Successful - Mon Feb 10 09:49:44 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; wishbone_cycy10_soc                         ;
 ; Top-level Entity Name              ; wishbone_soc                                ;
 ; Family                             ; Cyclone 10 LP                               ;
 ; Device                             ; 10CL016YU256C8G                             ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 20,162                                      ;
-;     Total combinational functions  ; 14,644                                      ;
-;     Dedicated logic registers      ; 6,915                                       ;
-; Total registers                    ; 6915                                        ;
+; Total logic elements               ; 75,667                                      ;
+;     Total combinational functions  ; 39,396                                      ;
+;     Dedicated logic registers      ; 37,844                                      ;
+; Total registers                    ; 37844                                       ;
 ; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/09/2019 22:40:00 ;
+; Start date & time ; 02/10/2020 09:40:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; wishbone_cycy10_soc ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------------+--------------+----------------------+
 ; Assignment Name                      ; Value                                  ; Default Value       ; Entity Name  ; Section Id           ;
 +--------------------------------------+----------------------------------------+---------------------+--------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 1098243871892.157590240013388          ; --                  ; --           ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 93328259659481.158129884103596         ; --                  ; --           ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                  ; --           ; wishbone_soc_vlg_tst ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --                  ; --           ; eda_simulation       ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; wishbone_soc_vlg_tst                   ; --                  ; --           ; eda_simulation       ;
@@ -107,8 +107,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:03:43     ; 1.0                     ; 5070 MB             ; 00:04:01                           ;
-; Total                ; 00:03:43     ; --                      ; --                  ; 00:04:01                           ;
+; Analysis & Synthesis ; 00:08:53     ; 1.0                     ; 5788 MB             ; 00:08:54                           ;
+; Total                ; 00:08:53     ; --                      ; --                  ; 00:08:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

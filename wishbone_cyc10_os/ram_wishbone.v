@@ -5,6 +5,8 @@
 `define DataBus 31:0
 `define DataMemNum (4*1024*1024)
 `define DataMemNumLog2 22
+//`define DataMemNum (1024)
+//`define DataMemNumLog2 10
 `define ByteWidth 7:0
 
 module ram_wishbone (
