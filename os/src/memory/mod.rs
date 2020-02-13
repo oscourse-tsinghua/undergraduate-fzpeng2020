@@ -1,10 +1,11 @@
 mod frame_allocator;
+pub mod paging;
+pub mod memory_set;
 
 use frame_allocator::SEGMENT_TREE_ALLOCATOR as FRAME_ALLOCATOR;
 use riscv::addr::{
     // 分别为虚拟地址、物理地址、虚拟页、物理页帧
     // 非常方便，之后会经常用到
-    // 用法可参见 https://github.com/rcore-os/riscv/blob/master/src/addr.rs
     VirtAddr,
     PhysAddr,
     Page,
@@ -13,9 +14,17 @@ use riscv::addr::{
 use crate::consts::*;
 use buddy_system_allocator::LockedHeap;
 
+use memory_set::{
+    MemorySet,
+    attr::MemoryAttr,
+    handler::Linear
+};
+
 pub fn init(l: usize, r: usize) {
     FRAME_ALLOCATOR.lock().init(l, r);
     init_heap();
+    println!("++++ init_heap   ++++");
+    kernel_remap();
     println!("++++setup memory!++++");
 }
 
@@ -29,6 +38,29 @@ fn init_heap() {
             .init(HEAP.as_ptr() as usize, KERNEL_HEAP_SIZE);
     }
 }
+
+pub fn access_pa_via_va(pa: usize) -> usize {
+    pa + PHYSICAL_MEMORY_OFFSET
+}
+
+pub fn kernel_remap() {
+    let mut memory_set = MemorySet::new();
+    extern "C" {
+        fn bootstack();    //定义在src/boot/entry64.asm
+        fn bootstacktop(); //定义在src/boot/entry64.asm
+    }
+    // 將启动栈 push 进来
+    memory_set.push(
+        bootstack as usize,
+        bootstacktop as usize,
+        MemoryAttr::new(),
+        Linear::new(PHYSICAL_MEMORY_OFFSET),
+    );
+    unsafe {
+        memory_set.activate();
+    }
+}
+
 pub fn alloc_frame() -> Option<Frame> {
     //将物理页号转为物理页帧
     Some(Frame::of_ppn(FRAME_ALLOCATOR.lock().alloc()))

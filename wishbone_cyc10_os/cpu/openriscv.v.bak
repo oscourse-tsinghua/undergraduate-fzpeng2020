@@ -26,7 +26,7 @@
 // File:    openriscv.v
 // Author:  Lei Silei, shyoshyo
 // E-mail:  leishangwen@163.com, shyoshyo@qq.com
-// Description: OpenRISCVï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+// Description: OpenRISCV´¦ÀíÆ÷µÄ¶¥²ãÎÄ¼þ
 // Revision: 1.0
 //////////////////////////////////////////////////////////////////////
 
@@ -64,33 +64,33 @@ module openriscv(
 	
 	output wire[`RegBus] pc_o
 );
-	// ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ inst ï¿½æ´¢ï¿½ï¿½ï¿½Äµï¿½Ö·
+	// ÏÂÒ»ÌõÐèÒª·ÃÎÊ inst ´æ´¢Æ÷µÄµØÖ·
 	wire [`PhyAddrBus]pc_next_inst_phy_addr;
 	wire [`RegBus]pc_next_inst_vir_addr;
 	wire pc_next_inst_tlb_exception;
 	wire pc_ce_o;
 
 
-	// pc reg ï¿½ï¿½ï¿½ IF ï¿½×¶Îµï¿½ï¿½ï¿½ï¿½ï¿½
-	// inst ï¿½æ´¢ï¿½ï¿½ Ê¹ï¿½ï¿½
+	// pc reg Á¬½Ó IF ½×¶ÎµÄÊäÈë
+	// inst ´æ´¢Æ÷ Ê¹ÄÜ
 	wire[`RegBus] pc;
 	wire if_inst_ce_i;
 	wire [`PhyAddrBus]if_inst_phy_addr_i;
 	wire [`ExceptionTypeBus]if_excepttype_i;
 
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½ IF Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ IF/ID Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	// ï¿½ï¿½ inst ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
+	//Á¬½ÓÒëÂë½×¶Î IF Ä£¿éµÄÊä³öÓë IF/ID Ä£¿éµÄÊäÈë
+	// ´Ó inst ´æ´¢Æ÷»ñµÃµÄÊý¾Ý
 	wire[`InstBus] if_inst_o;
 	wire if_inst_ce_o;
 	wire [`ExceptionTypeBus]if_excepttype_o;
 
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½IDÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//Á¬½ÓÒëÂë½×¶ÎIDÄ£¿éµÄÊäÈë
 	wire[`RegBus] id_pc_i;
 	wire[`InstBus] id_inst_i;
 	wire[`ExceptionTypeBus] id_excepttype_i;
 	wire id_not_stall_i;
 	
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½IDÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID/EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//Á¬½ÓÒëÂë½×¶ÎIDÄ£¿éµÄÊä³öÓëID/EXÄ£¿éµÄÊäÈë
 	wire[`AluOpBus] id_aluop_o;
 	wire[`AluSelBus] id_alusel_o;
 	wire[`RegBus] id_reg1_o;
@@ -109,7 +109,7 @@ module openriscv(
 	wire[`CSRAddrBus] id_csr_reg_addr_o;
 	wire[`RegBus] id_csr_reg_data_o;
 	
-	//ï¿½ï¿½ï¿½ID/EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶ï¿½EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//Á¬½ÓID/EXÄ£¿éµÄÊä³öÓëÖ´ÐÐ½×¶ÎEXÄ£¿éµÄÊäÈë
 	wire[`AluOpBus] ex_aluop_i;
 	wire[`AluSelBus] ex_alusel_i;
 	wire[`RegBus] ex_reg1_i;
@@ -130,7 +130,7 @@ module openriscv(
 	wire [`PhyAddrBus]ex_mem_phy_addr_i;
 	wire ex_data_tlb_exception_i;
 
-	//ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶ï¿½EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½EX/MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//Á¬½ÓÖ´ÐÐ½×¶ÎEXÄ£¿éµÄÊä³öÓëEX/MEMÄ£¿éµÄÊäÈë
 	wire ex_wreg_o;
 	wire[`RegAddrBus] ex_wd_o;
 	wire[`RegBus] ex_wdata_o;
@@ -152,7 +152,7 @@ module openriscv(
 	wire ex_data_tlb_r_exception_o;
 	wire ex_data_tlb_w_exception_o;
 
-	//ï¿½ï¿½ï¿½EX/MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½×¶ï¿½MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//Á¬½ÓEX/MEMÄ£¿éµÄÊä³öÓë·Ã´æ½×¶ÎMEMÄ£¿éµÄÊäÈë
 	wire mem_wreg_i;
 	wire[`RegAddrBus] mem_wd_i;
 	wire[`RegBus] mem_wdata_i;
@@ -174,7 +174,7 @@ module openriscv(
 	wire mem_data_tlb_r_exception_i;
 	wire mem_data_tlb_w_exception_i;
 
-	//ï¿½ï¿½Ó·Ã´ï¿½ï¿½×¶ï¿½MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MEM/WBÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//Á¬½Ó·Ã´æ½×¶ÎMEMÄ£¿éµÄÊä³öÓëMEM/WBÄ£¿éµÄÊäÈë
 	wire mem_wreg_o;
 	wire[`RegAddrBus] mem_wd_o;
 	wire[`RegBus] mem_wdata_o;
@@ -192,7 +192,7 @@ module openriscv(
 	wire[`RegBus] mem_current_data_address_o;
 	wire mem_not_stall_o;
 	
-	//ï¿½ï¿½ï¿½MEM/WBÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½×¶Îµï¿½ï¿½ï¿½ï¿½ï¿½	
+	//Á¬½ÓMEM/WBÄ£¿éµÄÊä³öÓë»ØÐ´½×¶ÎµÄÊäÈë	
 	wire wb_wreg_i;
 	wire[`RegAddrBus] wb_wd_i;
 	wire[`RegBus] wb_wdata_i;
@@ -205,7 +205,7 @@ module openriscv(
 	wire wb_is_in_delayslot_i;
 	wire[`RegBus] wb_current_inst_address_i;
 	
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½IDÄ£ï¿½ï¿½ï¿½ï¿½Í¨ï¿½Ã¼Ä´ï¿½ï¿½ï¿½RegfileÄ£ï¿½ï¿½
+	//Á¬½ÓÒëÂë½×¶ÎIDÄ£¿éÓëÍ¨ÓÃ¼Ä´æÆ÷RegfileÄ£¿é
 	wire reg1_read;
 	wire reg2_read;
 	wire[`RegBus] reg1_data;
@@ -213,16 +213,16 @@ module openriscv(
 	wire[`RegAddrBus] reg1_addr;
 	wire[`RegAddrBus] reg2_addr;
 	
-	// ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶ï¿½ï¿½ï¿½ex_regÄ£ï¿½é£¬ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Úµï¿½MADDï¿½ï¿½MADDUï¿½ï¿½MSUBï¿½ï¿½MSUBUÖ¸ï¿½ï¿½
+	// Á¬½ÓÖ´ÐÐ½×¶ÎÓëex_regÄ£¿é£¬ÓÃÓÚ¶àÖÜÆÚµÄMADD¡¢MADDU¡¢MSUB¡¢MSUBUÖ¸Áî
 	wire[1:0] cnt_o;
 	
 	wire[1:0] cnt_i;
 
-	// ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶ï¿½ï¿½ï¿½ex_regÄ£ï¿½é£¬ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Úµï¿½DIV, DIVUÖ¸ï¿½ï¿½
+	// Á¬½ÓÖ´ÐÐ½×¶ÎÓëex_regÄ£¿é£¬ÓÃÓÚ¶àÖÜÆÚµÄDIV, DIVUÖ¸Áî
 	wire div_started_i;
 	wire div_started_o;
 
-	// ex ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// ex Á¬½Ó ³ý·¨Æ÷
 	wire[`RegBus] div_result_rem;
 	wire[`RegBus] div_result_div;
 	wire div_ready;
@@ -232,7 +232,7 @@ module openriscv(
 	wire div_annul;
 	wire signed_div;
 
-	// id ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pc ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// id µ½×ÔÉí¡¢pc µÄÊä³ö
 	wire is_in_delayslot_i;
 	wire is_in_delayslot_o;
 	wire next_inst_in_delayslot_o;
@@ -258,7 +258,7 @@ module openriscv(
 	wire[`RegBus] exception_new_pc;
 
 
-	//pc_regï¿½ï¿½ï¿½ï¿½
+	//pc_regÀý»¯
 	pc_reg pc_reg0(
 		.clk(clk),
 		.rst_n(rst_n),
@@ -288,7 +288,7 @@ module openriscv(
 	assign if_excepttype_o = if_excepttype_i;
 	assign if_inst_ce_o = if_inst_ce_i;
 
-	//IF/IDÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//IF/IDÄ£¿éÀý»¯
 	if_id if_id0(
 		.clk(clk),
 		.rst_n(rst_n),
@@ -304,7 +304,7 @@ module openriscv(
 		.id_not_stall(id_not_stall_i)
 	);
 	
-	//ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½IDÄ£ï¿½ï¿½
+	//ÒëÂë½×¶ÎIDÄ£¿é
 	id id0(
 		.rst_n(rst_n),
 		.pc_i(id_pc_i),
@@ -316,16 +316,16 @@ module openriscv(
 		.reg1_data_i(reg1_data),
 		.reg2_data_i(reg2_data),
 		
-		//ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶Îµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ò»Ð©ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½loadï¿½ï¿½ï¿½ï¿½
+		//´¦ÓÚÖ´ÐÐ½×¶ÎµÄÖ¸ÁîµÄÒ»Ð©ÐÅÏ¢£¬ÓÃÓÚ½â¾öloadÏà¹Ø
 		.ex_aluop_i(ex_aluop_o),
 
-		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·
-		// ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶Îµï¿½Ö¸ï¿½ï¿½ÒªÐ´ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ä¼Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+		// Êý¾ÝÅÔÂ·
+		// ´¦ÓÚÖ´ÐÐ½×¶ÎµÄÖ¸ÁîÒªÐ´ÈëµÄÄ¿µÄ¼Ä´æÆ÷ÐÅÏ¢
 		.ex_wreg_i(ex_wreg_o),
 		.ex_wdata_i(ex_wdata_o),
 		.ex_wd_i(ex_wd_o),
 
-		// ï¿½ï¿½ï¿½Ú·Ã´ï¿½ï¿½×¶Îµï¿½Ö¸ï¿½ï¿½ÒªÐ´ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ä¼Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+		// ´¦ÓÚ·Ã´æ½×¶ÎµÄÖ¸ÁîÒªÐ´ÈëµÄÄ¿µÄ¼Ä´æÆ÷ÐÅÏ¢
 		.mem_wreg_i(mem_wreg_o),
 		.mem_wdata_i(mem_wdata_o),
 		.mem_wd_i(mem_wd_o),
@@ -337,7 +337,7 @@ module openriscv(
 		.ex_not_stall_i(ex_not_stall_i),
 		.mem_not_stall_i(mem_not_stall_i),
 
-		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Ö¸ï¿½î£¬ï¿½ï¿½Ã´ï¿½ï¿½Ò»ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ is_in_delayslot Îª true
+		// Èç¹ûÉÏÒ»ÌõÖ¸ÁîÊÇ×ªÒÆÖ¸Áî£¬ÄÇÃ´ÏÂÒ»ÌõÖ¸ÁîÔÚÒëÂëµÄÊ±ºò is_in_delayslot Îª true
 		.is_in_delayslot_i(is_in_delayslot_i),
 		.step_i(step_i),
 		
@@ -345,13 +345,13 @@ module openriscv(
 		.csr_reg_data_i(csr_data_o),
 		.csr_protect_i(csr_protect_o),
 
-		//ï¿½Íµï¿½regfileï¿½ï¿½ï¿½ï¿½Ï¢
+		//ËÍµ½regfileµÄÐÅÏ¢
 		.reg1_read_o(reg1_read),
 		.reg2_read_o(reg2_read),
 		.reg1_addr_o(reg1_addr),
 		.reg2_addr_o(reg2_addr), 
 
-		//ï¿½Íµï¿½ID/EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+		//ËÍµ½ID/EXÄ£¿éµÄÐÅÏ¢
 		.aluop_o(id_aluop_o),
 		.alusel_o(id_alusel_o),
 		.reg1_o(id_reg1_o),
@@ -361,16 +361,16 @@ module openriscv(
 		.wreg_o(id_wreg_o),
 		.inst_o(id_inst_o),
 
-		// ï¿½ï¿½Ò»ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ó³Ù²ï¿½ï¿½ï¿½
+		// ÏÂÒ»ÌõÖ¸ÁîÊÇ·ñÔÚÑÓ³Ù²ÛÖÐ
 		.next_inst_in_delayslot_o(next_inst_in_delayslot_o),
 		.step_o(step_o),
 
-		// ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½×ªï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½×ªï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Óµï¿½Ö·
+		// ÊÇ·ñÐèÒªÌø×ª£¬ÒÔ¼°Ìø×ªµØÖ·£¬Á´½ÓµØÖ·
 		.branch_flag_o(id_branch_flag_o),
 		.branch_target_address_o(branch_target_address),
 		.link_addr_o(id_link_address_o),
 		
-		// ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ó³Ù²ï¿½ï¿½ï¿½
+		// ÕâÌõÖ¸ÁîÊÇ·ñÔÚÑÓ³Ù²ÛÖÐ
 		.is_in_delayslot_o(id_is_in_delayslot_o),
 
 		.excepttype_o(id_excepttype_o),
@@ -381,11 +381,11 @@ module openriscv(
 		.csr_reg_addr_o(id_csr_reg_addr_o),
 		.csr_reg_data_o(id_csr_reg_data_o),
 		
-		// ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
+		// ÔÝÍ£ÇëÇó
 		.stallreq(stallreq_from_id)
 	);
 
-	//Í¨ï¿½Ã¼Ä´ï¿½ï¿½ï¿½Regfileï¿½ï¿½ï¿½ï¿½
+	//Í¨ÓÃ¼Ä´æÆ÷RegfileÀý»¯
 	regfile regfile1(
 		.clk (clk),
 		.rst_n (rst_n),
@@ -400,7 +400,7 @@ module openriscv(
 		.rdata2 (reg2_data)
 	);
 
-	//ID/EXÄ£ï¿½ï¿½
+	//ID/EXÄ£¿é
 	id_ex id_ex0(
 		.clk(clk),
 		.rst_n(rst_n),
@@ -408,7 +408,7 @@ module openriscv(
 		.stall(stall),
 		.flush(flush),
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½IDÄ£ï¿½é´«ï¿½Ýµï¿½ï¿½ï¿½Ï¢
+		//´ÓÒëÂë½×¶ÎIDÄ£¿é´«µÝµÄÐÅÏ¢
 		.id_aluop(id_aluop_o),
 		.id_alusel(id_alusel_o),
 		.id_reg1(id_reg1_o),
@@ -426,11 +426,11 @@ module openriscv(
 		.id_csr_reg_addr(id_csr_reg_addr_o),
 		.id_csr_reg_data(id_csr_reg_data_o),
 
-		// ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½Òªï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Ï¢
+		// ÒëÂë½×¶ÎÒª´«»ØÈ¥µÄÐÅÏ¢
 		.next_inst_in_delayslot_i(next_inst_in_delayslot_o),
 		.step_i(step_o),
 		
-		//ï¿½ï¿½ï¿½Ýµï¿½Ö´ï¿½Ð½×¶ï¿½EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+		//´«µÝµ½Ö´ÐÐ½×¶ÎEXÄ£¿éµÄÐÅÏ¢
 		.ex_aluop(ex_aluop_i),
 		.ex_alusel(ex_alusel_i),
 		.ex_reg1(ex_reg1_i),
@@ -448,17 +448,17 @@ module openriscv(
 		.ex_csr_reg_addr(ex_csr_reg_addr_i),
 		.ex_csr_reg_data(ex_csr_reg_data_i),
 
-		// ï¿½ï¿½ï¿½ï¿½ id ï¿½×¶ï¿½
+		// ´«»Ø id ½×¶Î
 		.is_in_delayslot_o(is_in_delayslot_i),
 		.step_o(step_i)
 	);
 
 
-	//EXÄ£ï¿½ï¿½
+	//EXÄ£¿é
 	ex ex0(
 		.rst_n(rst_n),
 	
-		//ï¿½Íµï¿½Ö´ï¿½Ð½×¶ï¿½EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+		//ËÍµ½Ö´ÐÐ½×¶ÎEXÄ£¿éµÄÐÅÏ¢
 		.aluop_i(ex_aluop_i),
 		.alusel_i(ex_alusel_i),
 		.reg1_i(ex_reg1_i),
@@ -472,16 +472,16 @@ module openriscv(
 		.cnt_i(cnt_i),
 		.div_started_i(div_started_i),
 
-		// ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½
+		// ³ý·¨Ä£¿é¸øµÄ½á¹û
 		.div_result_rem_i(div_result_rem),
 		.div_result_div_i(div_result_div),
 		.div_ready_i(div_ready), 
 		
-		// ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ó³Ù²ï¿½ï¿½Ð¡ï¿½ï¿½Ô¼ï¿½link address
+		// ÊÇ·ñÔÚÑÓ³Ù²ÛÖÐ¡¢ÒÔ¼°link address
 		.link_address_i(ex_link_address_i),
 		.is_in_delayslot_i(ex_is_in_delayslot_i),
 
-		// ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½
+		// ÐÂ¼ì²â³öµÄÒì³£ÀàÐÍ
 		.excepttype_i(ex_excepttype_i),
 		.current_inst_address_i(ex_current_inst_address_i),
 		.not_stall_i(ex_not_stall_i),
@@ -492,12 +492,12 @@ module openriscv(
 		.mem_phy_addr_i(ex_mem_phy_addr_i),
 		.data_tlb_exception_i(ex_data_tlb_exception_i),
 		
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½Ð´csrï¿½ÐµÄ¼Ä´ï¿½ï¿½ï¿½
+		//ÏòÏÂÒ»Á÷Ë®¼¶´«µÝ£¬ÓÃÓÚÐ´csrÖÐµÄ¼Ä´æÆ÷
 		.csr_reg_we_o(ex_csr_reg_we_o),
 		.csr_reg_addr_o(ex_csr_reg_addr_o),
 		.csr_reg_data_o(ex_csr_reg_data_o),
 
-		//EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½EX/MEMÄ£ï¿½ï¿½ï¿½ï¿½Ï¢
+		//EXÄ£¿éµÄÊä³öµ½EX/MEMÄ£¿éÐÅÏ¢
 		.wd_o(ex_wd_o),
 		.wreg_o(ex_wreg_o),
 		.wdata_o(ex_wdata_o),
@@ -505,14 +505,14 @@ module openriscv(
 		.cnt_o(cnt_o),
 		.div_started_o(div_started_o),
 
-		// ï¿½ï¿½ï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// ·¢ËÍ¸ø³ý·¨Æ÷µÄÇëÇó
 		.div_opdata1_o(div_opdata1),
 		.div_opdata2_o(div_opdata2),
 		.div_start_o(div_start),
 		.signed_div_o(signed_div),
 
 
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ø¡ï¿½ï¿½æ´¢Ö¸ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½
+		//ÏÂÃæÐÂÔöµÄ¼¸¸öÊä³öÊÇÎª¼ÓÔØ¡¢´æ´¢Ö¸Áî×¼±¸µÄ
 		.aluop_o(ex_aluop_o),
 		.mem_addr_o(ex_mem_addr_o),
 		.mem_we_o(ex_mem_we_o),
@@ -531,7 +531,7 @@ module openriscv(
 		.stallreq(stallreq_from_ex)
 	);
 
-	//EX/MEMÄ£ï¿½ï¿½
+	//EX/MEMÄ£¿é
 	ex_mem ex_mem0(
 		.clk(clk),
 		.rst_n(rst_n),
@@ -539,7 +539,7 @@ module openriscv(
 		.stall(stall),
 		.flush(flush),
 
-		//ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶ï¿½EXÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢	
+		//À´×ÔÖ´ÐÐ½×¶ÎEXÄ£¿éµÄÐÅÏ¢	
 		.ex_wd(ex_wd_o),
 		.ex_wreg(ex_wreg_o),
 		.ex_wdata(ex_wdata_o),
@@ -561,7 +561,7 @@ module openriscv(
 		.div_started_i(div_started_o),
 
 
-		//ï¿½Íµï¿½ï¿½Ã´ï¿½ï¿½×¶ï¿½MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+		//ËÍµ½·Ã´æ½×¶ÎMEMÄ£¿éµÄÐÅÏ¢
 		.mem_wd(mem_wd_i),
 		.mem_wreg(mem_wreg_i),
 		.mem_wdata(mem_wdata_i),
@@ -585,10 +585,10 @@ module openriscv(
 		.div_started_o(div_started_i)
 	);
 
-	// RAM ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+	// RAM ÎïÀíµØÖ·
 	wire[`PhyAddrBus] ram_phy_addr_o;
 
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý´æ´¢ï¿½ï¿½ data_ram Ì“ï¿½Mï¿½ï¿½Ö·
+	//Á¬½ÓÊý¾Ý´æ´¢Æ÷ data_ram Ì“”MµØÖ·
 	wire[`RegBus] ram_data_i;
 	wire[`RegBus] ram_addr_o;
 	wire[`RegBus] ram_data_o;
@@ -596,7 +596,7 @@ module openriscv(
 	wire[`RegSel] ram_sel_o;
 	wire ram_ce_o;
 
-	//MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//MEMÄ£¿éÀý»¯
 	mem mem0(
 		.rst_n(rst_n),
 
@@ -604,7 +604,7 @@ module openriscv(
 		.data_tlb_r_exception_i(mem_data_tlb_r_exception_i),
 		.data_tlb_w_exception_i(mem_data_tlb_w_exception_i),
 	
-		//ï¿½ï¿½ï¿½EX/MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢	
+		//À´×ÔEX/MEMÄ£¿éµÄÐÅÏ¢	
 		.wd_i(mem_wd_i),
 		.wreg_i(mem_wreg_i),
 		.wdata_i(mem_wdata_i),
@@ -621,12 +621,12 @@ module openriscv(
 		.current_inst_address_i(mem_current_inst_address_i),
 		.not_stall_i(mem_not_stall_i),
 		
-		//ï¿½ï¿½ï¿½memoryï¿½ï¿½ï¿½ï¿½Ï¢
+		//À´×ÔmemoryµÄÐÅÏ¢
 		.mem_data_i(ram_data_i),
 
-		//LLbit_iï¿½ï¿½LLbitï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ð´ï¿½×¶Î¿ï¿½ï¿½ï¿½ÒªÐ´LLbitï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½Òªï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ð¶ï¿½
-		// ï¿½ï¿½Ð´ï¿½×¶ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÐ´llbit, ï¿½ï¿½ llbit_o ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ä»¯ï¿½ï¿½ï¿½ï¿½Ç°Ò»ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//LLbit_iÊÇLLbit¼Ä´æÆ÷µÄÖµ
+		//µ«²»Ò»¶¨ÊÇ×îÐÂÖµ£¬»ØÐ´½×¶Î¿ÉÄÜÒªÐ´LLbit£¬ËùÒÔ»¹Òª½øÒ»²½ÅÐ¶Ï
+		// »ØÐ´½×¶ÎÈç¹ûÒªÐ´llbit, Ôò llbit_o »áÂíÉÏ±ä»¯£¬ÌáÇ°Ò»ÖÜÆÚ´«¹ýÈ¥£¬Æðµ½ÁËÀàËÆÓÚÊý¾ÝÅÔÂ·µÄ×÷ÓÃ
 		.LLbit_i(LLbit_o),
 		.LLbit_addr_i(LLbit_addr_o),
 
@@ -634,11 +634,11 @@ module openriscv(
 		.cnt_i(mem_cnt_i),
 		.original_data_i(mem_original_data_i),
 
-		//ï¿½Íµï¿½MEM/WBÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+		//ËÍµ½MEM/WBÄ£¿éµÄÐÅÏ¢
 		.wd_o(mem_wd_o),
 		.wreg_o(mem_wreg_o),
 		.wdata_o(mem_wdata_o),
-		// LLbit ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// LLbit µÄÊä³ö
 		.LLbit_we_o(mem_LLbit_we_o),
 		.LLbit_value_o(mem_LLbit_value_o),
 		.LLbit_addr_o(mem_LLbit_addr_o),
@@ -651,20 +651,20 @@ module openriscv(
 		.csr_reg_addr_o(mem_csr_reg_addr_o),
 		.csr_reg_data_o(mem_csr_reg_data_o),
 		
-		// ï¿½ï¿½ï¿½ï¿½È·ï¿½Ïµï¿½ï¿½ì³£ï¿½ï¿½ï¿½ï¿½
+		// ×îÖÕÈ·ÈÏµÄÒì³£ÀàÐÍ
 		.excepttype_o(mem_excepttype_o),
 		.is_in_delayslot_o(mem_is_in_delayslot_o),
-		// ï¿½ï¿½Ç°Ö¸ï¿½ï¿½ï¿½Äµï¿½Ö·
+		// µ±Ç°Ö¸ÁîµÄµØÖ·
 		.current_inst_address_o(mem_current_inst_address_o),
 		.current_data_address_o(mem_current_data_address_o),
 		.not_stall_o(mem_not_stall_o),
 
 		/*
-		// ï¿½ï¿½ï¿½Âµï¿½ EPC Öµ
+		// ×îÐÂµÄ EPC Öµ
 		.csr_epc_o(),
 		*/
 	
-		//ï¿½Íµï¿½memoryï¿½ï¿½ï¿½ï¿½Ï¢
+		//ËÍµ½memoryµÄÐÅÏ¢
 		.mem_addr_o(ram_addr_o),
 		.mem_phy_addr_o(ram_phy_addr_o),
 		.mem_we_o(ram_we_o),
@@ -673,14 +673,14 @@ module openriscv(
 		.mem_ce_o(ram_ce_o)
 	);
 
-	//MEM/WBÄ£ï¿½ï¿½
+	//MEM/WBÄ£¿é
 	mem_wb mem_wb0(
 		.clk(clk),
 		.rst_n(rst_n),
 		.stall(stall),
 		.flush(flush),
 
-		//ï¿½ï¿½Ô·Ã´ï¿½ï¿½×¶ï¿½MEMÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢	
+		//À´×Ô·Ã´æ½×¶ÎMEMÄ£¿éµÄÐÅÏ¢	
 		.mem_wd(mem_wd_o),
 		.mem_wreg(mem_wreg_o),
 		.mem_wdata(mem_wdata_o),
@@ -694,7 +694,7 @@ module openriscv(
 		.mem_cnt_i(mem_cnt_o),
 		.mem_original_data_i(mem_original_data_o),
 	
-		//ï¿½Íµï¿½ï¿½ï¿½Ð´ï¿½×¶Îµï¿½ï¿½ï¿½Ï¢
+		//ËÍµ½»ØÐ´½×¶ÎµÄÐÅÏ¢
 		.wb_wd(wb_wd_i),
 		.wb_wreg(wb_wreg_i),
 		.wb_wdata(wb_wdata_i),
@@ -715,19 +715,19 @@ module openriscv(
 
 		.flushreq_from_csr(flushreq_from_csr),
 
-		//ï¿½ï¿½ï¿½È¡Ö·ï¿½×¶Îµï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
+		//À´×ÔÈ¡Ö·½×¶ÎµÄÔÝÍ£ÇëÇó
 		.stallreq_from_if(stallreq_from_if),
 		
-		//ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
+		//À´×ÔÖ´ÐÐÒëÂëµÄÔÝÍ£ÇëÇó
 		.stallreq_from_id(stallreq_from_id),
 		
-		//ï¿½ï¿½ï¿½Ö´ï¿½Ð½×¶Îµï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
+		//À´×ÔÖ´ÐÐ½×¶ÎµÄÔÝÍ£ÇëÇó
 		.stallreq_from_ex(stallreq_from_ex),
 		
-		//ï¿½ï¿½Ô·Ã´ï¿½ï¿½×¶Îµï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
+		//À´×Ô·Ã´æ½×¶ÎµÄÔÝÍ£ÇëÇó
 		.stallreq_from_mem(stallreq_from_mem),
 
-		//ï¿½ï¿½Ô»ï¿½Ð´ï¿½×¶Îµï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
+		//À´×Ô»ØÐ´½×¶ÎµÄÔÝÍ£ÇëÇó
 		.stallreq_from_wb(`NoStop),
 
 		.flush(flush),
@@ -755,12 +755,12 @@ module openriscv(
 		.rst_n(rst_n),
 		.flush(flush),
 		
-		//Ð´ï¿½Ë¿ï¿½
+		//Ð´¶Ë¿Ú
 		.we_i(wb_LLbit_we_i),
 		.LLbit_i(wb_LLbit_value_i),
 		.LLbit_addr_i(wb_LLbit_addr_i),
 		
-		//ï¿½ï¿½Ë¿ï¿½1
+		//¶Á¶Ë¿Ú1
 		.LLbit_o(LLbit_o),
 		.LLbit_addr_o(LLbit_addr_o)
 	);

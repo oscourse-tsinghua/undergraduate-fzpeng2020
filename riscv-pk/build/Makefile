@@ -35,7 +35,7 @@ default : all
 project_name := riscv-pk
 src_dir      := ..
 scripts_dir  := $(src_dir)/scripts
-bbl_payload  := ../../undergraduate-fzpeng2020/os/target/riscv32-os/release/os
+bbl_payload  := ../../os/target/riscv32-os/release/os
 
 # If the version information is not in the configure script, then we
 # assume that we are in a working directory. We use the vcs-version.sh

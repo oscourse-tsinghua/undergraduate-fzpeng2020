@@ -15,28 +15,47 @@ pub fn rust_main() -> ! {
     }
     println!("rcore_step_by_step os is running!", );
     crate::interrupt::init();
-    println! (
-        "free memory paddr = [{:#x}, {:#x}",
-         end as usize - KERNEL_BEGIN_VADDR + KERNEL_BEGIN_PADDR,
-         PHYSICAL_MEMORY_END
-    );
     println!(
         "free physical memory ppn = [{:#x}, {:#x})",
-        ((end as usize - KERNEL_BEGIN_VADDR + KERNEL_BEGIN_PADDR) >> 12) + 2,
+        ((end as usize - KERNEL_BEGIN_VADDR + KERNEL_BEGIN_PADDR) >> 12) + 3,
         PHYSICAL_MEMORY_END >> 12
     );
     crate::memory::init(
-        ((end as usize - KERNEL_BEGIN_VADDR + KERNEL_BEGIN_PADDR) >> 12) + 2,
+        ((end as usize - KERNEL_BEGIN_VADDR + KERNEL_BEGIN_PADDR) >> 12) + 3,
         PHYSICAL_MEMORY_END >> 12
     );
+    //write_readonly_test();
+    //execute_unexecutable_test();
+    //read_invalid_test();
+    //frame_allocating_test();
     //dynamic_allocating_test();
-    test_page_table();
+    //test_page_table();
     crate::clock::init();
-    unsafe {
-        asm!("ebreak"::::"volatile");
-    }
-    panic!("end of rust_main");
     loop {}
+}
+
+
+fn write_readonly_test() {
+    extern "C" {
+        fn srodata();
+    }
+    unsafe {
+        let ptr = srodata as usize as *mut u8;
+        *ptr = 0xab;
+    }
+}
+
+fn execute_unexecutable_test() {
+    extern "C" {
+        fn sbss();
+    }
+    unsafe {
+        asm!("jr $0" :: "r"(sbss as usize) :: "volatile");
+    }
+}
+
+fn read_invalid_test() {
+    println!("{}", unsafe { *(0x12345678 as usize as *const u8) });
 }
 
 fn dynamic_allocating_test() {
@@ -71,6 +90,18 @@ fn dynamic_allocating_test() {
     assert!(vec_addr >= lbss && vec_addr < rbss);
     println!("vec is in section .bss!");
 }
+
+fn frame_allocating_test() {
+    println!("alloc {:x?}", alloc_frame());
+    let f = alloc_frame();
+    println!("alloc {:x?}", f);
+    println!("alloc {:x?}", alloc_frame());
+    println!("dealloc {:x?}", f);
+    dealloc_frame(f.unwrap());
+    println!("alloc {:x?}", alloc_frame());
+    println!("alloc {:x?}", alloc_frame());
+}
+
 
 fn test_page_table() {
     // test read

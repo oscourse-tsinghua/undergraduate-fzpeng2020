@@ -30,7 +30,7 @@ pub fn rust_trap(tf: &mut TrapFrame) {
 }
 
 fn page_fault(tf: &mut TrapFrame) {
-    println!("{:?} @ {:#x}", tf.scause.cause(), tf.stval);
+    println!("{:?} @ {:#x} instrction = {:#x}", tf.scause.cause(), tf.stval, tf.sepc);
     panic!("page fault");
 }
 

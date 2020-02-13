@@ -8,7 +8,6 @@ vmap work rtl_work
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/wb_conmax/wb_conmax_defines.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/cpu/defines.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/ip_pll.v}
-vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/config_string_rom {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/config_string_rom/config_string_rom.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/db {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/db/ip_pll_altpll.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/rom_wishbone_simulation.v}
 vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/wishbone_soc.v}

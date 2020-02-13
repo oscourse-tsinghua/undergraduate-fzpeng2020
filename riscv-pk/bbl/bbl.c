@@ -25,9 +25,6 @@ static void supervisor_vm_init()
   pte_t* root_pt = middle_pt;
   memset(root_pt, 0, RISCV_PGSIZE);
 #else
-  //size_t num_middle_pts = (-info.first_user_vaddr - 1) / MEGAPAGE_SIZE + 1;
-  printm("MEGAPAGE_SIZE: %d total_vaddr: %d \n", MEGAPAGE_SIZE, (-info.first_user_vaddr -1) );
-  //pte_t* root_pt = (void*)middle_pt + num_middle_pts * RISCV_PGSIZE;
   printm("Step 1.1 begin memset size: %x \n", (num_middle_pts + 1) * RISCV_PGSIZE);
   //mset(middle_pt, 0, (num_middle_pts + 1) * RISCV_PGSIZE);
   for (size_t i = 0; i < num_middle_pts - 1; i++)
@@ -76,11 +73,11 @@ static void supervisor_vm_init()
   pte_t* sbi_pte = middle_pt + ((num_middle_pts << RISCV_PGLEVEL_BITS) - 1);
   assert(!*sbi_pte);
   *sbi_pte = ptd_create((uintptr_t)sbi_pt >> RISCV_PGSHIFT);
-//for (uint32_t i = 0; i < 1024; i++) {
-//  	  printm("middle_pt[%d]:%x", i, middle_pt[i]);
-//  }
-  printm("sbi map is %x", middle_pt[1023]);
-  printm("mega map is %x", middle_pt[769]);
+  for (uint32_t i = 0; i < 1024; i++) {
+      if (middle_pt[i] != 0) printm("root[%d]:%x\n", i, root_pt[i]);
+  }
+  printm("root_pt : %x\n", root_pt);
+  printm("sbi_pte : %x\n", sbi_pte);
   mb();
   root_page_table = root_pt;
   write_csr(sptbr, (uintptr_t)root_pt >> RISCV_PGSHIFT);

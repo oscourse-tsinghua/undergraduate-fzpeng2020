@@ -2,11 +2,17 @@
     .globl _start
 _start:
 	lui sp, %hi(bootstacktop)   # 将栈指针 sp 置为栈顶地址
-	csrr t0, satp
+    #li  t1, 0xc0400020
+    #lw  t1, 0(t1)
+    #mv  a3, t1
+    #call print_uint32
+    #li t0, 0
+    #li t1, 0
+	#csrr t0, satp
 	#lw t1, 0(t0)
- 	mv a3, t0
+ 	#mv a3, t0
 	# a3
-	call print_uint32
+	#call print_uint32
 	
 	lui     t0, %hi(boot_page_table_sv32)
     li      t1, 0xC0000000 - 0x80000000
@@ -15,7 +21,7 @@ _start:
     li      t1, 1 << 31
     or      t0, t0, t1
     csrw    satp, t0
-	#sfence.vma
+	sfence.vma
 	
 	# update pc to 0xc0xx_xxxx
 	lui t0, %hi(rust_main)
@@ -52,10 +58,11 @@ boot_page_table_sv32:
     .zero 4 * 513
     # 0x80400000 -> 0x80400000 (4M)
     .word 0x201000cf # VRWXAD
+    #.zero 4
 	.zero 4 * 255
     # 0xC0400000 -> 0x80400000 (4M)
-    .word 0x201000ef #DAG XWRV
+    .word 0x2010002f #DAG XWRV
     .zero 4 * 253
 	# sbi map
-	.word 0x20108401 #DA     V      
+	.word 0x20108c01 #DA     V      
 boot_page_table_sv32_top:

@@ -825,7 +825,7 @@ module csr(
 					`CSR_sptbr:
 					begin
 						sptbr_ppn <= data_i[`CSR_sptbr_ppn_bus];
-
+						/*
 						mtlbpte[0][`PTE_V] <= 1'b0;
 						mtlbpte[1][`PTE_V] <= 1'b0;
 						mtlbpte[2][`PTE_V] <= 1'b0;
@@ -842,6 +842,7 @@ module csr(
 						mtlbpte[13][`PTE_V] <= 1'b0;
 						mtlbpte[14][`PTE_V] <= 1'b0;
 						mtlbpte[15][`PTE_V] <= 1'b0;
+						*/
 					end
 					`CSR_mtlbindex:
 					begin
