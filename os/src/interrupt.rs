@@ -42,7 +42,7 @@ fn super_timer() {
     clock_set_next_event();
     unsafe{
         TICK = TICK + 1;
-        if TICK % 10 == 0 {
+        if TICK % 10000 == 0 {
             println!("10 ticks!");
         }
     }
