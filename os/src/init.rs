@@ -31,6 +31,7 @@ pub fn rust_main() -> ! {
     //dynamic_allocating_test();
     //test_page_table();
     crate::process::init();
+    crate::process::run();
     crate::clock::init();
 //    write_readonly_test();
     loop {}

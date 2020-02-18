@@ -69,7 +69,7 @@ void illegal_insn_trap(uintptr_t* regs, uintptr_t mcause, uintptr_t mepc)
 
   uintptr_t mstatus;
   insn_t insn = get_insn(mepc, &mstatus);
-  log("insn = %x, mepc = %x, mstatus = %x", insn, mepc, mstatus);
+ // log("insn = %x, mepc = %x, mstatus = %x", insn, mepc, mstatus);
   
   if (unlikely((insn & 3) != 3))
     return truly_illegal_insn(regs, mcause, mepc, mstatus, insn);

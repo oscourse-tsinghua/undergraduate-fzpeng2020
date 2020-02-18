@@ -1,7 +1,8 @@
 use crate::context::TrapFrame;
 use riscv::register::{ sstatus, stvec, sscratch };
-use crate::clock::{ TICK, clock_set_next_event};
+use crate::clock::{ TICK , clock_set_next_event};
 use riscv::register::scause::{ Trap, Exception, Interrupt};
+use crate::process::tick;
 
 global_asm!(include_str!("trap/trap.asm"));
 
@@ -42,9 +43,30 @@ fn super_timer() {
     clock_set_next_event();
     unsafe{
         TICK = TICK + 1;
-        if TICK % 10000 == 0 {
+        if TICK % 10 == 0 {
             println!("10 ticks!");
         }
     }
 }
+#[inline(always)]
+pub fn disable_and_store() -> usize {
+    let sstatus: usize;
+    unsafe {
+        asm!("csrci sstatus, 1 << 1" : "=r"(sstatus) ::: "volatile");
+    }
+    sstatus
+}
 
+#[inline(always)]
+pub fn restore(flags: usize) {
+    unsafe {
+        asm!("csrs sstatus, $0" :: "r"(flags) :: "volatile");
+    }
+}
+
+#[inline(always)]
+pub fn enable_and_wfi() {
+    unsafe {
+        asm!("csrsi sstatus, 1 << 1; wfi" :::: "volatile");
+    }
+}

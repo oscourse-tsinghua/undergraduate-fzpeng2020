@@ -3,7 +3,7 @@ use riscv::register::sie;
 use riscv::register::{ time, timeh };
 
 pub static mut TICK: usize = 0;
-static TIMEBASE: u64 = 1000;
+static TIMEBASE: u64 = 100000;
 
 pub fn init() {
     unsafe {
