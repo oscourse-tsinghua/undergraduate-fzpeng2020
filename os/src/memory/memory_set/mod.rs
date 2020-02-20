@@ -22,20 +22,24 @@ pub struct MemorySet {
 }
 
 impl MemorySet {
-    pub fn push(&mut self, start: usize, end: usize, attr: MemoryAttr, handler: impl MemoryHandler) {
+    pub fn push(&mut self, start: usize, end: usize, attr: MemoryAttr, handler: impl MemoryHandler, data: Option<(usize, usize)>) {
         assert!(start <= end, "invalid memory area!");
         assert!(self.test_free_area(start, end), "memory area overlap!");
         let area = MemoryArea::new(start, end, Box::new(handler), attr);
         area.map(&mut self.page_table);
+        if let Some((src, length)) = data {
+            area.page_copy(&mut self.page_table, src, length);
+        }
         self.areas.push(area);
-    } 
+
+    }  
     fn test_free_area(&self, start: usize, end: usize) -> bool {
         self.areas
             .iter()
             .find(|area| area.is_overlap_with(start, end))
             .is_none()
     }
-    pub unsafe fn activate(&mut self) {
+    pub unsafe fn activate(&self) {
         self.page_table.activate();
     }
 	pub fn new() -> Self {
@@ -66,6 +70,7 @@ impl MemorySet {
             etext as usize,
             MemoryAttr::new().set_readonly().set_execute(),
             Linear::new(offset),
+			None,
         );
         // .rodata R
         self.push(
@@ -73,28 +78,34 @@ impl MemorySet {
             erodata as usize,
             MemoryAttr::new().set_readonly(),
             Linear::new(offset),
+			None,
         );
         // .data R|W
         self.push(
             sdata as usize,
             edata as usize,
             MemoryAttr::new(),
-            Linear::new(offset)
+            Linear::new(offset),
+			None,
         );
         // .bss R|W
         self.push(
             sbss as usize,
             ebss as usize,
             MemoryAttr::new(),
-            Linear::new(offset)
+            Linear::new(offset),
+			None,
         );
         // 物理内存 R|W
-        println!("map the last memory");
         self.push(
             (end as usize / PAGE_SIZE + 1) * PAGE_SIZE, 
             access_pa_via_va(PHYSICAL_MEMORY_END),
             MemoryAttr::new(),
             Linear::new(offset),
+			None,
         );
     }
+	pub fn token(&self) -> usize {
+		self.page_table.token()
+	}
 }

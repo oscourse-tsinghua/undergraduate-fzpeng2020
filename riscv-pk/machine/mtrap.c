@@ -65,7 +65,7 @@ fpga_uart_putchar(uint8_t c) {
         fpga_uart_putchar_sub(' ');
         fpga_uart_putchar_sub('\b');
     } else if(c == '\n') {
-        fpga_uart_putchar_sub('\r');
+        //fpga_uart_putchar_sub('\r');
         fpga_uart_putchar_sub('\n');
     } else {
         fpga_uart_putchar_sub(c);

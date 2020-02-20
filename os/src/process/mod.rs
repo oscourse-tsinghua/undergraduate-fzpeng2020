@@ -34,6 +34,20 @@ pub fn init() {
             thread
         });
     }
+
+    extern "C" {
+        fn _user_img_start();
+        fn _user_img_end();
+    }
+    let data = unsafe {
+        core::slice::from_raw_parts(
+            _user_img_start as *const u8,
+            _user_img_end as usize - _user_img_start as usize,
+        )
+    };
+    let user_thread = unsafe { Thread::new_user(data) };
+    CPU.add_thread(user_thread);
+
     println!("++++ setup process!   ++++");
 }
 

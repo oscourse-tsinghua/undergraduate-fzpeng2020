@@ -2,16 +2,22 @@ target := riscv32-os
 mode ?= debug
 kernel := target/$(target)/$(mode)/os
 bin := target/$(target)/$(mode)/kernel.bin
-usr_path := usr
+usr_path := usr/build/rust
+export USER_IMG = $(usr_path)/hello_world
 qemu_path := ~/software/qemu-4.1.0/riscv32-softmmu/qemu-system-riscv32 
 
-export SFSIMG = $(usr_path)/rcore32.img
+#export SFSIMG = $(usr_path)/rcore32.img
 
 .PHONY: all clean run build asm qemu kernel
 
 all: build
 
-build: $(bin)
+build: $(bin) usr
+
+usr:
+	cd ./usr/build/
+	cargo build --target riscv32-os.json
+	cd ..
 
 run: build qemu
 

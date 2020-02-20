@@ -2,7 +2,18 @@
 //use crate::io;
 use crate::consts::*;
 global_asm!(include_str!("boot/entry.asm")); // 引入 _start
-
+global_asm!(concat!(
+    r#"
+    .section .data
+    .global _user_img_start
+    .global _user_img_end
+_user_img_start:
+    .incbin ""#,
+    env!("USER_IMG"),
+    r#""
+_user_img_end:
+"#
+));
 use crate::memory::{
     alloc_frame,
     dealloc_frame

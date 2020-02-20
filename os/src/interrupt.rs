@@ -24,6 +24,7 @@ pub fn rust_trap(tf: &mut TrapFrame) {
         Trap::Exception(Exception::Breakpoint) => breakpoint(),
         Trap::Interrupt(Interrupt::SupervisorTimer) => super_timer(),
         Trap::Exception(Exception::InstructionPageFault) => page_fault(tf),
+        Trap::Exception(Exception::UserEnvCall) => syscall(tf),
         Trap::Exception(Exception::LoadPageFault) => page_fault(tf),
         Trap::Exception(Exception::StorePageFault) => page_fault(tf),
         _ => panic!("unexpected trap: {:#x?}", tf),
@@ -48,6 +49,18 @@ fn super_timer() {
         }
     }
 }
+
+fn syscall(tf: &mut TrapFrame) {
+    // 返回后跳转到 ecall 下一条指令
+    tf.sepc += 4;
+    let ret = crate::syscall::syscall(
+        tf.x[17],
+        [tf.x[10], tf.x[11], tf.x[12]],
+        tf
+    );
+    tf.x[10] = ret as usize;
+}
+
 #[inline(always)]
 pub fn disable_and_store() -> usize {
     let sstatus: usize;

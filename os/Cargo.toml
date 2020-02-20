@@ -17,3 +17,4 @@ riscv = { path = "crate/riscv", features = ["inline-asm"] }
 buddy_system_allocator = "0.3"
 #buddy-allocator = { path = "crate/buddy-allocator" }
 spin = "0.5.2"
+xmas-elf = "0.6"
