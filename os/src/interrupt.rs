@@ -27,7 +27,7 @@ pub fn rust_trap(tf: &mut TrapFrame) {
         Trap::Exception(Exception::UserEnvCall) => syscall(tf),
         Trap::Exception(Exception::LoadPageFault) => page_fault(tf),
         Trap::Exception(Exception::StorePageFault) => page_fault(tf),
-        _ => panic!("unexpected trap: {:#x?}", tf),
+        _ => panic!("unexpected trap!"),
     }
 }
 

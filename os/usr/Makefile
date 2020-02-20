@@ -3,7 +3,7 @@ out_img ?= rcore32.img
 
 cargo_args := --target riscv32-os.json
 rust_src_dir := rust/src/bin
-rust_bin_path := rust/target/riscv32-os/debug
+rust_bin_path := rust/target/riscv32-os/release
 rust_bins := $(patsubst $(rust_src_dir)/%.rs, $(rust_bin_path)/%, $(wildcard $(rust_src_dir)/*.rs))
 
 .PHONY: all clean rust

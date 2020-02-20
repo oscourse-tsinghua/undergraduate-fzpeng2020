@@ -1,5 +1,5 @@
 
-bootloader_rom.o：     文件格式 elf32-littleriscv
+bootloader_rom.o:     file format elf32-littleriscv
 
 
 Disassembly of section .text:

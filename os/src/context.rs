@@ -6,7 +6,7 @@ use riscv::register::sstatus;
 use core::mem::zeroed;
 
 #[repr(C)]
-#[derive(Debug)]
+//#[derive(Debug)]
 pub struct TrapFrame {
     pub x: [usize; 32], // General registers
     pub sstatus: Sstatus, // Supervisor Status Register
