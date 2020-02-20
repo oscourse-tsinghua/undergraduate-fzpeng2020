@@ -1,9 +1,0 @@
-*.data
-*.o
-*.om
-*.asm
-*.bin
-*.exe
-*.v
-Bin2Mem
-
