@@ -9,3 +9,4 @@ wishbone_cyc10/simulation/modelsim/*
 wishbone_cyc10_os/simulation/modelsim/*
 os/target
 os/crate
+os/usr/rust/target
