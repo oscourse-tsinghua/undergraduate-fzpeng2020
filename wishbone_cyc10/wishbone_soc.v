@@ -195,8 +195,7 @@ module wishbone_soc(
 	wire       s1_ack_i;
 	
 	wishbone_uart_lite #(
-	//
-		.ClkFreq(2000000),
+		.ClkFreq(20000000),
 	`ifdef Simulation
 		.BoundRate(2500000)
 	`else

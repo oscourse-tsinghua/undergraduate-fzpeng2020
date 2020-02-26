@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="8dd28656b6590e058b1c"/>
+    <hash md5_digest_80b="e66fb7742187b26e0e19"/>
   </project>
   <file_info>
     <file device="10CL016YU256C8G" path="wishbone_cycy10_soc.sof" usercode="0xFFFFFFFF"/>
@@ -8,7 +8,7 @@
   <sld_infos>
     <sld_info hpath="sdram:sdram0" name="sdram0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME sdram HAS_SOPCINFO 1 GENERATION_ID 1582689625"/>
+        <assignment_value text="QSYS_NAME sdram HAS_SOPCINFO 1 GENERATION_ID 1582714229"/>
       </assignment_values>
       <parameters/>
     </sld_info>
