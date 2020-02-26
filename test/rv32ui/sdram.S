@@ -38,8 +38,8 @@ lw_8020:
 ok:	
 	#sub a5, a5, s0
  	#sub t1, t1, s0
-	#mv a3, t0
-	#call print_uint32
+	mv a3, t0
+	call print_uint32
 	
 	#mv a3, t1
 	#call print_uint32

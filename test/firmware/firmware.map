@@ -9,7 +9,7 @@ RAM              0x0000000080000000 0x0000000000800000 xrw
 Linker script and memory map
 
 
-.text           0x0000000000010000     0xa634
+.text           0x0000000000010000     0xa63c
                 0x0000000000010000                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000000010000      0x1cc firmware/start.o
@@ -71,99 +71,100 @@ Linker script and memory map
                 0x00000000000115f8                bge
  .text          0x00000000000119cc      0x370 rv32ui/srai.o
                 0x00000000000119cc                srai
- .text          0x0000000000011d3c      0x174 rv32ui/sdram.o
+ .text          0x0000000000011d3c      0x17c rv32ui/sdram.o
                 0x0000000000011d3c                sdram
- .text          0x0000000000011eb0      0x574 rv32ui/sub.o
-                0x0000000000011eb0                sub
- .text          0x0000000000012424      0x57c rv32ui/mul.o
-                0x0000000000012424                mul
- .text          0x00000000000129a0      0x538 rv32ui/sw.o
-                0x00000000000129a0                sw
- .text          0x0000000000012ed8      0x374 rv32ui/beq.o
-                0x0000000000012ed8                beq
- .text          0x000000000001324c      0x198 rv32ui/divu.o
-                0x000000000001324c                divu
- .text          0x00000000000133e4      0x650 rv32ui/sra.o
-                0x00000000000133e4                sra
- .text          0x0000000000013a34      0x36c rv32ui/srli.o
-                0x0000000000013a34                srli
- .text          0x0000000000013da0      0x340 rv32ui/lw.o
-                0x0000000000013da0                lw
- .text          0x00000000000140e0      0x190 rv32ui/div.o
-                0x00000000000140e0                div
- .text          0x0000000000014270      0x100 rv32ui/auipc.o
-                0x0000000000014270                auipc
- .text          0x0000000000014370      0x340 rv32ui/addi.o
-                0x0000000000014370                addi
- .text          0x00000000000146b0      0x1b8 rv32ui/jalr.o
-                0x00000000000146b0                jalr
- .text          0x0000000000014868      0x378 rv32ui/bne.o
-                0x0000000000014868                bne
- .text          0x0000000000014be0      0x40c rv32ui/bgeu.o
-                0x0000000000014be0                bgeu
- .text          0x0000000000014fec      0x580 rv32ui/mulhu.o
-                0x0000000000014fec                mulhu
- .text          0x000000000001556c      0x32c rv32ui/slti.o
-                0x000000000001556c                slti
- .text          0x0000000000015898      0x190 rv32ui/rem.o
-                0x0000000000015898                rem
- .text          0x0000000000015a28      0x57c rv32ui/slt.o
-                0x0000000000015a28                slt
- .text          0x0000000000015fa4      0x300 rv32ui/lbu.o
-                0x0000000000015fa4                lbu
- .text          0x00000000000162a4      0x300 rv32ui/lb.o
-                0x00000000000162a4                lb
- .text          0x00000000000165a4      0x52c rv32ui/sh.o
-                0x00000000000165a4                sh
- .text          0x0000000000016ad0      0x114 rv32ui/lui.o
-                0x0000000000016ad0                lui
- .text          0x0000000000016be4      0x4a8 rv32ui/sb.o
-                0x0000000000016be4                sb
- .text          0x000000000001708c      0x3ac rv32ui/bltu.o
-                0x000000000001708c                bltu
- .text          0x0000000000017438      0x194 rv32ui/remu.o
-                0x0000000000017438                remu
- .text          0x00000000000175cc       0x74 rv32ui/simple.o
-                0x00000000000175cc                simple
- .text          0x0000000000017640      0x33c rv32ui/slli.o
-                0x0000000000017640                slli
- .text          0x000000000001797c      0x56c rv32ui/and.o
-                0x000000000001797c                and
- .text          0x0000000000017ee8      0x290 rv32ui/ori.o
-                0x0000000000017ee8                ori
- .text          0x0000000000018178      0x334 rv32ui/lhu.o
-                0x0000000000018178                lhu
- .text          0x00000000000184ac      0x670 rv32ui/srl.o
-                0x00000000000184ac                srl
- .text          0x0000000000018b1c      0x10c rv32ui/jal.o
-                0x0000000000018b1c                jal
- .text          0x0000000000018c28      0x594 rv32ui/add.o
-                0x0000000000018c28                add
- .text          0x00000000000191bc      0x278 rv32ui/andi.o
-                0x00000000000191bc                andi
- .text          0x0000000000019434       0xf0 rv32ui/j.o
-                0x0000000000019434                j
- .text          0x0000000000019524      0x29c rv32ui/xori.o
-                0x0000000000019524                xori
- .text          0x00000000000197c0      0x374 rv32ui/blt.o
-                0x00000000000197c0                blt
- .text          0x0000000000019b34      0x580 rv32ui/mulh.o
-                0x0000000000019b34                mulh
- .text          0x000000000001a0b4      0x580 rv32ui/mulhsu.o
-                0x000000000001a0b4                mulhsu
+ .text          0x0000000000011eb8      0x574 rv32ui/sub.o
+                0x0000000000011eb8                sub
+ .text          0x000000000001242c      0x57c rv32ui/mul.o
+                0x000000000001242c                mul
+ .text          0x00000000000129a8      0x538 rv32ui/sw.o
+                0x00000000000129a8                sw
+ .text          0x0000000000012ee0      0x374 rv32ui/beq.o
+                0x0000000000012ee0                beq
+ .text          0x0000000000013254      0x198 rv32ui/divu.o
+                0x0000000000013254                divu
+ .text          0x00000000000133ec      0x650 rv32ui/sra.o
+                0x00000000000133ec                sra
+ .text          0x0000000000013a3c      0x36c rv32ui/srli.o
+                0x0000000000013a3c                srli
+ .text          0x0000000000013da8      0x340 rv32ui/lw.o
+                0x0000000000013da8                lw
+ .text          0x00000000000140e8      0x190 rv32ui/div.o
+                0x00000000000140e8                div
+ *fill*         0x0000000000014278        0x0 
+ .text          0x0000000000014278      0x100 rv32ui/auipc.o
+                0x0000000000014278                auipc
+ .text          0x0000000000014378      0x340 rv32ui/addi.o
+                0x0000000000014378                addi
+ .text          0x00000000000146b8      0x1b8 rv32ui/jalr.o
+                0x00000000000146b8                jalr
+ .text          0x0000000000014870      0x378 rv32ui/bne.o
+                0x0000000000014870                bne
+ .text          0x0000000000014be8      0x40c rv32ui/bgeu.o
+                0x0000000000014be8                bgeu
+ .text          0x0000000000014ff4      0x580 rv32ui/mulhu.o
+                0x0000000000014ff4                mulhu
+ .text          0x0000000000015574      0x32c rv32ui/slti.o
+                0x0000000000015574                slti
+ .text          0x00000000000158a0      0x190 rv32ui/rem.o
+                0x00000000000158a0                rem
+ .text          0x0000000000015a30      0x57c rv32ui/slt.o
+                0x0000000000015a30                slt
+ .text          0x0000000000015fac      0x300 rv32ui/lbu.o
+                0x0000000000015fac                lbu
+ .text          0x00000000000162ac      0x300 rv32ui/lb.o
+                0x00000000000162ac                lb
+ .text          0x00000000000165ac      0x52c rv32ui/sh.o
+                0x00000000000165ac                sh
+ .text          0x0000000000016ad8      0x114 rv32ui/lui.o
+                0x0000000000016ad8                lui
+ .text          0x0000000000016bec      0x4a8 rv32ui/sb.o
+                0x0000000000016bec                sb
+ .text          0x0000000000017094      0x3ac rv32ui/bltu.o
+                0x0000000000017094                bltu
+ .text          0x0000000000017440      0x194 rv32ui/remu.o
+                0x0000000000017440                remu
+ .text          0x00000000000175d4       0x74 rv32ui/simple.o
+                0x00000000000175d4                simple
+ .text          0x0000000000017648      0x33c rv32ui/slli.o
+                0x0000000000017648                slli
+ .text          0x0000000000017984      0x56c rv32ui/and.o
+                0x0000000000017984                and
+ .text          0x0000000000017ef0      0x290 rv32ui/ori.o
+                0x0000000000017ef0                ori
+ .text          0x0000000000018180      0x334 rv32ui/lhu.o
+                0x0000000000018180                lhu
+ .text          0x00000000000184b4      0x670 rv32ui/srl.o
+                0x00000000000184b4                srl
+ .text          0x0000000000018b24      0x10c rv32ui/jal.o
+                0x0000000000018b24                jal
+ .text          0x0000000000018c30      0x594 rv32ui/add.o
+                0x0000000000018c30                add
+ .text          0x00000000000191c4      0x278 rv32ui/andi.o
+                0x00000000000191c4                andi
+ .text          0x000000000001943c       0xf0 rv32ui/j.o
+                0x000000000001943c                j
+ .text          0x000000000001952c      0x29c rv32ui/xori.o
+                0x000000000001952c                xori
+ .text          0x00000000000197c8      0x374 rv32ui/blt.o
+                0x00000000000197c8                blt
+ .text          0x0000000000019b3c      0x580 rv32ui/mulh.o
+                0x0000000000019b3c                mulh
+ .text          0x000000000001a0bc      0x580 rv32ui/mulhsu.o
+                0x000000000001a0bc                mulhsu
  *(.text*)
  *(.rodata)
  *(.rodata*)
  *(.srodata)
  *(.srodata*)
-                0x000000000001a634                . = ALIGN (0x4)
-                0x000000000001a634                _etext = .
-                0x000000000001a634                _sidata = _etext
+                0x000000000001a63c                . = ALIGN (0x4)
+                0x000000000001a63c                _etext = .
+                0x000000000001a63c                _sidata = _etext
 
-.rela.dyn       0x000000000001a634        0x0
- .rela.text     0x000000000001a634        0x0 firmware/start.o
+.rela.dyn       0x000000000001a63c        0x0
+ .rela.text     0x000000000001a63c        0x0 firmware/start.o
 
-.data           0x0000000080000000       0x70 load address 0x000000000001a634
+.data           0x0000000080000000       0x70 load address 0x000000000001a63c
                 0x0000000080000000                . = ALIGN (0x4)
                 0x0000000080000000                _sdata = .
                 0x0000000080000000                _ram_start = .
@@ -223,7 +224,7 @@ Linker script and memory map
                 0x0000000080000070                . = ALIGN (0x4)
                 0x0000000080000070                _edata = .
 
-.bss            0x0000000080000070        0x0 load address 0x000000000001a6a4
+.bss            0x0000000080000070        0x0 load address 0x000000000001a6ac
                 0x0000000080000070                . = ALIGN (0x4)
                 0x0000000080000070                _sbss = .
  *(.bss)

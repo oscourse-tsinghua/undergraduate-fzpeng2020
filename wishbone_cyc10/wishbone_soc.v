@@ -87,6 +87,7 @@ module wishbone_soc(
 		.c1(cpu_clk),		 //10Mhz	
 		.locked(lock)
 	);
+	assign sdr_clk_o = wishbone_clk;
 	`else 
 	ip_pll_sdram ip_pll_sdram0(
 		.areset(!rst_n),
@@ -97,14 +98,9 @@ module wishbone_soc(
 		.c3(sdr_clk_o),	 //150Mhz -68degree
 		.locked(lock)
 	);
-	/*
-	sdram_clk sdram_clk0(
-	.inclk0(clk_50),
-	.c0(sdram_clk),		//200Mhz
-	.c1(sdr_clk_o)		//200Mhz -68
-	);
-	*/
+	
 	`endif
+	
 	
 	
 	wire[31:0] pc_o;
@@ -199,7 +195,8 @@ module wishbone_soc(
 	wire       s1_ack_i;
 	
 	wishbone_uart_lite #(
-		.ClkFreq(20000000),
+	//
+		.ClkFreq(2000000),
 	`ifdef Simulation
 		.BoundRate(2500000)
 	`else
@@ -322,7 +319,9 @@ module wishbone_soc(
 		.wishbone_data_o(s0_data_i),
 		.wishbone_ack_o(s0_ack_i)
 		);
-	`elif SdramOpensourceIp
+	`endif
+	
+	`ifdef SdramOpensourceIp
 	sdrc_top sdrc_top0(
      .wb_rst_i(~reset_n),
      .wb_clk_i(wishbone_clk),
@@ -350,7 +349,6 @@ module wishbone_soc(
      .sdr_addr(sdr_addr_13_to_12),
      .sdr_dq(sdr_dq_io),
       
-		//
 		//Parameters
      .sdr_init_done(sdram_init_done),
      .cfg_req_depth(2'b11),

@@ -18,7 +18,7 @@
  */
 `include "cpu/defines.v"
 module wishbone_uart_lite #(
-	parameter ClkFreq   = 25000000,
+	parameter ClkFreq   = 20000000,
 	parameter BoundRate = 115200
 )(
 	input clk,
