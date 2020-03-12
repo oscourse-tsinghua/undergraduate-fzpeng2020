@@ -1,5 +1,5 @@
 Analysis & Synthesis report for wishbone_cycy10_soc
-Wed Feb 26 18:51:45 2020
+Tue Mar 10 15:41:01 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -445,13 +445,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 26 18:51:44 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 10 15:41:01 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; wishbone_cycy10_soc                         ;
 ; Top-level Entity Name              ; wishbone_soc                                ;
 ; Family                             ; Cyclone 10 LP                               ;
-; Total logic elements               ; 13,689                                      ;
-;     Total combinational functions  ; 10,028                                      ;
+; Total logic elements               ; 13,692                                      ;
+;     Total combinational functions  ; 10,031                                      ;
 ;     Dedicated logic registers      ; 5,172                                       ;
 ; Total registers                    ; 5172                                        ;
 ; Total pins                         ; 51                                          ;
@@ -561,7 +561,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.9%      ;
+;     Processor 2            ;   0.8%      ;
 +----------------------------+-------------+
 
 
@@ -644,16 +644,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                  ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 13,689                                                                                                 ;
+; Estimated Total logic elements              ; 13,692                                                                                                 ;
 ;                                             ;                                                                                                        ;
-; Total combinational functions               ; 10028                                                                                                  ;
+; Total combinational functions               ; 10031                                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                                        ;
-;     -- 4 input functions                    ; 6776                                                                                                   ;
-;     -- 3 input functions                    ; 1985                                                                                                   ;
-;     -- <=2 input functions                  ; 1267                                                                                                   ;
+;     -- 4 input functions                    ; 6785                                                                                                   ;
+;     -- 3 input functions                    ; 1977                                                                                                   ;
+;     -- <=2 input functions                  ; 1269                                                                                                   ;
 ;                                             ;                                                                                                        ;
 ; Logic elements by mode                      ;                                                                                                        ;
-;     -- normal mode                          ; 8891                                                                                                   ;
+;     -- normal mode                          ; 8894                                                                                                   ;
 ;     -- arithmetic mode                      ; 1137                                                                                                   ;
 ;                                             ;                                                                                                        ;
 ; Total registers                             ; 5172                                                                                                   ;
@@ -669,8 +669,8 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                                      ;
 ;                                             ;                                                                                                        ;
 ; Maximum fan-out node                        ; ip_pll_sdram:ip_pll_sdram0|altpll:altpll_component|ip_pll_sdram_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 5349                                                                                                   ;
-; Total fan-out                               ; 56779                                                                                                  ;
+; Maximum fan-out                             ; 5350                                                                                                   ;
+; Total fan-out                               ; 56795                                                                                                  ;
 ; Average fan-out                             ; 3.69                                                                                                   ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------+
 
@@ -680,27 +680,27 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                ; Entity Name                                     ; Library Name ;
 +----------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+--------------+
-; |wishbone_soc                                                                                                  ; 10028 (114)         ; 5172 (0)                  ; 393216      ; 8            ; 0       ; 4         ; 51   ; 0            ; |wishbone_soc                                                                                                                                                                      ; wishbone_soc                                    ; work         ;
-;    |config_string_and_timer:config_string_and_timer0|                                                          ; 349 (349)           ; 167 (167)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|config_string_and_timer:config_string_and_timer0                                                                                                                     ; config_string_and_timer                         ; work         ;
+; |wishbone_soc                                                                                                  ; 10031 (114)         ; 5172 (0)                  ; 393216      ; 8            ; 0       ; 4         ; 51   ; 0            ; |wishbone_soc                                                                                                                                                                      ; wishbone_soc                                    ; work         ;
+;    |config_string_and_timer:config_string_and_timer0|                                                          ; 350 (350)           ; 167 (167)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|config_string_and_timer:config_string_and_timer0                                                                                                                     ; config_string_and_timer                         ; work         ;
 ;    |ip_pll_sdram:ip_pll_sdram0|                                                                                ; 0 (0)               ; 1 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|ip_pll_sdram:ip_pll_sdram0                                                                                                                                           ; ip_pll_sdram                                    ; work         ;
 ;       |altpll:altpll_component|                                                                                ; 0 (0)               ; 1 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|ip_pll_sdram:ip_pll_sdram0|altpll:altpll_component                                                                                                                   ; altpll                                          ; work         ;
 ;          |ip_pll_sdram_altpll:auto_generated|                                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|ip_pll_sdram:ip_pll_sdram0|altpll:altpll_component|ip_pll_sdram_altpll:auto_generated                                                                                ; ip_pll_sdram_altpll                             ; work         ;
 ;    |led_wishbone:led_wishbone0|                                                                                ; 10 (10)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|led_wishbone:led_wishbone0                                                                                                                                           ; led_wishbone                                    ; work         ;
-;    |openriscv:openriscv0|                                                                                      ; 7684 (0)            ; 4190 (0)                  ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0                                                                                                                                                 ; openriscv                                       ; work         ;
+;    |openriscv:openriscv0|                                                                                      ; 7690 (0)            ; 4190 (0)                  ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0                                                                                                                                                 ; openriscv                                       ; work         ;
 ;       |LLbit_reg:LLbit_reg0|                                                                                   ; 33 (33)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|LLbit_reg:LLbit_reg0                                                                                                                            ; LLbit_reg                                       ; work         ;
 ;       |csr:csr0|                                                                                               ; 1101 (1100)         ; 2383 (2383)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|csr:csr0                                                                                                                                        ; csr                                             ; work         ;
 ;          |mmu_conv:mmu_conv0|                                                                                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|csr:csr0|mmu_conv:mmu_conv0                                                                                                                     ; mmu_conv                                        ; work         ;
 ;       |ctrl:ctrl0|                                                                                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|ctrl:ctrl0                                                                                                                                      ; ctrl                                            ; work         ;
-;       |ex:ex0|                                                                                                 ; 1038 (946)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|ex:ex0                                                                                                                                          ; ex                                              ; work         ;
+;       |ex:ex0|                                                                                                 ; 1039 (947)          ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|ex:ex0                                                                                                                                          ; ex                                              ; work         ;
 ;          |lpm_mult:Mult0|                                                                                      ; 92 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|ex:ex0|lpm_mult:Mult0                                                                                                                           ; lpm_mult                                        ; work         ;
 ;             |mult_16t:auto_generated|                                                                          ; 92 (92)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|ex:ex0|lpm_mult:Mult0|mult_16t:auto_generated                                                                                                   ; mult_16t                                        ; work         ;
 ;       |ex_mem:ex_mem0|                                                                                         ; 388 (388)           ; 232 (232)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|ex_mem:ex_mem0                                                                                                                                  ; ex_mem                                          ; work         ;
-;       |id:id0|                                                                                                 ; 2074 (2074)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|id:id0                                                                                                                                          ; id                                              ; work         ;
+;       |id:id0|                                                                                                 ; 2075 (2075)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|id:id0                                                                                                                                          ; id                                              ; work         ;
 ;       |id_ex:id_ex0|                                                                                           ; 1424 (1424)         ; 231 (231)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|id_ex:id_ex0                                                                                                                                    ; id_ex                                           ; work         ;
 ;       |if_id:if_id0|                                                                                           ; 67 (67)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|if_id:if_id0                                                                                                                                    ; if_id                                           ; work         ;
 ;       |mem:mem0|                                                                                               ; 981 (981)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|mem:mem0                                                                                                                                        ; mem                                             ; work         ;
 ;       |mem_wb:mem_wb0|                                                                                         ; 135 (135)           ; 105 (105)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|mem_wb:mem_wb0                                                                                                                                  ; mem_wb                                          ; work         ;
-;       |pc_reg:pc_reg0|                                                                                         ; 301 (301)           ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|pc_reg:pc_reg0                                                                                                                                  ; pc_reg                                          ; work         ;
+;       |pc_reg:pc_reg0|                                                                                         ; 305 (305)           ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|pc_reg:pc_reg0                                                                                                                                  ; pc_reg                                          ; work         ;
 ;       |regfile:regfile1|                                                                                       ; 44 (44)             ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|regfile:regfile1                                                                                                                                ; regfile                                         ; work         ;
 ;       |wishbone_bus_if:dwishbone_bus_if|                                                                       ; 44 (44)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|wishbone_bus_if:dwishbone_bus_if                                                                                                                ; wishbone_bus_if                                 ; work         ;
 ;       |wishbone_bus_if:iwishbone_bus_if|                                                                       ; 47 (47)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|openriscv:openriscv0|wishbone_bus_if:iwishbone_bus_if                                                                                                                ; wishbone_bus_if                                 ; work         ;
@@ -711,16 +711,16 @@ refer to the applicable agreement for further details.
 ;          |altsyncram:altsyncram_component|                                                                     ; 32 (0)              ; 1 (0)                     ; 393216      ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|rom_wishbone:rom_wishbone0|ip_rom:ip_rom0|altsyncram:altsyncram_component                                                                                            ; altsyncram                                      ; work         ;
 ;             |altsyncram_mba1:auto_generated|                                                                   ; 32 (0)              ; 1 (1)                     ; 393216      ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|rom_wishbone:rom_wishbone0|ip_rom:ip_rom0|altsyncram:altsyncram_component|altsyncram_mba1:auto_generated                                                             ; altsyncram_mba1                                 ; work         ;
 ;                |mux_9ob:mux2|                                                                                  ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|rom_wishbone:rom_wishbone0|ip_rom:ip_rom0|altsyncram:altsyncram_component|altsyncram_mba1:auto_generated|mux_9ob:mux2                                                ; mux_9ob                                         ; work         ;
-;    |sdram:sdram0|                                                                                              ; 261 (0)             ; 241 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|sdram:sdram0                                                                                                                                                         ; sdram                                           ; sdram        ;
+;    |sdram:sdram0|                                                                                              ; 259 (0)             ; 241 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|sdram:sdram0                                                                                                                                                         ; sdram                                           ; sdram        ;
 ;       |altera_reset_controller:rst_controller|                                                                 ; 0 (0)               ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|sdram:sdram0|altera_reset_controller:rst_controller                                                                                                                  ; altera_reset_controller                         ; sdram        ;
 ;          |altera_reset_synchronizer:alt_rst_sync_uq1|                                                          ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|sdram:sdram0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1                                                                       ; altera_reset_synchronizer                       ; sdram        ;
-;       |sdram_new_sdram_controller_0:new_sdram_controller_0|                                                    ; 261 (212)           ; 238 (152)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|sdram:sdram0|sdram_new_sdram_controller_0:new_sdram_controller_0                                                                                                     ; sdram_new_sdram_controller_0                    ; sdram        ;
+;       |sdram_new_sdram_controller_0:new_sdram_controller_0|                                                    ; 259 (210)           ; 238 (152)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|sdram:sdram0|sdram_new_sdram_controller_0:new_sdram_controller_0                                                                                                     ; sdram_new_sdram_controller_0                    ; sdram        ;
 ;          |sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module| ; 49 (49)             ; 86 (86)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|sdram:sdram0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module ; sdram_new_sdram_controller_0_input_efifo_module ; sdram        ;
-;    |wb32_avalon16:wb32_avalon16|                                                                               ; 212 (212)           ; 169 (169)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb32_avalon16:wb32_avalon16                                                                                                                                          ; wb32_avalon16                                   ; work         ;
-;    |wb_conmax_top:wb_conmax_top0|                                                                              ; 736 (0)             ; 364 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0                                                                                                                                         ; wb_conmax_top                                   ; work         ;
+;    |wb32_avalon16:wb32_avalon16|                                                                               ; 213 (213)           ; 169 (169)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb32_avalon16:wb32_avalon16                                                                                                                                          ; wb32_avalon16                                   ; work         ;
+;    |wb_conmax_top:wb_conmax_top0|                                                                              ; 733 (0)             ; 364 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0                                                                                                                                         ; wb_conmax_top                                   ; work         ;
 ;       |wb_conmax_master_if:m0|                                                                                 ; 70 (70)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_master_if:m0                                                                                                                  ; wb_conmax_master_if                             ; work         ;
 ;       |wb_conmax_master_if:m1|                                                                                 ; 70 (70)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_master_if:m1                                                                                                                  ; wb_conmax_master_if                             ; work         ;
-;       |wb_conmax_rf:rf|                                                                                        ; 218 (218)           ; 274 (274)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_rf:rf                                                                                                                         ; wb_conmax_rf                                    ; work         ;
+;       |wb_conmax_rf:rf|                                                                                        ; 213 (213)           ; 274 (274)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_rf:rf                                                                                                                         ; wb_conmax_rf                                    ; work         ;
 ;       |wb_conmax_slave_if:s0|                                                                                  ; 97 (71)             ; 13 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s0                                                                                                                   ; wb_conmax_slave_if                              ; work         ;
 ;          |wb_conmax_msel:msel|                                                                                 ; 26 (11)             ; 10 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s0|wb_conmax_msel:msel                                                                                               ; wb_conmax_msel                                  ; work         ;
 ;             |wb_conmax_arb:arb0|                                                                               ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s0|wb_conmax_msel:msel|wb_conmax_arb:arb0                                                                            ; wb_conmax_arb                                   ; work         ;
@@ -730,7 +730,7 @@ refer to the applicable agreement for further details.
 ;             |wb_conmax_pri_enc:pri_enc|                                                                        ; 7 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s0|wb_conmax_msel:msel|wb_conmax_pri_enc:pri_enc                                                                     ; wb_conmax_pri_enc                               ; work         ;
 ;                |wb_conmax_pri_dec:pd0|                                                                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s0|wb_conmax_msel:msel|wb_conmax_pri_enc:pri_enc|wb_conmax_pri_dec:pd0                                               ; wb_conmax_pri_dec                               ; work         ;
 ;                |wb_conmax_pri_dec:pd1|                                                                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s0|wb_conmax_msel:msel|wb_conmax_pri_enc:pri_enc|wb_conmax_pri_dec:pd1                                               ; wb_conmax_pri_dec                               ; work         ;
-;       |wb_conmax_slave_if:s15|                                                                                 ; 95 (69)             ; 13 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15                                                                                                                  ; wb_conmax_slave_if                              ; work         ;
+;       |wb_conmax_slave_if:s15|                                                                                 ; 97 (71)             ; 13 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15                                                                                                                  ; wb_conmax_slave_if                              ; work         ;
 ;          |wb_conmax_msel:msel|                                                                                 ; 26 (11)             ; 10 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel                                                                                              ; wb_conmax_msel                                  ; work         ;
 ;             |wb_conmax_arb:arb0|                                                                               ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel|wb_conmax_arb:arb0                                                                           ; wb_conmax_arb                                   ; work         ;
 ;             |wb_conmax_arb:arb1|                                                                               ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |wishbone_soc|wb_conmax_top:wb_conmax_top0|wb_conmax_slave_if:s15|wb_conmax_msel:msel|wb_conmax_arb:arb1                                                                           ; wb_conmax_arb                                   ; work         ;
@@ -9175,24 +9175,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 3                           ;
 ;     plain             ; 65                          ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 10028                       ;
+; cycloneiii_lcell_comb ; 10031                       ;
 ;     arith             ; 1137                        ;
 ;         1 data inputs ; 10                          ;
 ;         2 data inputs ; 384                         ;
 ;         3 data inputs ; 743                         ;
-;     normal            ; 8891                        ;
+;     normal            ; 8894                        ;
 ;         0 data inputs ; 11                          ;
 ;         1 data inputs ; 151                         ;
-;         2 data inputs ; 711                         ;
-;         3 data inputs ; 1242                        ;
-;         4 data inputs ; 6776                        ;
+;         2 data inputs ; 713                         ;
+;         3 data inputs ; 1234                        ;
+;         4 data inputs ; 6785                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.10                       ;
-; Average LUT depth     ; 11.90                       ;
+; Average LUT depth     ; 11.92                       ;
 +-----------------------+-----------------------------+
 
 
@@ -9201,7 +9201,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:02     ;
+; Top            ; 00:01:03     ;
 +----------------+--------------+
 
 
@@ -9211,25 +9211,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 26 18:49:49 2020
+    Info: Processing started: Tue Mar 10 15:38:51 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off wishbone_cycy10_soc -c wishbone_cycy10_soc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12248): Elaborating Platform Designer system entity "sdram.qsys"
-Info (12250): 2020.02.26.18:50:20 Progress: Loading wishbone_cyc10/sdram.qsys
-Info (12250): 2020.02.26.18:50:23 Progress: Reading input file
-Info (12250): 2020.02.26.18:50:23 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2020.02.26.18:50:25 Progress: Parameterizing module clk_0
-Info (12250): 2020.02.26.18:50:25 Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 18.0]
-Info (12250): 2020.02.26.18:50:25 Progress: Parameterizing module new_sdram_controller_0
-Info (12250): 2020.02.26.18:50:25 Progress: Building connections
-Info (12250): 2020.02.26.18:50:25 Progress: Parameterizing connections
-Info (12250): 2020.02.26.18:50:25 Progress: Validating
-Info (12250): 2020.02.26.18:50:27 Progress: Done reading input file
+Info (12250): 2020.03.10.15:39:30 Progress: Loading wishbone_cyc10/sdram.qsys
+Info (12250): 2020.03.10.15:39:32 Progress: Reading input file
+Info (12250): 2020.03.10.15:39:32 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2020.03.10.15:39:33 Progress: Parameterizing module clk_0
+Info (12250): 2020.03.10.15:39:33 Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 18.0]
+Info (12250): 2020.03.10.15:39:34 Progress: Parameterizing module new_sdram_controller_0
+Info (12250): 2020.03.10.15:39:34 Progress: Building connections
+Info (12250): 2020.03.10.15:39:34 Progress: Parameterizing connections
+Info (12250): 2020.03.10.15:39:34 Progress: Validating
+Info (12250): 2020.03.10.15:39:35 Progress: Done reading input file
 Info (12250): Sdram.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
 Info (12250): Sdram: Generating sdram "sdram" for QUARTUS_SYNTH
 Info (12250): New_sdram_controller_0: Starting RTL generation for module 'sdram_new_sdram_controller_0'
-Info (12250): New_sdram_controller_0:   Generation command is [exec F:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/FANZHI~1/AppData/Local/Temp/alt8318_7755830416265571968.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=F:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/FANZHI~1/AppData/Local/Temp/alt8318_7755830416265571968.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): New_sdram_controller_0:   Generation command is [exec F:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/FANZHI~1/AppData/Local/Temp/alt8331_3421634475799237023.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=F:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/FANZHI~1/AppData/Local/Temp/alt8331_3421634475799237023.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): New_sdram_controller_0: Done RTL generation for module 'sdram_new_sdram_controller_0'
 Info (12250): New_sdram_controller_0: "sdram" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
 Info (12250): Rst_controller: "sdram" instantiated altera_reset_controller "rst_controller"
@@ -9625,8 +9625,8 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "s0_data_i[8]" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v Line: 179
     Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_sel_i[0]~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 35
     Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_sel_i[1]~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 35
-    Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_sel_i[3]~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 35
     Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_sel_i[2]~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 35
+    Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_sel_i[3]~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 35
     Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_addr_i[8]~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 33
     Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_we_i~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 36
     Info (17048): Logic cell "wb32_avalon16:wb32_avalon16|wishbone_stb_i~buf0" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb32_avalon16.v Line: 38
@@ -9689,19 +9689,19 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v Line: 41
     Warning (15610): No output dependent on input pin "uart_rxd_i" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v Line: 64
-Info (21057): Implemented 13940 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 13943 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 31 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 13816 logic cells
+    Info (21061): Implemented 13819 logic cells
     Info (21064): Implemented 64 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 5030 megabytes
-    Info: Processing ended: Wed Feb 26 18:51:45 2020
-    Info: Elapsed time: 00:01:56
-    Info: Total CPU time (on all processors): 00:02:39
+    Info: Peak virtual memory: 5024 megabytes
+    Info: Processing ended: Tue Mar 10 15:41:01 2020
+    Info: Elapsed time: 00:02:10
+    Info: Total CPU time (on all processors): 00:02:09
 
 
 +------------------------------------------+

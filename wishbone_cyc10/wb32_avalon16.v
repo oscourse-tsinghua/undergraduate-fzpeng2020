@@ -119,7 +119,7 @@ always @(posedge sdram_clk) begin
 	if(reset_n == `RstEnable) begin
 		state <= state_idle;
 		avalon_sdram_byteenable_n_o <= 2'b11;
-		avalon_sdram_read_n_o <= 1'b1;
+		avalon_sdram_read_n_o <= 1'b1;//_n低电平有效
 		avalon_sdram_write_n_o <= 1'b1;
 		avalon_sdram_writedata_o <= 16'b0;
 		cnt <= 5'b00000;
@@ -132,19 +132,23 @@ always @(posedge sdram_clk) begin
 				if(wishbone_cyc_r == 1'b0 || wishbone_stb_r == 1'b0) begin
 					cnt <= 5'b0;
 				end else begin
-					cnt <= cnt + 4'b1;
-					if (cnt == 5'b11111) begin
+					cnt <= cnt + 5'b1;
+					if (cnt == 5'b11111) begin//31
+					
+					//读写检测
 						if(wishbone_we_r) begin 
 							state <= state_write_byte_lo;
 							avalon_sdram_writedata_o <= wishbone_data_r[15:0];
 							avalon_sdram_byteenable_n_o <= ~wishbone_sel_r[1:0];
 							avalon_sdram_address_o <= {wishbone_addr_r[21:1],1'b0};
 						end
-						else state <= state_read_byte_lo;
+						else state <= state_read_wait_lo;//
 					end
 				end 
 			end
 			
+			
+			//写
 			state_write_byte_lo: begin
 				if(wishbone_sel_r[1:0] != 2'b00) begin // write low
 					avalon_sdram_write_n_o <= 1'b0;
@@ -154,7 +158,7 @@ always @(posedge sdram_clk) begin
 				end	
 			end
 			state_write_wait_lo: begin
-				if(!avalon_sdram_waitrequest_i) begin
+				if(!avalon_sdram_waitrequest_i) begin//不等待就写
 					avalon_sdram_writedata_o <= wishbone_data_r[31:16];
 					avalon_sdram_byteenable_n_o <= ~wishbone_sel_r[3:2];
 					avalon_sdram_address_o <= {wishbone_addr_r[21:1],1'b1};
@@ -173,47 +177,59 @@ always @(posedge sdram_clk) begin
 			end
 			state_write_wait_hi: begin
 				if(!avalon_sdram_waitrequest_i) begin
-					state <= state_done;
 					avalon_sdram_write_n_o <= 1'b1;
+					state <= state_done;				
 				end
 			end
 			
-			state_read_byte_lo: begin
+			
+			
+			
+			// if no wait request, start read low byte
+			state_read_wait_lo: begin
 				avalon_sdram_read_n_o <= 1'b0;
-				state <= state_read_wait_lo;
 				avalon_sdram_address_o <= {wishbone_addr_r[21:1],1'b0};
 				avalon_sdram_byteenable_n_o <= 2'b00;
+				state <= state_read_byte_lo;
+				
 			end
 			
-			state_read_wait_lo: begin
-				if(!avalon_sdram_waitrequest_i) avalon_sdram_read_n_o <= 1'b1;
-				if(avalon_sdram_readdatavalid_i) begin 
-					state <= state_read_byte_hi;
+			// read low byte
+			state_read_byte_lo: begin//
+				if(!avalon_sdram_waitrequest_i) begin
+					avalon_sdram_read_n_o <= 1'b1;
 				end
-			end
-	
-			state_read_byte_hi: begin
+				if(avalon_sdram_readdatavalid_i) begin 	
+					state <= state_read_wait_hi;
+				end
 				rdata[15:0] <= avalon_sdram_readdata_i;
+			end
+			
+			// if no wait request, start read high byte
+			state_read_wait_hi: begin
 				avalon_sdram_read_n_o <= 1'b0;
 				avalon_sdram_address_o <= {wishbone_addr_r[21:1],1'b1};
 				avalon_sdram_byteenable_n_o <= 2'b00;
-				// fit the fucking bus
-				//if(!avalon_sdram_readdatavalid_i) 
-				state <= state_read_wait_hi;
+				state <= state_read_byte_hi;
 			end
 			
-			state_read_wait_hi: begin
-				if(!avalon_sdram_waitrequest_i) avalon_sdram_read_n_o <= 1'b1;
-				if(avalon_sdram_readdatavalid_i) begin 
-					state <= state_done;
-					//rdata[31:16] <= avalon_sdram_readdata_i;
+			// read high byte
+			state_read_byte_hi: begin
+				if(!avalon_sdram_waitrequest_i) begin
 					avalon_sdram_read_n_o <= 1'b1;
 				end
+				if(avalon_sdram_readdatavalid_i) begin 	
+					state <= state_done;
+					avalon_sdram_read_n_o <= 1'b1;
+				end
+				rdata[31:16] <= avalon_sdram_readdata_i;
 			end
+			
+			
+			
 			
 			state_done: begin
 				cnt <= 5'b0;
-				rdata[31:16] <= avalon_sdram_readdata_i;
 				if (skip_to_idle == 1'b1) state <= state_idle;
 			end
 			

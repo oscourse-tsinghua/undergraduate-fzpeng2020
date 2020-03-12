@@ -1,6 +1,6 @@
 // define RV32 for 32 bits, or ISA is 64 bits
 `define RV32
-`define Simulation
+//`define Simulation
 
 //ȫ��
 `define RstEnable 1'b0

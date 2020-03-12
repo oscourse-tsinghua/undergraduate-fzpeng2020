@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Feb 26 18:51:44 2020
+Analysis & Synthesis Status : Successful - Tue Mar 10 15:41:01 2020
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : wishbone_cycy10_soc
 Top-level Entity Name : wishbone_soc
 Family : Cyclone 10 LP
-Total logic elements : 13,689
-    Total combinational functions : 10,028
+Total logic elements : 13,692
+    Total combinational functions : 10,031
     Dedicated logic registers : 5,172
 Total registers : 5172
 Total pins : 51
