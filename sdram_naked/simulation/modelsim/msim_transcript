@@ -1,0 +1,203 @@
+# Reading F:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do sdram_naked_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying F:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll/ip_pll_sdram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:38 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll/ip_pll_sdram.v 
+# -- Compiling module ip_pll_sdram
+# 
+# Top level modules:
+# 	ip_pll_sdram
+# End time: 10:31:39 on Mar 13,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:39 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v 
+# End time: 10:31:39 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/defines.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:39 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/defines.v 
+# End time: 10:31:39 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db/ip_pll_sdram_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:39 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db/ip_pll_sdram_altpll.v 
+# -- Compiling module ip_pll_sdram_altpll
+# 
+# Top level modules:
+# 	ip_pll_sdram_altpll
+# End time: 10:31:39 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wishbone_uart_lite.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:39 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wishbone_uart_lite.v 
+# -- Compiling module wishbone_uart_lite
+# 
+# Top level modules:
+# 	wishbone_uart_lite
+# End time: 10:31:39 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:39 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked.v 
+# -- Compiling module sdram_naked
+# 
+# Top level modules:
+# 	sdram_naked
+# End time: 10:31:40 on Mar 13,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:40 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_top.v 
+# -- Compiling module wb_conmax_top
+# 
+# Top level modules:
+# 	wb_conmax_top
+# End time: 10:31:40 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_slave_if.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:40 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_slave_if.v 
+# -- Compiling module wb_conmax_slave_if
+# 
+# Top level modules:
+# 	wb_conmax_slave_if
+# End time: 10:31:40 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_rf.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:40 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_rf.v 
+# -- Compiling module wb_conmax_rf
+# 
+# Top level modules:
+# 	wb_conmax_rf
+# End time: 10:31:40 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_enc.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:40 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_enc.v 
+# -- Compiling module wb_conmax_pri_enc
+# 
+# Top level modules:
+# 	wb_conmax_pri_enc
+# End time: 10:31:40 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_dec.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:40 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_dec.v 
+# -- Compiling module wb_conmax_pri_dec
+# 
+# Top level modules:
+# 	wb_conmax_pri_dec
+# End time: 10:31:41 on Mar 13,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_msel.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:41 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_msel.v 
+# -- Compiling module wb_conmax_msel
+# 
+# Top level modules:
+# 	wb_conmax_msel
+# End time: 10:31:41 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_master_if.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:41 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_master_if.v 
+# -- Compiling module wb_conmax_master_if
+# 
+# Top level modules:
+# 	wb_conmax_master_if
+# End time: 10:31:41 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_arb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:41 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_arb.v 
+# -- Compiling module wb_conmax_arb
+# 
+# Top level modules:
+# 	wb_conmax_arb
+# End time: 10:31:41 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_master.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:41 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_master.v 
+# -- Compiling module sdram_naked_master
+# 
+# Top level modules:
+# 	sdram_naked_master
+# End time: 10:31:42 on Mar 13,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked {F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_tst.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:31:42 on Mar 13,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked" F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_tst.vt 
+# -- Compiling module sdram_naked_tst
+# 
+# Top level modules:
+# 	sdram_naked_tst
+# End time: 10:31:42 on Mar 13,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs="+acc"  sdram_naked_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs=""+acc"" sdram_naked_tst 
+# Start time: 10:31:42 on Mar 13,2020
+# Loading work.sdram_naked_tst
+# Loading work.sdram_naked
+# Loading work.sdram_naked_master
+# Loading work.ip_pll_sdram
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.wishbone_uart_lite
+# Loading work.wb_conmax_top
+# Loading work.wb_conmax_master_if
+# Loading work.wb_conmax_slave_if
+# Loading work.wb_conmax_arb
+# Loading work.wb_conmax_msel
+# Loading work.wb_conmax_pri_enc
+# Loading work.wb_conmax_pri_dec
+# Loading work.wb_conmax_rf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : Cyclone 10 LP PLL was reset
+# Time: 0  Instance: sdram_naked_tst.i1.ip_pll_sdram0.altpll_component.cycloneiii_pll.pll3
+#  Note : Cyclone 10 LP PLL locked to incoming clock
+# Time: 490000  Instance: sdram_naked_tst.i1.ip_pll_sdram0.altpll_component.cycloneiii_pll.pll3
+3210# End time: 10:32:14 on Mar 13,2020, Elapsed time: 0:00:32
+# Errors: 0, Warnings: 0

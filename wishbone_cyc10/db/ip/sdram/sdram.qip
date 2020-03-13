@@ -2,7 +2,7 @@ set_global_assignment -entity "sdram" -library "sdram" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "sdram" -library "sdram" -name IP_TOOL_VERSION "18.0"
 set_global_assignment -entity "sdram" -library "sdram" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "sdram" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../sdram.sopcinfo"]
-set_global_assignment -entity "sdram" -library "sdram" -name SLD_INFO "QSYS_NAME sdram HAS_SOPCINFO 1 GENERATION_ID 1583825976"
+set_global_assignment -entity "sdram" -library "sdram" -name SLD_INFO "QSYS_NAME sdram HAS_SOPCINFO 1 GENERATION_ID 1584064720"
 set_global_assignment -library "sdram" -name SLD_FILE [file join $::quartus(qip_path) "sdram.debuginfo"]
 set_global_assignment -entity "sdram" -library "sdram" -name IP_TARGETED_DEVICE_FAMILY "Cyclone 10 LP"
 set_global_assignment -entity "sdram" -library "sdram" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone 10 LP}"
@@ -14,7 +14,7 @@ set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_DISPLA
 set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTU4MzgyNTk3Ng==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTU4NDA2NDcyMA==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSAxMCBMUA==::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBDTDAxNllVMjU2QzhH::QXV0byBERVZJQ0U="
 set_global_assignment -entity "sdram" -library "sdram" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="

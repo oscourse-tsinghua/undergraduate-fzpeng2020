@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2020.03.10.15:39:44"
+ date="2020.03.13.09:58:46"
  outputDirectory="F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip/sdram/">
  <perimeter>
   <parameter
@@ -158,13 +158,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="sdram:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL016YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1583825976,AUTO_UNIQUE_ID=(clock_source:18.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_new_sdram_controller:18.0:TAC=5.4,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=14.0,addressWidth=22,bankWidth=2,casLatency=3,clockRate=50000000,columnWidth=8,componentName=sdram_new_sdram_controller_0,dataWidth=16,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=100.0,refreshPeriod=15.625,registerDataIn=true,rowWidth=12,size=8388608)(clock:18.0:)(reset:18.0:)"
+   parameterizationKey="sdram:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10CL016YU256C8G,AUTO_DEVICE_FAMILY=Cyclone 10 LP,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1584064720,AUTO_UNIQUE_ID=(clock_source:18.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_new_sdram_controller:18.0:TAC=5.4,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=14.0,addressWidth=22,bankWidth=2,casLatency=3,clockRate=50000000,columnWidth=8,componentName=sdram_new_sdram_controller_0,dataWidth=16,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=100.0,refreshPeriod=15.625,registerDataIn=true,rowWidth=12,size=8388608)(clock:18.0:)(reset:18.0:)"
    instancePathKey="sdram"
    kind="sdram"
    version="1.0"
    name="sdram">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1583825976" />
+  <parameter name="AUTO_GENERATION_ID" value="1584064720" />
   <parameter name="AUTO_DEVICE" value="10CL016YU256C8G" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 LP" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -226,7 +226,7 @@
    <message level="Debug" culprit="sdram"><![CDATA["<b>sdram</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
    <message level="Debug" culprit="sdram">queue size: 1 starting:altera_avalon_new_sdram_controller "submodules/sdram_new_sdram_controller_0"</message>
    <message level="Info" culprit="new_sdram_controller_0">Starting RTL generation for module 'sdram_new_sdram_controller_0'</message>
-   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec F:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/FANZHI~1/AppData/Local/Temp/alt8331_3421634475799237023.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=F:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/FANZHI~1/AppData/Local/Temp/alt8331_3421634475799237023.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec F:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/FANZHI~1/AppData/Local/Temp/alt8334_6826811956349905246.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=F:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/FANZHI~1/AppData/Local/Temp/alt8334_6826811956349905246.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="new_sdram_controller_0">Done RTL generation for module 'sdram_new_sdram_controller_0'</message>
    <message level="Info" culprit="new_sdram_controller_0"><![CDATA["<b>sdram</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>new_sdram_controller_0</b>"]]></message>
    <message level="Debug" culprit="sdram">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
@@ -281,7 +281,7 @@
   <messages>
    <message level="Debug" culprit="sdram">queue size: 1 starting:altera_avalon_new_sdram_controller "submodules/sdram_new_sdram_controller_0"</message>
    <message level="Info" culprit="new_sdram_controller_0">Starting RTL generation for module 'sdram_new_sdram_controller_0'</message>
-   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec F:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/FANZHI~1/AppData/Local/Temp/alt8331_3421634475799237023.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=F:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/FANZHI~1/AppData/Local/Temp/alt8331_3421634475799237023.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec F:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- F:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/FANZHI~1/AppData/Local/Temp/alt8334_6826811956349905246.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=F:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/FANZHI~1/AppData/Local/Temp/alt8334_6826811956349905246.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
    <message level="Info" culprit="new_sdram_controller_0">Done RTL generation for module 'sdram_new_sdram_controller_0'</message>
    <message level="Info" culprit="new_sdram_controller_0"><![CDATA["<b>sdram</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>new_sdram_controller_0</b>"]]></message>
   </messages>

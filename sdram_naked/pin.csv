@@ -1,0 +1,72 @@
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+# File: F:\undergraduate_thesis\undergraduate-fzpeng2020\sdram_naked\pin.csv
+# Generated on: Thu Mar 12 09:00:31 2020
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clk,Input,PIN_E1,1,B1_N1,PIN_E1,2.5 V,,,,,
+clk_50,Input,PIN_M15,5,B5_N0,PIN_M15,2.5 V,,,,,
+led[7],Output,PIN_M6,3,B3_N1,PIN_M6,2.5 V,,,,,
+led[6],Output,PIN_J1,2,B2_N0,PIN_J1,2.5 V,,,,,
+led[5],Output,PIN_J2,2,B2_N0,PIN_J2,2.5 V,,,,,
+led[4],Output,PIN_G1,1,B1_N1,PIN_G1,2.5 V,,,,,
+led[3],Output,PIN_G2,1,B1_N1,PIN_G2,2.5 V,,,,,
+led[2],Output,PIN_D1,1,B1_N0,PIN_D1,2.5 V,,,,,
+led[1],Output,PIN_C2,1,B1_N0,PIN_C2,2.5 V,,,,,
+led[0],Output,PIN_B1,1,B1_N0,PIN_B1,2.5 V,,,,,
+rst_n,Input,PIN_D15,6,B6_N0,PIN_D15,2.5 V,,,,,
+sdr_addr_o[11],Output,PIN_C11,7,B7_N0,PIN_C11,2.5 V,,,,,
+sdr_addr_o[10],Output,PIN_C6,8,B8_N0,PIN_C6,2.5 V,,,,,
+sdr_addr_o[9],Output,PIN_E10,7,B7_N0,PIN_E10,2.5 V,,,,,
+sdr_addr_o[8],Output,PIN_C14,7,B7_N0,PIN_C14,2.5 V,,,,,
+sdr_addr_o[7],Output,PIN_E11,7,B7_N0,PIN_E11,2.5 V,,,,,
+sdr_addr_o[6],Output,PIN_F9,7,B7_N1,PIN_F9,2.5 V,,,,,
+sdr_addr_o[5],Output,PIN_D11,7,B7_N0,PIN_D11,2.5 V,,,,,
+sdr_addr_o[4],Output,PIN_E9,7,B7_N1,PIN_E9,2.5 V,,,,,
+sdr_addr_o[3],Output,PIN_D9,7,B7_N1,PIN_D9,2.5 V,,,,,
+sdr_addr_o[2],Output,PIN_D6,8,B8_N1,PIN_D6,2.5 V,,,,,
+sdr_addr_o[1],Output,PIN_E6,8,B8_N1,PIN_E6,2.5 V,,,,,
+sdr_addr_o[0],Output,PIN_D8,8,B8_N0,PIN_D8,2.5 V,,,,,
+sdr_ba_o[1],Output,PIN_E7,8,B8_N0,PIN_E7,2.5 V,,,,,
+sdr_ba_o[0],Output,PIN_E8,8,B8_N0,PIN_E8,2.5 V,,,,,
+sdr_cas_n_o,Output,PIN_C9,7,B7_N1,PIN_C9,2.5 V,,,,,
+sdr_cke_o,Output,PIN_A10,7,B7_N1,PIN_A10,2.5 V,,,,,
+sdr_clk_o,Output,PIN_B10,7,B7_N1,PIN_B10,2.5 V,,,,,
+sdr_cs_n_o,Output,PIN_A2,8,B8_N1,PIN_A2,2.5 V,,,,,
+sdr_dq_io[15],Bidir,PIN_B12,7,B7_N0,PIN_B12,2.5 V,,,,,
+sdr_dq_io[14],Bidir,PIN_B13,7,B7_N0,PIN_B13,2.5 V,,,,,
+sdr_dq_io[13],Bidir,PIN_A12,7,B7_N0,PIN_A12,2.5 V,,,,,
+sdr_dq_io[12],Bidir,PIN_A14,7,B7_N0,PIN_A14,2.5 V,,,,,
+sdr_dq_io[11],Bidir,PIN_A13,7,B7_N1,PIN_A13,2.5 V,,,,,
+sdr_dq_io[10],Bidir,PIN_B14,7,B7_N0,PIN_B14,2.5 V,,,,,
+sdr_dq_io[9],Bidir,PIN_B11,7,B7_N1,PIN_B11,2.5 V,,,,,
+sdr_dq_io[8],Bidir,PIN_A15,7,B7_N1,PIN_A15,2.5 V,,,,,
+sdr_dq_io[7],Bidir,PIN_B4,8,B8_N1,PIN_B4,2.5 V,,,,,
+sdr_dq_io[6],Bidir,PIN_A7,8,B8_N0,PIN_A7,2.5 V,,,,,
+sdr_dq_io[5],Bidir,PIN_A4,8,B8_N1,PIN_A4,2.5 V,,,,,
+sdr_dq_io[4],Bidir,PIN_B6,8,B8_N0,PIN_B6,2.5 V,,,,,
+sdr_dq_io[3],Bidir,PIN_B5,8,B8_N1,PIN_B5,2.5 V,,,,,
+sdr_dq_io[2],Bidir,PIN_B7,8,B8_N0,PIN_B7,2.5 V,,,,,
+sdr_dq_io[1],Bidir,PIN_A5,8,B8_N1,PIN_A5,2.5 V,,,,,
+sdr_dq_io[0],Bidir,PIN_A6,8,B8_N0,PIN_A6,2.5 V,,,,,
+sdr_dqm_o[1],Output,PIN_A11,7,B7_N1,PIN_A11,2.5 V,,,,,
+sdr_dqm_o[0],Output,PIN_C8,8,B8_N0,PIN_C8,2.5 V,,,,,
+sdr_ras_n_o,Output,PIN_A3,8,B8_N1,PIN_A3,2.5 V,,,,,
+sdr_we_n_o,Output,PIN_B3,8,B8_N1,PIN_B3,2.5 V,,,,,
+uart_rxd_i,Input,PIN_R1,2,B2_N1,PIN_R1,2.5 V,,,,,
+uart_txd_o,Output,PIN_T2,3,B3_N1,PIN_T2,2.5 V,,,,,

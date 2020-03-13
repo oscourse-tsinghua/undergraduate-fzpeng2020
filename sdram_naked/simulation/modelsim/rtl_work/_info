@@ -1,0 +1,318 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/simulation/modelsim
+vip_pll_sdram
+Z1 !s110 1584066699
+!i10b 1
+!s100 8H[k`;^Wi@m;AI`DQSLa]2
+IaMo80H4cG;jFbg3zTz4T<0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1582713819
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll/ip_pll_sdram.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll/ip_pll_sdram.v
+L0 39
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1584066698.000000
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll/ip_pll_sdram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll/ip_pll_sdram.v|
+!i113 1
+Z4 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/ip_pll
+Z5 tCvgOpt 0
+vip_pll_sdram_altpll
+R1
+!i10b 1
+!s100 =iI9:BCedJ09k[VnP^GB;0
+I]I^HO4_VH@^nUX76YXNWz0
+R2
+R0
+w1583979430
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db/ip_pll_sdram_altpll.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db/ip_pll_sdram_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+Z6 !s108 1584066699.000000
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db/ip_pll_sdram_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db/ip_pll_sdram_altpll.v|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/db
+R5
+vsdram_naked
+R1
+!i10b 1
+!s100 l<YY9_0_fUPc2j<m1f^EP3
+I8o0m50ME^QYVM5>ULh@>80
+R2
+R0
+w1584064821
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked.v
+L0 2
+R3
+r1
+!s85 0
+31
+R6
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked.v|
+!i113 1
+R4
+Z7 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked
+R5
+vsdram_naked_master
+Z8 !s110 1584066701
+!i10b 1
+!s100 Ab21a49:>TRUd1JDGIVm>3
+IKJm7Q[M?CQM_?]OjY:Lnb1
+R2
+R0
+w1584066074
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_master.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_master.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z9 !s108 1584066701.000000
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_master.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_master.v|
+!i113 1
+R4
+R7
+R5
+vsdram_naked_tst
+!s110 1584066702
+!i10b 1
+!s100 GN6T55;I28<Cg0^X7cl^`2
+I?DeD9nQF]54j2nbhQWo7;3
+R2
+R0
+w1584066683
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_tst.vt
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_tst.vt
+L0 28
+R3
+r1
+!s85 0
+31
+!s108 1584066702.000000
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_tst.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/sdram_naked_tst.vt|
+!i113 1
+R4
+R7
+R5
+vwb_conmax_arb
+R8
+!i10b 1
+!s100 KDD5ifon^A4TOA0B=P]T40
+IKRH>F:G1PYGB<7PT7O;^K0
+R2
+R0
+Z10 w1582711940
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_arb.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_arb.v
+L0 63
+R3
+r1
+!s85 0
+31
+R9
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_arb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_arb.v|
+!i113 1
+R4
+Z11 !s92 -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax
+R5
+vwb_conmax_master_if
+R8
+!i10b 1
+!s100 2QXT;Vea`JCOAkcSje72<1
+IDQdUhMHJPFkY7DY?o=ET@3
+R2
+R0
+R10
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_master_if.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_master_if.v
+Z12 L0 61
+R3
+r1
+!s85 0
+31
+R9
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_master_if.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_master_if.v|
+!i113 1
+R4
+R11
+R5
+vwb_conmax_msel
+R8
+!i10b 1
+!s100 P<8BID9@^MQf]c_W0N6n;1
+I4Mk4NJ:0c975SNonFdn<23
+R2
+R0
+R10
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_msel.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_msel.v
+R12
+R3
+r1
+!s85 0
+31
+R9
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_msel.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_msel.v|
+!i113 1
+R4
+R11
+R5
+vwb_conmax_pri_dec
+R8
+!i10b 1
+!s100 F?cJb`zB9Om3SSYHgeZmz0
+IF4B6R@7mfV8<0JY>IWWzG1
+R2
+R0
+R10
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_dec.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_dec.v
+R12
+R3
+r1
+!s85 0
+31
+Z13 !s108 1584066700.000000
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_dec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_dec.v|
+!i113 1
+R4
+R11
+R5
+vwb_conmax_pri_enc
+Z14 !s110 1584066700
+!i10b 1
+!s100 VVPk_hZ`2M8JdHXDcn03Z3
+IK_6HJ3Y=@9>2_zLXMCFST1
+R2
+R0
+R10
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_enc.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_enc.v
+R12
+R3
+r1
+!s85 0
+31
+R13
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_enc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_pri_enc.v|
+!i113 1
+R4
+R11
+R5
+vwb_conmax_rf
+R14
+!i10b 1
+!s100 l>e_YWVaiUPD]=2I6?mkJ0
+I5ALT_fh8^JbBl03O2fOOG0
+R2
+R0
+R10
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_rf.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_rf.v
+R12
+R3
+r1
+!s85 0
+31
+R13
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_rf.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_rf.v|
+!i113 1
+R4
+R11
+R5
+vwb_conmax_slave_if
+R14
+!i10b 1
+!s100 @h607nU2jgEh9F3GlZ;Ge3
+IVOVdV:Ik?YUT=@PFQhXYG1
+R2
+R0
+R10
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_slave_if.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_slave_if.v
+R12
+R3
+r1
+!s85 0
+31
+R13
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_slave_if.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_slave_if.v|
+!i113 1
+R4
+R11
+R5
+vwb_conmax_top
+R14
+!i10b 1
+!s100 cDWSL^Qjk6Ea<a`_^KM7X2
+I:2D[F<eFekH]W4SP293<f1
+R2
+R0
+R10
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_top.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_top.v
+R12
+R3
+r1
+!s85 0
+31
+R13
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wb_conmax/wb_conmax_top.v|
+!i113 1
+R4
+R11
+R5
+vwishbone_uart_lite
+R1
+!i10b 1
+!s100 H<Em1gW66mdzc@fVloFVY0
+ITYQQ1Hf<^P[hTVI9Z[Ndl3
+R2
+R0
+w1584063096
+8F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wishbone_uart_lite.v
+FF:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wishbone_uart_lite.v
+L0 20
+R3
+r1
+!s85 0
+31
+R6
+!s107 F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/defines.v|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wishbone_uart_lite.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked|F:/undergraduate_thesis/undergraduate-fzpeng2020/sdram_naked/wishbone_uart_lite.v|
+!i113 1
+R4
+R7
+R5

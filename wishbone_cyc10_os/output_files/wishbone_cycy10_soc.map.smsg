@@ -1,8 +1,0 @@
-Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(739): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_xfr_ctl.v Line: 739
-Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(740): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_xfr_ctl.v Line: 740
-Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(754): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_xfr_ctl.v Line: 754
-Warning (10273): Verilog HDL warning at sdrc_xfr_ctl.v(755): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_xfr_ctl.v Line: 755
-Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(269): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_bank_fsm.v Line: 269
-Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(271): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_bank_fsm.v Line: 271
-Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(295): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_bank_fsm.v Line: 295
-Warning (10273): Verilog HDL warning at sdrc_bank_fsm.v(297): extended using "x" or "z" File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10_os/sdram_controller/sdrc_bank_fsm.v Line: 297
