@@ -6,8 +6,4 @@
 *.jic
 *.sof
 *.pof
-cscope.*
-wishbone_cyc10/simulation/modelsim/*
-wishbone_cyc10_os/simulation/modelsim/*
-os/target
-os/crate
+sdram_naked/simulation/modelsim/*
