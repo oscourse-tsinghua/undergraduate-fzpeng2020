@@ -19,7 +19,7 @@ Bin2Mem: Bin2Mem.c
 %.v: %.bin Bin2Mem
 	./Bin2Mem -f $< -o $@
 config_string_rom: config_string_rom.v
-	cp $< $@
+	mv $< $@
 
 clean:
 	rm -f *.o *.om *.bin *.data *.mif *.v *.asm Bin2Mem config_string_rom
