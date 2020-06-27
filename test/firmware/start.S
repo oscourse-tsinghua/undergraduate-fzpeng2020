@@ -99,57 +99,63 @@ _start:
 	TEST(j)
 	TEST(jal)
 	TEST(jalr)
+	call print
 
 	TEST(beq)
 	TEST(bne)
 	TEST(blt)
 	TEST(bge)
 	TEST(bltu)
+	call print
+	
 	TEST(bgeu)
-
 	TEST(lb)
 	TEST(lh)
 	TEST(lw)
 	TEST(lbu)
+	call print
+	
 	TEST(lhu)
-
 	TEST(sb)
 	TEST(sh)
 	TEST(sw)
-
-
 	TEST(addi)
+	call print
+
 	TEST(slti) // also tests sltiu
 	TEST(xori)
 	TEST(ori)
 	TEST(andi)
 	TEST(slli)
+	call print
+
 	TEST(srli)
 	TEST(srai)
-
-
 	TEST(add)
 	TEST(sub)
 	TEST(sll)
+	call print
+
 	TEST(slt) // what is with sltu ?
 	TEST(xor)
 	TEST(srl)
 	TEST(sra)
 	TEST(or)
+	call print
+	
 	TEST(and)
-
-
 	TEST(mulh)
 	TEST(mulhsu)
 	TEST(mulhu)
 	TEST(mul)
+	call print
 
 	TEST(div)
 	TEST(divu)
 	TEST(rem)
 	TEST(remu)
-
 	TEST(simple)
+	call print
 	TEST(sdram)
 #endif
 
@@ -197,4 +203,13 @@ loop:
 	//sw a5,0(a0)
 	//sw a4,0(a0)
 	j loop
+print:
+	lui a0,0x02000000>>12
+	addi a1,zero,'\r'
+	sw a1,0(a0)
+	addi a1,zero,'\n'
+	sw a1,0(a0)
+	ret
+	
+
 

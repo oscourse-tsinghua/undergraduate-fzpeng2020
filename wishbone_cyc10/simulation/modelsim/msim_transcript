@@ -12,372 +12,372 @@
 # 
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:59 on Dec 31,2019
+# Start time: 21:54:04 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_defines.v 
-# End time: 22:39:59 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:05 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:39:59 on Dec 31,2019
+# Start time: 21:54:05 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/defines.v 
-# End time: 22:39:59 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:05 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:00 on Dec 31,2019
+# Start time: 21:54:05 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v 
 # -- Compiling module ip_rom
 # 
 # Top level modules:
 # 	ip_rom
-# End time: 22:40:00 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:05 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_pll.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:00 on Dec 31,2019
+# Start time: 21:54:05 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_pll.v 
 # -- Compiling module ip_pll
 # 
 # Top level modules:
 # 	ip_pll
-# End time: 22:40:00 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:05 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip_pll_altpll.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:00 on Dec 31,2019
+# Start time: 21:54:06 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/db/ip_pll_altpll.v 
 # -- Compiling module ip_pll_altpll
 # 
 # Top level modules:
 # 	ip_pll_altpll
-# End time: 22:40:00 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:06 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:01 on Dec 31,2019
+# Start time: 21:54:06 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_soc.v 
 # -- Compiling module wishbone_soc
 # 
 # Top level modules:
 # 	wishbone_soc
-# End time: 22:40:01 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:06 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:01 on Dec 31,2019
+# Start time: 21:54:06 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v 
 # -- Compiling module rom_wishbone
 # 
 # Top level modules:
 # 	rom_wishbone
-# End time: 22:40:01 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:06 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ram_wishbone.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:02 on Dec 31,2019
+# Start time: 21:54:06 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ram_wishbone.v 
 # -- Compiling module ram_wishbone
 # 
 # Top level modules:
 # 	ram_wishbone
-# End time: 22:40:02 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:06 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/phy_bus_addr_conv.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:02 on Dec 31,2019
+# Start time: 21:54:06 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/phy_bus_addr_conv.v 
 # -- Compiling module phy_bus_addr_conv
 # ** Warning: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/phy_bus_addr_conv.v(99): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	phy_bus_addr_conv
-# End time: 22:40:03 on Dec 31,2019, Elapsed time: 0:00:01
+# End time: 21:54:07 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_top.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:03 on Dec 31,2019
+# Start time: 21:54:07 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_top.v 
 # -- Compiling module wb_conmax_top
 # 
 # Top level modules:
 # 	wb_conmax_top
-# End time: 22:40:03 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:07 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:04 on Dec 31,2019
+# Start time: 21:54:07 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_slave_if.v 
 # -- Compiling module wb_conmax_slave_if
 # 
 # Top level modules:
 # 	wb_conmax_slave_if
-# End time: 22:40:04 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:07 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_rf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:04 on Dec 31,2019
+# Start time: 21:54:07 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_rf.v 
 # -- Compiling module wb_conmax_rf
 # 
 # Top level modules:
 # 	wb_conmax_rf
-# End time: 22:40:04 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:07 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:05 on Dec 31,2019
+# Start time: 21:54:07 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_enc.v 
 # -- Compiling module wb_conmax_pri_enc
 # 
 # Top level modules:
 # 	wb_conmax_pri_enc
-# End time: 22:40:05 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:08 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:05 on Dec 31,2019
+# Start time: 21:54:08 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_pri_dec.v 
 # -- Compiling module wb_conmax_pri_dec
 # 
 # Top level modules:
 # 	wb_conmax_pri_dec
-# End time: 22:40:05 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:08 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:05 on Dec 31,2019
+# Start time: 21:54:08 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_msel.v 
 # -- Compiling module wb_conmax_msel
 # 
 # Top level modules:
 # 	wb_conmax_msel
-# End time: 22:40:06 on Dec 31,2019, Elapsed time: 0:00:01
+# End time: 21:54:08 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:06 on Dec 31,2019
+# Start time: 21:54:08 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_master_if.v 
 # -- Compiling module wb_conmax_master_if
 # 
 # Top level modules:
 # 	wb_conmax_master_if
-# End time: 22:40:06 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:08 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:06 on Dec 31,2019
+# Start time: 21:54:08 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wb_conmax/wb_conmax_arb.v 
 # -- Compiling module wb_conmax_arb
 # 
 # Top level modules:
 # 	wb_conmax_arb
-# End time: 22:40:06 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:09 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/wishbone_bus_if.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:06 on Dec 31,2019
+# Start time: 21:54:09 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/wishbone_bus_if.v 
 # -- Compiling module wishbone_bus_if
 # 
 # Top level modules:
 # 	wishbone_bus_if
-# End time: 22:40:06 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:09 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:06 on Dec 31,2019
+# Start time: 21:54:09 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 22:40:06 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:09 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/pc_reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:07 on Dec 31,2019
+# Start time: 21:54:09 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/pc_reg.v 
 # -- Compiling module pc_reg
 # 
 # Top level modules:
 # 	pc_reg
-# End time: 22:40:07 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:09 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/openriscv.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:07 on Dec 31,2019
+# Start time: 21:54:09 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/openriscv.v 
 # -- Compiling module openriscv
 # 
 # Top level modules:
 # 	openriscv
-# End time: 22:40:07 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:10 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mmu_conv.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:07 on Dec 31,2019
+# Start time: 21:54:10 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mmu_conv.v 
 # -- Compiling module mmu_conv
 # 
 # Top level modules:
 # 	mmu_conv
-# End time: 22:40:07 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:10 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem_wb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:07 on Dec 31,2019
+# Start time: 21:54:10 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem_wb.v 
 # -- Compiling module mem_wb
 # 
 # Top level modules:
 # 	mem_wb
-# End time: 22:40:07 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:10 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:07 on Dec 31,2019
+# Start time: 21:54:10 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v 
 # -- Compiling module mem
 # 
 # Top level modules:
 # 	mem
-# End time: 22:40:08 on Dec 31,2019, Elapsed time: 0:00:01
+# End time: 21:54:10 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/llbit_reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:08 on Dec 31,2019
+# Start time: 21:54:10 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/llbit_reg.v 
 # -- Compiling module LLbit_reg
 # 
 # Top level modules:
 # 	LLbit_reg
-# End time: 22:40:08 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:10 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/if_id.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:08 on Dec 31,2019
+# Start time: 21:54:10 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/if_id.v 
 # -- Compiling module if_id
 # 
 # Top level modules:
 # 	if_id
-# End time: 22:40:08 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:11 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id_ex.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:09 on Dec 31,2019
+# Start time: 21:54:11 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id_ex.v 
 # -- Compiling module id_ex
 # 
 # Top level modules:
 # 	id_ex
-# End time: 22:40:09 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:11 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:09 on Dec 31,2019
+# Start time: 21:54:11 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/id.v 
 # -- Compiling module id
 # 
 # Top level modules:
 # 	id
-# End time: 22:40:09 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:11 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:09 on Dec 31,2019
+# Start time: 21:54:11 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex_mem.v 
 # -- Compiling module ex_mem
 # 
 # Top level modules:
 # 	ex_mem
-# End time: 22:40:09 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:11 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:09 on Dec 31,2019
+# Start time: 21:54:11 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ex.v 
 # -- Compiling module ex
 # 
 # Top level modules:
 # 	ex
-# End time: 22:40:10 on Dec 31,2019, Elapsed time: 0:00:01
+# End time: 21:54:12 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/div.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:10 on Dec 31,2019
+# Start time: 21:54:12 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/div.v 
 # -- Compiling module div
 # 
 # Top level modules:
 # 	div
-# End time: 22:40:10 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:12 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ctrl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:10 on Dec 31,2019
+# Start time: 21:54:12 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/ctrl.v 
 # -- Compiling module ctrl
 # 
 # Top level modules:
 # 	ctrl
-# End time: 22:40:10 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:12 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/csr.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:10 on Dec 31,2019
+# Start time: 21:54:12 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/csr.v 
 # -- Compiling module csr
 # 
 # Top level modules:
 # 	csr
-# End time: 22:40:10 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:12 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/led_wishbone.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:10 on Dec 31,2019
+# Start time: 21:54:12 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/led_wishbone.v 
 # -- Compiling module led_wishbone
 # 
 # Top level modules:
 # 	led_wishbone
-# End time: 22:40:10 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:12 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_uart_lite.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:10 on Dec 31,2019
+# Start time: 21:54:12 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/wishbone_uart_lite.v 
 # -- Compiling module wishbone_uart_lite
 # 
 # Top level modules:
 # 	wishbone_uart_lite
-# End time: 22:40:11 on Dec 31,2019, Elapsed time: 0:00:01
+# End time: 21:54:13 on Jun 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10 {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_and_timer.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:11 on Dec 31,2019
+# Start time: 21:54:13 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/config_string_and_timer.v 
 # -- Compiling module config_string_and_timer
 # 
 # Top level modules:
 # 	config_string_and_timer
-# End time: 22:40:11 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:13 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim {F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:40:11 on Dec 31,2019
+# Start time: 21:54:13 on Jun 17,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim" F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/simulation/modelsim/wishbone_soc.vt 
 # -- Compiling module wishbone_soc_vlg_tst
 # 
 # Top level modules:
 # 	wishbone_soc_vlg_tst
-# End time: 22:40:11 on Dec 31,2019, Elapsed time: 0:00:00
+# End time: 21:54:13 on Jun 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs="+acc"  wishbone_soc_vlg_tst
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L rtl_work -L work -voptargs=""+acc"" wishbone_soc_vlg_tst 
-# Start time: 22:40:13 on Dec 31,2019
+# Start time: 21:54:13 on Jun 17,2020
 # Loading work.wishbone_soc_vlg_tst
 # Loading work.wishbone_soc
 # Loading work.ip_pll
@@ -424,17 +424,15 @@
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # ** Warning: (vsim-3015) F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/openriscv.v(600): [PCDPC] - Port size (12) does not match connection size (32) for port 'csr_reg_addr_i'. The port definition is at: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v(65).
 #    Time: 0 ps  Iteration: 0  Instance: /wishbone_soc_vlg_tst/i1/openriscv0/mem0 File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/cpu/mem.v
-# ** Warning: (vsim-3015) F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/rom_wishbone.v(16): [PCDPC] - Port size (14) does not match connection size (13) for port 'address'. The port definition is at: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v(40).
-#    Time: 0 ps  Iteration: 0  Instance: /wishbone_soc_vlg_tst/i1/rom_wishbone0/ip_rom0 File: F:/undergraduate_thesis/undergraduate-fzpeng2020/wishbone_cyc10/ip_rom.v
-# ** Warning: Design size of 11084 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 11046 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: fanzhipeng  Hostname: LAPTOP-ILT6KOAH  ProcessID: 24584
-#           Attempting to use alternate WLF file "./wlftknzx7g".
+#           Attempting to use alternate WLF file "./wlftqyzj63".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftknzx7g
+#           Using alternate file: ./wlftqyzj63
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -444,26 +442,5 @@
 # Time: 0  Instance: wishbone_soc_vlg_tst.i1.ip_pll0.altpll_component.cycloneiii_pll.pll3
 #  Note : Cyclone 10 LP PLL locked to incoming clock
 # Time: 798000  Instance: wishbone_soc_vlg_tst.i1.ip_pll0.altpll_component.cycloneiii_pll.pll3
-add wave -position insertpoint  \
-sim:/wishbone_soc_vlg_tst/i1/m1_we_i \
-sim:/wishbone_soc_vlg_tst/i1/m1_stb_i \
-sim:/wishbone_soc_vlg_tst/i1/m1_sel_i \
-sim:/wishbone_soc_vlg_tst/i1/m1_data_o \
-sim:/wishbone_soc_vlg_tst/i1/m1_data_i \
-sim:/wishbone_soc_vlg_tst/i1/m1_cyc_i \
-sim:/wishbone_soc_vlg_tst/i1/m1_addr_phy_i \
-sim:/wishbone_soc_vlg_tst/i1/m1_addr_i \
-sim:/wishbone_soc_vlg_tst/i1/m1_ack_o \
-sim:/wishbone_soc_vlg_tst/i1/m0_we_i \
-sim:/wishbone_soc_vlg_tst/i1/m0_stb_i \
-sim:/wishbone_soc_vlg_tst/i1/m0_sel_i \
-sim:/wishbone_soc_vlg_tst/i1/m0_data_o \
-sim:/wishbone_soc_vlg_tst/i1/m0_data_i \
-sim:/wishbone_soc_vlg_tst/i1/m0_cyc_i \
-sim:/wishbone_soc_vlg_tst/i1/m0_addr_phy_i \
-sim:/wishbone_soc_vlg_tst/i1/m0_addr_i \
-sim:/wishbone_soc_vlg_tst/i1/m0_ack_o
-# Break key hit
-# Simulation stop requested.
-# End time: 22:44:15 on Dec 31,2019, Elapsed time: 0:04:02
-# Errors: 0, Warnings: 5
+# End time: 21:55:55 on Jun 17,2020, Elapsed time: 0:01:42
+# Errors: 0, Warnings: 4

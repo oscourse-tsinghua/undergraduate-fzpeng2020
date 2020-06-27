@@ -15,7 +15,9 @@
 	.global TEST_FUNC_NAME;		\
 	.global TEST_FUNC_RET;		\
 TEST_FUNC_NAME:				\
-	li	a0, 0x00ff;		\
+	li	a0, 0x7fff;		\
+	li  a3, 10;			\
+	li  a4, 1;			\
 .delay_pr:				\
 	addi	a0,a0,-1;		\
 	bne	a0,zero,.delay_pr;	\
@@ -27,6 +29,7 @@ TEST_FUNC_NAME:				\
 	beq	a1,zero,.prname_done;	\
 	sw	a1,0(a2);		\
 	addi	a0,a0,1;		\
+	sub     a3,a3,a4;		\
 	jal	zero,.prname_next;	\
 .test_name:				\
 	.ascii TEST_FUNC_TXT;		\
@@ -34,8 +37,12 @@ TEST_FUNC_NAME:				\
 	.balign 4, 0;			\
 .prname_done:				\
 	addi	a1,zero,'.';		\
+.loop:						\
 	sw	a1,0(a2);		\
-	sw	a1,0(a2);
+	sub a3,a3,a4;		\
+	beq a3,zero,.endloop;	\
+	call .loop;			\
+.endloop:
 
 #define RVTEST_PASS			\
 	li	a0, 0xff;		\
@@ -47,9 +54,7 @@ TEST_FUNC_NAME:				\
 	sw	a1,0(a0);		\
 	addi	a2,zero,'K';		\
 	sw	a2,0(a0);		\
-	addi	a3,zero,'\r';		\
-	sw	a3,0(a0);		\
-	addi    a4,zero,'\n';		\
+	addi	a4,zero,' ';		\
 	sw	a4,0(a0);		\
 	jal	zero,TEST_FUNC_RET;
 
@@ -67,10 +72,8 @@ TEST_FUNC_NAME:				\
 	addi	a3,zero,'O';		\
 	sw	a3,0(a0);		\
 	sw	a2,0(a0);		\
-	addi	a4,zero,'\r';		\
+	addi	a4,zero,' ';		\
 	sw	a4,0(a0);		\
-	addi	a5,zero,'\n';		\
-	sw	a5,0(a0);		\
 	jal	zero,TEST_FUNC_RET;	
 
 	//ebreak;

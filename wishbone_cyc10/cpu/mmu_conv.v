@@ -1,35 +1,3 @@
-//////////////////////////////////////////////////////////////////////
-////                                                              ////
-//// Copyright (C) 2016 shyoshyo                                  ////
-////                                                              ////
-//// This source file may be used and distributed without         ////
-//// restriction provided that this copyright statement is not    ////
-//// removed from the file and that any derivative work contains  ////
-//// the original copyright notice and the associated disclaimer. ////
-////                                                              ////
-//// This source file is free software; you can redistribute it   ////
-//// and/or modify it under the terms of the GNU Lesser General   ////
-//// Public License as published by the Free Software Foundation; ////
-//// either version 2.1 of the License, or (at your option) any   ////
-//// later version.                                               ////
-////                                                              ////
-//// This source is distributed in the hope that it will be       ////
-//// useful, but WITHOUT ANY WARRANTY; without even the implied   ////
-//// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR      ////
-//// PURPOSE.  See the GNU Lesser General Public License for more ////
-//// details.                                                     ////
-////                                                              ////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-// Module:  mmu_conv
-// File:    mmu_conv.v
-// Author:  shyoshyo
-// E-mail:  shyoshyo@qq.com
-// Description: MMU convert module
-// Revision: 1.0
-//////////////////////////////////////////////////////////////////////
-
 `include "defines.v"
 
 module mmu_conv
@@ -65,9 +33,11 @@ module mmu_conv
 
 	output reg tlb_exception_o,
 	output reg tlb_update_o,
-
+ 
 	output reg [3:0]hit_index_o
 );
+
+`ifndef DisableTLB
 	/************************* TLB 表 *************************/
 
 	wire [`RegBus]tlb_vpn[15:0];
@@ -202,10 +172,11 @@ module mmu_conv
 	wire tlb_exception;
 
 	assign tlb_miss_exception = ((|hit) == 1'b1) ? `False_v : `True_v;
-
+`endif
 	always @(*)
 	begin
 		hit_index_o <= 4'd0;
+		`ifndef DisableTLB
 		if(hit[15]) hit_index_o <= 4'd15;
 		if(hit[14]) hit_index_o <= 4'd14;
 		if(hit[13]) hit_index_o <= 4'd13;
@@ -222,10 +193,11 @@ module mmu_conv
 		if(hit[2]) hit_index_o <= 4'd2;
 		if(hit[1]) hit_index_o <= 4'd1;
 		if(hit[0]) hit_index_o <= 4'd0;
+		`endif
 	end
-
+`ifndef DisableTLB
 	assign tlb_exception = tlb_miss_exception | protect_exception[hit_index_o] | update_exception[hit_index_o];
-
+`endif
 	/*********************** 計算物理地址 ***********************/
 
 	always @(*)
@@ -251,6 +223,7 @@ module mmu_conv
 			tlb_exception_o <= `False_v;
 			tlb_update_o <= `False_v;
 		end
+`ifndef DisableTLB
 `ifdef RV32
 		else if(vm_i == `CSR_mstatus_vm_Sv32)
 `else
@@ -267,6 +240,7 @@ module mmu_conv
 			else
 				tlb_update_o <= update_exception[hit_index_o];
 		end
+`endif
 		else
 		begin
 			$display("should never arrive here");
